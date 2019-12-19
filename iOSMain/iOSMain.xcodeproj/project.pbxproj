@@ -17,6 +17,7 @@
 		918D8D52239FFD0D0064AC83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918D8D51239FFD0D0064AC83 /* Assets.xcassets */; };
 		918D8D55239FFD0D0064AC83 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918D8D54239FFD0D0064AC83 /* Preview Assets.xcassets */; };
 		918D8D58239FFD0D0064AC83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 918D8D56239FFD0D0064AC83 /* LaunchScreen.storyboard */; };
+		91D6B9DB23AA849F0059EE9B /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6B9DA23AA849F0059EE9B /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		918D8D59239FFD0D0064AC83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		918D8D5E239FFD0D0064AC83 /* iOSMainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSMainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		918D8D64239FFD0D0064AC83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91D6B9DA23AA849F0059EE9B /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				918D8D64239FFD0D0064AC83 /* Info.plist */,
+				91D6B9DA23AA849F0059EE9B /* Test.swift */,
 			);
 			path = iOSMainTests;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 					};
 					918D8D5D239FFD0D0064AC83 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 						TestTargetID = 918D8D47239FFD0C0064AC83;
 					};
 				};
@@ -257,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91D6B9DB23AA849F0059EE9B /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +446,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6KD9UARPF;
 				INFOPLIST_FILE = iOSMainTests/Info.plist;
@@ -452,6 +458,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = vp.iOSMainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSMain.app/iOSMain";
@@ -463,6 +470,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6KD9UARPF;
 				INFOPLIST_FILE = iOSMainTests/Info.plist;
