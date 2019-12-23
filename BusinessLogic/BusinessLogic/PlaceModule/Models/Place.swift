@@ -7,8 +7,18 @@
 //
 
 public struct Place {
-    public var id: Int
+    public var id: UUID
     public var name: String
     public var placeCoordinate: PlaceCoordinate
     public var createDate: Date
+    
+    public init(id: UUID,
+                name: String,
+                placeCoordinate: PlaceCoordinate,
+                createDate: Date) {
+        self.id = id
+        self.name = name
+        self.placeCoordinate = placeCoordinate
+        self.createDate = createDate
+    }
 }

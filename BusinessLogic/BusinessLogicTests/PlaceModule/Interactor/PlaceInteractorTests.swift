@@ -10,7 +10,9 @@ import XCTest
 @testable import BusinessLogic
 
 final class PlaceInteractorTests: XCTestCase {
+    // MARK: - Mocks
     private let output = PlaceInteractorOutputMock()
+    private let placeDBBoundaryMock = PlaceDBBoundaryMock()
     
     // MARK: - Tests
     func testIsDisplayAllSortedPlaces() {
@@ -21,12 +23,12 @@ final class PlaceInteractorTests: XCTestCase {
     
     // MARK: - Helpers
     func makeSUT() -> PlaceInteractorInput {
-        let sut = PlaceInteractor(output: output)
+        let sut = PlaceInteractor(output: output, placeDB: placeDBBoundaryMock)
         return sut
     }
 }
 
-// MARK: - Mocks
+// MARK: - PlaceInteractorOutputMock
 private extension PlaceInteractorTests {
     class PlaceInteractorOutputMock: PlaceInteractorOutput {
         var isGetAllSortedPlacesCalled = false
@@ -34,5 +36,16 @@ private extension PlaceInteractorTests {
         func display(places: [Place]) {
             isGetAllSortedPlacesCalled = true
         }
+    }
+}
+
+// MARK: - PlaceDBBoundaryMock
+private extension PlaceInteractorTests {
+    class PlaceDBBoundaryMock: PlaceDBBoundary {
+        func getAllPlaces() -> [Place] {
+            return []
+        }
+        
+        func addPlace(_ place: Place) {}
     }
 }

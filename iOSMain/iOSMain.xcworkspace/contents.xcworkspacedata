@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../CoreDataDB/CoreDataDB.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:../iOSUI/iOSUI.xcodeproj">
    </FileRef>
    <FileRef

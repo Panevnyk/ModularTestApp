@@ -19,6 +19,8 @@ final public class PlacePresenter: PlaceInteractorOutput {
     public init() {}
     
     public func display(places: [Place]) {
-        view?.display(placeViewModels: places.map { PlaceViewModel(id: $0.id, name: $0.name) })
+        view?.display(placeViewModels: places.enumerated().compactMap {
+            PlaceViewModel(id: $0, name: $1.name)
+        })
     }
 }

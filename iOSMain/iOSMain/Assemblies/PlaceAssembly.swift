@@ -8,6 +8,7 @@
 
 import SwiftUI
 import BusinessLogic
+import CoreDataDB
 import iOSUI
 
 
@@ -16,9 +17,10 @@ final class PlaceAssembly {
     let interactor: PlaceInteractorInput
     let view: PlaceListView
     
-    init() {
+    init(placeDB: PlaceDBBoundary) {
         let presenter = PlacePresenter()
-        let interactor = PlaceInteractor(output: presenter)
+        let interactor = PlaceInteractor(output: presenter,
+                                         placeDB: placeDB)
         let view = PlaceListView(interactor: interactor)
         presenter.view = view
         
