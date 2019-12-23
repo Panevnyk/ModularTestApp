@@ -58,6 +58,16 @@
                ReferencedContainer = "container:../iOSUI/iOSUI.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "912F265F23ACE3FD00AD85D1"
+               BuildableName = "CoreDataDBTests.xctest"
+               BlueprintName = "CoreDataDBTests"
+               ReferencedContainer = "container:../CoreDataDB/CoreDataDB.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

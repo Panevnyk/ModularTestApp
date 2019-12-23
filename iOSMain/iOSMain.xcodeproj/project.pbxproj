@@ -12,6 +12,8 @@
 		9114901B23A92DFC00ABFA96 /* PlaceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114901A23A92DFC00ABFA96 /* PlaceAssembly.swift */; };
 		9114902023A9311E00ABFA96 /* iOSUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9114901F23A9311E00ABFA96 /* iOSUI.framework */; };
 		9114902123A9311E00ABFA96 /* iOSUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9114901F23A9311E00ABFA96 /* iOSUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		914DBC2223ACF83F00092638 /* CoreDataDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914DBC2123ACF83F00092638 /* CoreDataDB.framework */; };
+		914DBC2323ACF83F00092638 /* CoreDataDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 914DBC2123ACF83F00092638 /* CoreDataDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		918D8D4C239FFD0C0064AC83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918D8D4B239FFD0C0064AC83 /* AppDelegate.swift */; };
 		918D8D4E239FFD0C0064AC83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918D8D4D239FFD0C0064AC83 /* SceneDelegate.swift */; };
 		918D8D52239FFD0D0064AC83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918D8D51239FFD0D0064AC83 /* Assets.xcassets */; };
@@ -39,6 +41,7 @@
 			files = (
 				9114902123A9311E00ABFA96 /* iOSUI.framework in Embed Frameworks */,
 				91127C3E23A39DCA0098CAFE /* BusinessLogic.framework in Embed Frameworks */,
+				914DBC2323ACF83F00092638 /* CoreDataDB.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,6 +52,7 @@
 		91127C3C23A39DCA0098CAFE /* BusinessLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BusinessLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9114901A23A92DFC00ABFA96 /* PlaceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAssembly.swift; sourceTree = "<group>"; };
 		9114901F23A9311E00ABFA96 /* iOSUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		914DBC2123ACF83F00092638 /* CoreDataDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreDataDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		918D8D48239FFD0C0064AC83 /* iOSMain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		918D8D4B239FFD0C0064AC83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		918D8D4D239FFD0C0064AC83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 			files = (
 				9114902023A9311E00ABFA96 /* iOSUI.framework in Frameworks */,
 				91127C3D23A39DCA0098CAFE /* BusinessLogic.framework in Frameworks */,
+				914DBC2223ACF83F00092638 /* CoreDataDB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +89,7 @@
 		91127C2023A397920098CAFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				914DBC2123ACF83F00092638 /* CoreDataDB.framework */,
 				9114901F23A9311E00ABFA96 /* iOSUI.framework */,
 				91127C3C23A39DCA0098CAFE /* BusinessLogic.framework */,
 			);

@@ -37,7 +37,7 @@ final class PlacePresenterTests: XCTestCase {
     }
     
     func makePlace(id: Int, name: String) -> Place {
-        return Place(id: id,
+        return Place(id: UUID(),
                      name: name,
                      placeCoordinate: PlaceCoordinate(lat: 0.0, lng: 0.0),
                      createDate: Date())

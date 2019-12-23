@@ -10,6 +10,11 @@ public protocol PlaceInteractorInput: class {
     func getAllSortedPlaces()
 }
 
+public protocol PlaceDBBoundary {
+    func getAllPlaces() -> [Place]
+    func addPlace(_ place: Place)
+}
+
 public protocol PlaceInteractorOutput {
     func display(places: [Place])
 }
@@ -17,30 +22,17 @@ public protocol PlaceInteractorOutput {
 public class PlaceInteractor: PlaceInteractorInput {
     // MARK: - Properties
     private let output: PlaceInteractorOutput
+    private let placeDB: PlaceDBBoundary
     
     // MARK: - Inits
-    public init(output: PlaceInteractorOutput) {
+    public init(output: PlaceInteractorOutput, placeDB: PlaceDBBoundary) {
         self.output = output
+        self.placeDB = placeDB
     }
     
     // MARK: - Public methods
     public func getAllSortedPlaces() {
-        output.display(places: makePlaces())
-    }
-    
-    // MARK: - Helpers
-    private func makePlaces() -> [Place] {
-        return [Place(id: 0,
-                      name: "Ivano-Frankivsk",
-                      placeCoordinate: PlaceCoordinate(lat: 48.9215, lng: 24.70972),
-                      createDate: Date()),
-                Place(id: 1,
-                      name: "Lviv",
-                      placeCoordinate: PlaceCoordinate(lat: 49.83826, lng: 24.02324),
-                      createDate: Date()),
-                Place(id: 2,
-                      name: "Kyiv",
-                      placeCoordinate: PlaceCoordinate(lat: 50.45466, lng: 30.5238),
-                      createDate: Date())]
+        let places = placeDB.getAllPlaces()
+        output.display(places: places)
     }
 }

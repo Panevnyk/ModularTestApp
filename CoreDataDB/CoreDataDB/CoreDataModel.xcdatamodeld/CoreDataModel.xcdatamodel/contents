@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="PlaceCoordinateMO" representedClassName="PlaceCoordinateMO" syncable="YES" codeGenerationType="class">
+        <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="lng" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="placeMO" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlaceMO" inverseName="placeCoordinateMO" inverseEntity="PlaceMO"/>
+    </entity>
+    <entity name="PlaceMO" representedClassName="PlaceMO" syncable="YES" codeGenerationType="class">
+        <attribute name="createDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="placeCoordinateMO" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlaceCoordinateMO" inverseName="placeMO" inverseEntity="PlaceCoordinateMO"/>
+    </entity>
+    <elements>
+        <element name="PlaceMO" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="PlaceCoordinateMO" positionX="-63" positionY="9" width="128" height="88"/>
+    </elements>
+</model>
