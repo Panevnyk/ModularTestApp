@@ -11,28 +11,46 @@ import BusinessLogic
 
 extension CoreDataService: PlaceDBBoundary {
     public func getAllPlaces() -> [Place] {
-        // add dummy places
-//        makePlaces().forEach { addPlace($0) }
-        
         let placesMO: [PlaceMO] = getEntities() ?? []
-        
-        let places: [Place] = placesMO.compactMap { (placeMO) in
-            guard let id = placeMO.id,
-                let name = placeMO.name,
-                let createDate = placeMO.createDate,
-                let lat = placeMO.placeCoordinateMO?.lat,
-                let lng = placeMO.placeCoordinateMO?.lng else { return nil }
-            
-            let placeCoordinate = PlaceCoordinate(lat: lat, lng: lng)
-            let place = Place(id: id, name: name, placeCoordinate: placeCoordinate, createDate: createDate)
-
-            return place
-        }
-        
-        return places
+        return placesMO.compactMap { makePlace(from: $0) }
     }
     
-    public func addPlace(_ place: Place) {
+    public func add(place: Place) {
+        let placeMO = makePlaceMO(from: place, backgroundContext: backgroundContext)
+        save(object: placeMO)
+    }
+    
+    public func remove(place: Place) {
+        guard let placeMOForRemove = fetchPlaceMOFromDB(by: place, backgroundContext: backgroundContext)  else { return }
+        remove(object: placeMOForRemove)
+    }
+}
+
+// MARK: - Helper methods
+private extension CoreDataService {
+    func fetchPlaceMOFromDB(by place: Place, backgroundContext: NSManagedObjectContext) -> PlaceMO? {
+        let predicate = NSPredicate(format: "id = %@", place.id.uuidString)
+        do {
+            return try backgroundContext.entity(withType: PlaceMO.self, predicate: predicate)
+        } catch let error {
+            print("CoreDataService module fail to fetch place object error: \(error)")
+        }
+        return nil
+    }
+    
+    func makePlace(from placeMO: PlaceMO) -> Place? {
+        guard let id = placeMO.id,
+            let name = placeMO.name,
+            let createDate = placeMO.createDate,
+            let lat = placeMO.placeCoordinateMO?.lat,
+            let lng = placeMO.placeCoordinateMO?.lng else { return nil }
+        
+        let placeCoordinate = PlaceCoordinate(lat: lat, lng: lng)
+        let place = Place(id: id, name: name, placeCoordinate: placeCoordinate, createDate: createDate)
+        return place
+    }
+    
+    func makePlaceMO(from place: Place, backgroundContext: NSManagedObjectContext) -> PlaceMO {
         let placeCoordinateMO = PlaceCoordinateMO(context: backgroundContext)
         placeCoordinateMO.lat = place.placeCoordinate.lat
         placeCoordinateMO.lng = place.placeCoordinate.lng
@@ -43,23 +61,6 @@ extension CoreDataService: PlaceDBBoundary {
         placeMO.createDate = place.createDate
         placeMO.placeCoordinateMO = placeCoordinateMO
         
-        save(object: placeMO)
-    }
-}
-
-extension CoreDataService {
-    private func makePlaces() -> [Place] {
-        return [Place(id: UUID(),
-                      name: "Ivano-Frankivsk",
-                      placeCoordinate: PlaceCoordinate(lat: 48.9215, lng: 24.70972),
-                      createDate: Date()),
-                Place(id: UUID(),
-                      name: "Lviv",
-                      placeCoordinate: PlaceCoordinate(lat: 49.83826, lng: 24.02324),
-                      createDate: Date()),
-                Place(id: UUID(),
-                      name: "Kyiv",
-                      placeCoordinate: PlaceCoordinate(lat: 50.45466, lng: 30.5238),
-                      createDate: Date())]
+        return placeMO
     }
 }

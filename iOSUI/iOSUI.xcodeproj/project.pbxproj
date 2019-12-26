@@ -15,11 +15,14 @@
 		9159CD5423A9329E00BFE983 /* BusinessLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9159CD5223A9329E00BFE983 /* BusinessLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9159CD5723A9341F00BFE983 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159CD5623A9341F00BFE983 /* DetailsView.swift */; };
 		9159CD5923A9355500BFE983 /* PlaceRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159CD5823A9355500BFE983 /* PlaceRowView.swift */; };
+		917F049823B25B0D00104654 /* AddPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F049723B25B0D00104654 /* AddPlaceView.swift */; };
+		918E902623B4CAE300A3BD61 /* Color+AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E902523B4CAE300A3BD61 /* Color+AppStyle.swift */; };
 		91D6B9D223AA18FF0059EE9B /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6B9D123AA18FF0059EE9B /* PlaceViewModel.swift */; };
 		91D6B9D423AA4FD60059EE9B /* PlaceDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6B9D323AA4FD60059EE9B /* PlaceDataSource.swift */; };
 		91D6B9D723AA51EE0059EE9B /* PlacePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6B9D623AA51EE0059EE9B /* PlacePresenterTests.swift */; };
 		91D6B9D923AA7A170059EE9B /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6B9D823AA7A170059EE9B /* Test.swift */; };
 		91D6C19723A7ACF600730E2D /* PlacePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6C19623A7ACF600730E2D /* PlacePresenter.swift */; };
+		91FAE0DA23B4E859005DBEA7 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAE0D923B4E859005DBEA7 /* AddButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +60,14 @@
 		9159CD5223A9329E00BFE983 /* BusinessLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BusinessLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9159CD5623A9341F00BFE983 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		9159CD5823A9355500BFE983 /* PlaceRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRowView.swift; sourceTree = "<group>"; };
+		917F049723B25B0D00104654 /* AddPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceView.swift; sourceTree = "<group>"; };
+		918E902523B4CAE300A3BD61 /* Color+AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppStyle.swift"; sourceTree = "<group>"; };
 		91D6B9D123AA18FF0059EE9B /* PlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
 		91D6B9D323AA4FD60059EE9B /* PlaceDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDataSource.swift; sourceTree = "<group>"; };
 		91D6B9D623AA51EE0059EE9B /* PlacePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePresenterTests.swift; sourceTree = "<group>"; };
 		91D6B9D823AA7A170059EE9B /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		91D6C19623A7ACF600730E2D /* PlacePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePresenter.swift; sourceTree = "<group>"; };
+		91FAE0D923B4E859005DBEA7 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,8 @@
 		91127C7523A3A01A0098CAFE /* iOSUI */ = {
 			isa = PBXGroup;
 			children = (
+				91FAE0D823B4E840005DBEA7 /* UIComponents */,
+				918E902423B4CACC00A3BD61 /* Extensions */,
 				91D6C19323A7ACBF00730E2D /* PlaceModule */,
 				9159CD5623A9341F00BFE983 /* DetailsView.swift */,
 				91D6B9D823AA7A170059EE9B /* Test.swift */,
@@ -125,6 +133,34 @@
 			path = iOSUITests;
 			sourceTree = "<group>";
 		};
+		917F049523B25AEB00104654 /* PlaceList */ = {
+			isa = PBXGroup;
+			children = (
+				9114901C23A92EB900ABFA96 /* PlaceListView.swift */,
+				9159CD5823A9355500BFE983 /* PlaceRowView.swift */,
+				91D6C19623A7ACF600730E2D /* PlacePresenter.swift */,
+				91D6B9D323AA4FD60059EE9B /* PlaceDataSource.swift */,
+				91D6B9D123AA18FF0059EE9B /* PlaceViewModel.swift */,
+			);
+			path = PlaceList;
+			sourceTree = "<group>";
+		};
+		917F049623B25AF200104654 /* AddPlace */ = {
+			isa = PBXGroup;
+			children = (
+				917F049723B25B0D00104654 /* AddPlaceView.swift */,
+			);
+			path = AddPlace;
+			sourceTree = "<group>";
+		};
+		918E902423B4CACC00A3BD61 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				918E902523B4CAE300A3BD61 /* Color+AppStyle.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		91D6B9D523AA51BC0059EE9B /* PlaceModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,11 +172,8 @@
 		91D6C19323A7ACBF00730E2D /* PlaceModule */ = {
 			isa = PBXGroup;
 			children = (
-				9114901C23A92EB900ABFA96 /* PlaceListView.swift */,
-				9159CD5823A9355500BFE983 /* PlaceRowView.swift */,
-				91D6C19623A7ACF600730E2D /* PlacePresenter.swift */,
-				91D6B9D323AA4FD60059EE9B /* PlaceDataSource.swift */,
-				91D6B9D123AA18FF0059EE9B /* PlaceViewModel.swift */,
+				917F049623B25AF200104654 /* AddPlace */,
+				917F049523B25AEB00104654 /* PlaceList */,
 			);
 			path = PlaceModule;
 			sourceTree = "<group>";
@@ -151,6 +184,14 @@
 				9159CD5223A9329E00BFE983 /* BusinessLogic.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91FAE0D823B4E840005DBEA7 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				91FAE0D923B4E859005DBEA7 /* AddButton.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,12 +305,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				918E902623B4CAE300A3BD61 /* Color+AppStyle.swift in Sources */,
 				9114901D23A92EB900ABFA96 /* PlaceListView.swift in Sources */,
 				91D6B9D223AA18FF0059EE9B /* PlaceViewModel.swift in Sources */,
+				91FAE0DA23B4E859005DBEA7 /* AddButton.swift in Sources */,
 				91D6B9D423AA4FD60059EE9B /* PlaceDataSource.swift in Sources */,
 				91D6B9D923AA7A170059EE9B /* Test.swift in Sources */,
 				9159CD5923A9355500BFE983 /* PlaceRowView.swift in Sources */,
 				91D6C19723A7ACF600730E2D /* PlacePresenter.swift in Sources */,
+				917F049823B25B0D00104654 /* AddPlaceView.swift in Sources */,
 				9159CD5723A9341F00BFE983 /* DetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

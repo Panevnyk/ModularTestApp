@@ -8,11 +8,14 @@
 
 public protocol PlaceInteractorInput: class {
     func getAllSortedPlaces()
+    func add(place: Place)
+    func removePlace(by index: Int)
 }
 
 public protocol PlaceDBBoundary {
     func getAllPlaces() -> [Place]
-    func addPlace(_ place: Place)
+    func add(place: Place)
+    func remove(place: Place)
 }
 
 public protocol PlaceInteractorOutput {
@@ -24,6 +27,8 @@ public class PlaceInteractor: PlaceInteractorInput {
     private let output: PlaceInteractorOutput
     private let placeDB: PlaceDBBoundary
     
+    private var displayedPlaces: [Place] = []
+    
     // MARK: - Inits
     public init(output: PlaceInteractorOutput, placeDB: PlaceDBBoundary) {
         self.output = output
@@ -33,6 +38,18 @@ public class PlaceInteractor: PlaceInteractorInput {
     // MARK: - Public methods
     public func getAllSortedPlaces() {
         let places = placeDB.getAllPlaces()
+        displayedPlaces = places
         output.display(places: places)
+    }
+    
+    public func add(place: Place) {
+        placeDB.add(place: place)
+    }
+    
+    public func removePlace(by index: Int) {
+        guard displayedPlaces.count > index else { return }
+        
+        let placeForRemove = displayedPlaces[index]
+        placeDB.remove(place: placeForRemove)
     }
 }

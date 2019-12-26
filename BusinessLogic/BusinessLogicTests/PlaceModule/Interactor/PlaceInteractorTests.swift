@@ -16,25 +16,81 @@ final class PlaceInteractorTests: XCTestCase {
     
     // MARK: - Tests
     func testIsDisplayAllSortedPlaces() {
-        let sut = makeSUT()
+        let places = makePlaces(names: ["Place1", "Place2", "Place3"])
+        let sut = makeSUT(places: places)
+        
         sut.getAllSortedPlaces()
-        XCTAssertTrue(output.isGetAllSortedPlacesCalled)
+        
+        XCTAssertEqual(output.displayedPlaces?.count, 3)
+        XCTAssertEqual(output.displayedPlaces?[0].name, "Place1")
+        XCTAssertEqual(output.displayedPlaces?[1].name, "Place2")
+        XCTAssertEqual(output.displayedPlaces?[2].name, "Place3")
     }
     
+    func testAddPlaceIsDBCalled() {
+        let sut = makeSUT()
+        let place = makePlace(name: "Test add place")
+        
+        sut.add(place: place)
+        
+        XCTAssertEqual(placeDBBoundaryMock.addedPlace?.name, "Test add place")
+    }
+    
+    func testRemovePlace_fromEmptyArray_expectedNothingRemoved() {
+        let sut = makeSUT()
+        
+        sut.getAllSortedPlaces()
+        sut.removePlace(by: 0)
+        
+        XCTAssertEqual(placeDBBoundaryMock.removedPlace?.name, nil)
+    }
+    
+    func testRemovePlace_byOutOfBoundsIndex_expectedNothingRemoved() {
+        let places = makePlaces(names: ["Place1", "Place2", "Place3"])
+        let sut = makeSUT(places: places)
+        
+        sut.getAllSortedPlaces()
+        sut.removePlace(by: 3)
+        
+        XCTAssertEqual(placeDBBoundaryMock.removedPlace?.name, nil)
+    }
+    
+    func testRemovePlace_withCorrectIndex_expectedObjectSuccessfulyRemoved() {
+        let places = makePlaces(names: ["Place1", "Place2", "Place3"])
+        let sut = makeSUT(places: places)
+        
+        sut.getAllSortedPlaces()
+        sut.removePlace(by: 1)
+        
+        XCTAssertEqual(placeDBBoundaryMock.removedPlace?.name, "Place2")
+    }
+
     // MARK: - Helpers
-    func makeSUT() -> PlaceInteractorInput {
+    func makeSUT(places: [Place] = []) -> PlaceInteractorInput {
+        placeDBBoundaryMock.mockedPlaces = places
         let sut = PlaceInteractor(output: output, placeDB: placeDBBoundaryMock)
         return sut
+    }
+    
+    func makePlaces(names: [String]) -> [Place] {
+        return names.compactMap { makePlace(name: $0) }
+    }
+    
+    func makePlace(name: String) -> Place {
+        return Place(id: UUID(),
+                     name: name,
+                     placeCoordinate: PlaceCoordinate(lat: 0.0, lng: 0.0),
+                     createDate: Date())
     }
 }
 
 // MARK: - PlaceInteractorOutputMock
 private extension PlaceInteractorTests {
     class PlaceInteractorOutputMock: PlaceInteractorOutput {
-        var isGetAllSortedPlacesCalled = false
+        var displayedPlaces: [Place]?
         
         func display(places: [Place]) {
-            isGetAllSortedPlacesCalled = true
+            displayedPlaces = places
         }
     }
 }
@@ -42,10 +98,20 @@ private extension PlaceInteractorTests {
 // MARK: - PlaceDBBoundaryMock
 private extension PlaceInteractorTests {
     class PlaceDBBoundaryMock: PlaceDBBoundary {
+        var mockedPlaces: [Place] = []
+        var addedPlace: Place?
+        var removedPlace: Place?
+        
         func getAllPlaces() -> [Place] {
-            return []
+            return mockedPlaces
         }
         
-        func addPlace(_ place: Place) {}
+        func add(place: Place) {
+            addedPlace = place
+        }
+        
+        func remove(place: Place) {
+            removedPlace = place
+        }
     }
 }
