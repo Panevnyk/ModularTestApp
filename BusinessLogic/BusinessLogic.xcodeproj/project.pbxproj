@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		91127BF123A392CA0098CAFE /* BusinessLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91127BE723A392CA0098CAFE /* BusinessLogic.framework */; };
-		91127BF623A392CA0098CAFE /* BusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91127BF523A392CA0098CAFE /* BusinessLogicTests.swift */; };
 		91127BF823A392CA0098CAFE /* BusinessLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = 91127BEA23A392CA0098CAFE /* BusinessLogic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91127C0F23A395610098CAFE /* BusinessLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91127C0623A395610098CAFE /* BusinessLogic.framework */; };
-		91127C1E23A396C80098CAFE /* BusinessLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91127BF523A392CA0098CAFE /* BusinessLogicTests.swift */; };
 		91127C1F23A396D50098CAFE /* BusinessLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = 91127BEA23A392CA0098CAFE /* BusinessLogic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91127C9423A3AEB10098CAFE /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91127C9323A3AEB10098CAFE /* Place.swift */; };
 		91127C9523A3AEB10098CAFE /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91127C9323A3AEB10098CAFE /* Place.swift */; };
@@ -19,6 +17,14 @@
 		91127C9923A3AF700098CAFE /* PlaceCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91127C9723A3AF700098CAFE /* PlaceCoordinate.swift */; };
 		91127C9B23A3AF9B0098CAFE /* PlaceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91127C9A23A3AF9B0098CAFE /* PlaceInteractor.swift */; };
 		91127C9C23A3AF9B0098CAFE /* PlaceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91127C9A23A3AF9B0098CAFE /* PlaceInteractor.swift */; };
+		91AB45E623DB2BDC00EDD45D /* ReflectionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45E523DB2BDC00EDD45D /* ReflectionEntity.swift */; };
+		91AB45E723DB2BDC00EDD45D /* ReflectionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45E523DB2BDC00EDD45D /* ReflectionEntity.swift */; };
+		91AB45EE23DB359600EDD45D /* CreateQuestionPoolInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45ED23DB359600EDD45D /* CreateQuestionPoolInteractorTests.swift */; };
+		91AB45EF23DB359600EDD45D /* CreateQuestionPoolInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45ED23DB359600EDD45D /* CreateQuestionPoolInteractorTests.swift */; };
+		91AB45F123DB35DC00EDD45D /* CreateQuestionPoolInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45F023DB35DC00EDD45D /* CreateQuestionPoolInteractor.swift */; };
+		91AB45F223DB35DC00EDD45D /* CreateQuestionPoolInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45F023DB35DC00EDD45D /* CreateQuestionPoolInteractor.swift */; };
+		91AB45F423DB455C00EDD45D /* QuestionPollInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45F323DB455C00EDD45D /* QuestionPollInteractorTests.swift */; };
+		91AB45F523DB455C00EDD45D /* QuestionPollInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45F323DB455C00EDD45D /* QuestionPollInteractorTests.swift */; };
 		91D6C19123A78CB400730E2D /* PlaceInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6C19023A78CB400730E2D /* PlaceInteractorTests.swift */; };
 		91D6C19223A78CB400730E2D /* PlaceInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6C19023A78CB400730E2D /* PlaceInteractorTests.swift */; };
 /* End PBXBuildFile section */
@@ -45,13 +51,16 @@
 		91127BEA23A392CA0098CAFE /* BusinessLogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessLogic.h; sourceTree = "<group>"; };
 		91127BEB23A392CA0098CAFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91127BF023A392CA0098CAFE /* BusinessLogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BusinessLogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		91127BF523A392CA0098CAFE /* BusinessLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessLogicTests.swift; sourceTree = "<group>"; };
 		91127BF723A392CA0098CAFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91127C0623A395610098CAFE /* BusinessLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BusinessLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91127C0E23A395610098CAFE /* BusinessLogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BusinessLogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91127C9323A3AEB10098CAFE /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		91127C9723A3AF700098CAFE /* PlaceCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCoordinate.swift; sourceTree = "<group>"; };
 		91127C9A23A3AF9B0098CAFE /* PlaceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInteractor.swift; sourceTree = "<group>"; };
+		91AB45E523DB2BDC00EDD45D /* ReflectionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionEntity.swift; sourceTree = "<group>"; };
+		91AB45ED23DB359600EDD45D /* CreateQuestionPoolInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuestionPoolInteractorTests.swift; sourceTree = "<group>"; };
+		91AB45F023DB35DC00EDD45D /* CreateQuestionPoolInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuestionPoolInteractor.swift; sourceTree = "<group>"; };
+		91AB45F323DB455C00EDD45D /* QuestionPollInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPollInteractorTests.swift; sourceTree = "<group>"; };
 		91D6C19023A78CB400730E2D /* PlaceInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInteractorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +121,7 @@
 		91127BE923A392CA0098CAFE /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				91AB45E823DB341300EDD45D /* ReflectionModule */,
 				91127C9223A3AE6D0098CAFE /* PlaceModule */,
 				91127BEA23A392CA0098CAFE /* BusinessLogic.h */,
 				91127BEB23A392CA0098CAFE /* Info.plist */,
@@ -122,8 +132,8 @@
 		91127BF423A392CA0098CAFE /* BusinessLogicTests */ = {
 			isa = PBXGroup;
 			children = (
+				91AB45EB23DB353300EDD45D /* ReflectionModule */,
 				91D6C18E23A78C7900730E2D /* PlaceModule */,
-				91127BF523A392CA0098CAFE /* BusinessLogicTests.swift */,
 				91127BF723A392CA0098CAFE /* Info.plist */,
 			);
 			path = BusinessLogicTests;
@@ -141,8 +151,7 @@
 		91127C9623A3AF640098CAFE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				91127C9323A3AEB10098CAFE /* Place.swift */,
-				91127C9723A3AF700098CAFE /* PlaceCoordinate.swift */,
+				91AB45E323DB2BA800EDD45D /* Place */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -153,6 +162,57 @@
 				91127C9A23A3AF9B0098CAFE /* PlaceInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		91AB45E323DB2BA800EDD45D /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				91127C9323A3AEB10098CAFE /* Place.swift */,
+				91127C9723A3AF700098CAFE /* PlaceCoordinate.swift */,
+			);
+			path = Place;
+			sourceTree = "<group>";
+		};
+		91AB45E823DB341300EDD45D /* ReflectionModule */ = {
+			isa = PBXGroup;
+			children = (
+				91AB45EA23DB343300EDD45D /* Interactors */,
+				91AB45E923DB342500EDD45D /* Models */,
+			);
+			path = ReflectionModule;
+			sourceTree = "<group>";
+		};
+		91AB45E923DB342500EDD45D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				91AB45E523DB2BDC00EDD45D /* ReflectionEntity.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		91AB45EA23DB343300EDD45D /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				91AB45F023DB35DC00EDD45D /* CreateQuestionPoolInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		91AB45EB23DB353300EDD45D /* ReflectionModule */ = {
+			isa = PBXGroup;
+			children = (
+				91AB45EC23DB355500EDD45D /* Interactors */,
+			);
+			path = ReflectionModule;
+			sourceTree = "<group>";
+		};
+		91AB45EC23DB355500EDD45D /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				91AB45ED23DB359600EDD45D /* CreateQuestionPoolInteractorTests.swift */,
+				91AB45F323DB455C00EDD45D /* QuestionPollInteractorTests.swift */,
+			);
+			path = Interactors;
 			sourceTree = "<group>";
 		};
 		91D6C18E23A78C7900730E2D /* PlaceModule */ = {
@@ -349,6 +409,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				91127C9823A3AF700098CAFE /* PlaceCoordinate.swift in Sources */,
+				91AB45E623DB2BDC00EDD45D /* ReflectionEntity.swift in Sources */,
+				91AB45F123DB35DC00EDD45D /* CreateQuestionPoolInteractor.swift in Sources */,
 				91127C9423A3AEB10098CAFE /* Place.swift in Sources */,
 				91127C9B23A3AF9B0098CAFE /* PlaceInteractor.swift in Sources */,
 			);
@@ -358,8 +420,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91AB45EE23DB359600EDD45D /* CreateQuestionPoolInteractorTests.swift in Sources */,
+				91AB45F423DB455C00EDD45D /* QuestionPollInteractorTests.swift in Sources */,
 				91D6C19123A78CB400730E2D /* PlaceInteractorTests.swift in Sources */,
-				91127BF623A392CA0098CAFE /* BusinessLogicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +431,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				91127C9923A3AF700098CAFE /* PlaceCoordinate.swift in Sources */,
+				91AB45E723DB2BDC00EDD45D /* ReflectionEntity.swift in Sources */,
+				91AB45F223DB35DC00EDD45D /* CreateQuestionPoolInteractor.swift in Sources */,
 				91127C9523A3AEB10098CAFE /* Place.swift in Sources */,
 				91127C9C23A3AF9B0098CAFE /* PlaceInteractor.swift in Sources */,
 			);
@@ -377,8 +442,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91AB45EF23DB359600EDD45D /* CreateQuestionPoolInteractorTests.swift in Sources */,
+				91AB45F523DB455C00EDD45D /* QuestionPollInteractorTests.swift in Sources */,
 				91D6C19223A78CB400730E2D /* PlaceInteractorTests.swift in Sources */,
-				91127C1E23A396C80098CAFE /* BusinessLogicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
