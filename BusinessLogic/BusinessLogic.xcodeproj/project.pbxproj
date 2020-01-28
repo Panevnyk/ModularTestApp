@@ -17,14 +17,20 @@
 		91127C9923A3AF700098CAFE /* PlaceCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91127C9723A3AF700098CAFE /* PlaceCoordinate.swift */; };
 		91127C9B23A3AF9B0098CAFE /* PlaceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91127C9A23A3AF9B0098CAFE /* PlaceInteractor.swift */; };
 		91127C9C23A3AF9B0098CAFE /* PlaceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91127C9A23A3AF9B0098CAFE /* PlaceInteractor.swift */; };
-		91AB45E623DB2BDC00EDD45D /* ReflectionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45E523DB2BDC00EDD45D /* ReflectionEntity.swift */; };
-		91AB45E723DB2BDC00EDD45D /* ReflectionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45E523DB2BDC00EDD45D /* ReflectionEntity.swift */; };
-		91AB45EE23DB359600EDD45D /* CreateQuestionPoolInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45ED23DB359600EDD45D /* CreateQuestionPoolInteractorTests.swift */; };
-		91AB45EF23DB359600EDD45D /* CreateQuestionPoolInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45ED23DB359600EDD45D /* CreateQuestionPoolInteractorTests.swift */; };
-		91AB45F123DB35DC00EDD45D /* CreateQuestionPoolInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45F023DB35DC00EDD45D /* CreateQuestionPoolInteractor.swift */; };
-		91AB45F223DB35DC00EDD45D /* CreateQuestionPoolInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45F023DB35DC00EDD45D /* CreateQuestionPoolInteractor.swift */; };
-		91AB45F423DB455C00EDD45D /* QuestionPollInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45F323DB455C00EDD45D /* QuestionPollInteractorTests.swift */; };
-		91AB45F523DB455C00EDD45D /* QuestionPollInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45F323DB455C00EDD45D /* QuestionPollInteractorTests.swift */; };
+		911F8DF723E049F600B9B48B /* EditHabitDatasInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911F8DF623E049F600B9B48B /* EditHabitDatasInteractor.swift */; };
+		911F8DF823E049F600B9B48B /* EditHabitDatasInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911F8DF623E049F600B9B48B /* EditHabitDatasInteractor.swift */; };
+		911F8DFA23E0583C00B9B48B /* HabitsArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911F8DF923E0583C00B9B48B /* HabitsArea.swift */; };
+		911F8DFB23E0583C00B9B48B /* HabitsArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911F8DF923E0583C00B9B48B /* HabitsArea.swift */; };
+		911F8DFD23E0586100B9B48B /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911F8DFC23E0586100B9B48B /* Habit.swift */; };
+		911F8DFE23E0586100B9B48B /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911F8DFC23E0586100B9B48B /* Habit.swift */; };
+		911F8E0023E058EF00B9B48B /* HabitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911F8DFF23E058EF00B9B48B /* HabitData.swift */; };
+		911F8E0123E058EF00B9B48B /* HabitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911F8DFF23E058EF00B9B48B /* HabitData.swift */; };
+		91AB45EE23DB359600EDD45D /* EditHabitsAreaInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45ED23DB359600EDD45D /* EditHabitsAreaInteractorTests.swift */; };
+		91AB45EF23DB359600EDD45D /* EditHabitsAreaInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45ED23DB359600EDD45D /* EditHabitsAreaInteractorTests.swift */; };
+		91AB45F123DB35DC00EDD45D /* EditHabitsAreaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45F023DB35DC00EDD45D /* EditHabitsAreaInteractor.swift */; };
+		91AB45F223DB35DC00EDD45D /* EditHabitsAreaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45F023DB35DC00EDD45D /* EditHabitsAreaInteractor.swift */; };
+		91AB45F423DB455C00EDD45D /* EditHabitDatasInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45F323DB455C00EDD45D /* EditHabitDatasInteractorTests.swift */; };
+		91AB45F523DB455C00EDD45D /* EditHabitDatasInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45F323DB455C00EDD45D /* EditHabitDatasInteractorTests.swift */; };
 		91D6C19123A78CB400730E2D /* PlaceInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6C19023A78CB400730E2D /* PlaceInteractorTests.swift */; };
 		91D6C19223A78CB400730E2D /* PlaceInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6C19023A78CB400730E2D /* PlaceInteractorTests.swift */; };
 /* End PBXBuildFile section */
@@ -57,10 +63,13 @@
 		91127C9323A3AEB10098CAFE /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		91127C9723A3AF700098CAFE /* PlaceCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCoordinate.swift; sourceTree = "<group>"; };
 		91127C9A23A3AF9B0098CAFE /* PlaceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInteractor.swift; sourceTree = "<group>"; };
-		91AB45E523DB2BDC00EDD45D /* ReflectionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionEntity.swift; sourceTree = "<group>"; };
-		91AB45ED23DB359600EDD45D /* CreateQuestionPoolInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuestionPoolInteractorTests.swift; sourceTree = "<group>"; };
-		91AB45F023DB35DC00EDD45D /* CreateQuestionPoolInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuestionPoolInteractor.swift; sourceTree = "<group>"; };
-		91AB45F323DB455C00EDD45D /* QuestionPollInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPollInteractorTests.swift; sourceTree = "<group>"; };
+		911F8DF623E049F600B9B48B /* EditHabitDatasInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHabitDatasInteractor.swift; sourceTree = "<group>"; };
+		911F8DF923E0583C00B9B48B /* HabitsArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsArea.swift; sourceTree = "<group>"; };
+		911F8DFC23E0586100B9B48B /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		911F8DFF23E058EF00B9B48B /* HabitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitData.swift; sourceTree = "<group>"; };
+		91AB45ED23DB359600EDD45D /* EditHabitsAreaInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHabitsAreaInteractorTests.swift; sourceTree = "<group>"; };
+		91AB45F023DB35DC00EDD45D /* EditHabitsAreaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHabitsAreaInteractor.swift; sourceTree = "<group>"; };
+		91AB45F323DB455C00EDD45D /* EditHabitDatasInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHabitDatasInteractorTests.swift; sourceTree = "<group>"; };
 		91D6C19023A78CB400730E2D /* PlaceInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInteractorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,7 +194,9 @@
 		91AB45E923DB342500EDD45D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				91AB45E523DB2BDC00EDD45D /* ReflectionEntity.swift */,
+				911F8DF923E0583C00B9B48B /* HabitsArea.swift */,
+				911F8DFC23E0586100B9B48B /* Habit.swift */,
+				911F8DFF23E058EF00B9B48B /* HabitData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,7 +204,8 @@
 		91AB45EA23DB343300EDD45D /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				91AB45F023DB35DC00EDD45D /* CreateQuestionPoolInteractor.swift */,
+				91AB45F023DB35DC00EDD45D /* EditHabitsAreaInteractor.swift */,
+				911F8DF623E049F600B9B48B /* EditHabitDatasInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -209,8 +221,8 @@
 		91AB45EC23DB355500EDD45D /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				91AB45ED23DB359600EDD45D /* CreateQuestionPoolInteractorTests.swift */,
-				91AB45F323DB455C00EDD45D /* QuestionPollInteractorTests.swift */,
+				91AB45ED23DB359600EDD45D /* EditHabitsAreaInteractorTests.swift */,
+				91AB45F323DB455C00EDD45D /* EditHabitDatasInteractorTests.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -408,10 +420,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				911F8DFA23E0583C00B9B48B /* HabitsArea.swift in Sources */,
 				91127C9823A3AF700098CAFE /* PlaceCoordinate.swift in Sources */,
-				91AB45E623DB2BDC00EDD45D /* ReflectionEntity.swift in Sources */,
-				91AB45F123DB35DC00EDD45D /* CreateQuestionPoolInteractor.swift in Sources */,
+				911F8E0023E058EF00B9B48B /* HabitData.swift in Sources */,
+				911F8DF723E049F600B9B48B /* EditHabitDatasInteractor.swift in Sources */,
+				91AB45F123DB35DC00EDD45D /* EditHabitsAreaInteractor.swift in Sources */,
 				91127C9423A3AEB10098CAFE /* Place.swift in Sources */,
+				911F8DFD23E0586100B9B48B /* Habit.swift in Sources */,
 				91127C9B23A3AF9B0098CAFE /* PlaceInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,8 +435,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91AB45EE23DB359600EDD45D /* CreateQuestionPoolInteractorTests.swift in Sources */,
-				91AB45F423DB455C00EDD45D /* QuestionPollInteractorTests.swift in Sources */,
+				91AB45EE23DB359600EDD45D /* EditHabitsAreaInteractorTests.swift in Sources */,
+				91AB45F423DB455C00EDD45D /* EditHabitDatasInteractorTests.swift in Sources */,
 				91D6C19123A78CB400730E2D /* PlaceInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,10 +445,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				911F8DFB23E0583C00B9B48B /* HabitsArea.swift in Sources */,
 				91127C9923A3AF700098CAFE /* PlaceCoordinate.swift in Sources */,
-				91AB45E723DB2BDC00EDD45D /* ReflectionEntity.swift in Sources */,
-				91AB45F223DB35DC00EDD45D /* CreateQuestionPoolInteractor.swift in Sources */,
+				911F8E0123E058EF00B9B48B /* HabitData.swift in Sources */,
+				911F8DF823E049F600B9B48B /* EditHabitDatasInteractor.swift in Sources */,
+				91AB45F223DB35DC00EDD45D /* EditHabitsAreaInteractor.swift in Sources */,
 				91127C9523A3AEB10098CAFE /* Place.swift in Sources */,
+				911F8DFE23E0586100B9B48B /* Habit.swift in Sources */,
 				91127C9C23A3AF9B0098CAFE /* PlaceInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,8 +460,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91AB45EF23DB359600EDD45D /* CreateQuestionPoolInteractorTests.swift in Sources */,
-				91AB45F523DB455C00EDD45D /* QuestionPollInteractorTests.swift in Sources */,
+				91AB45EF23DB359600EDD45D /* EditHabitsAreaInteractorTests.swift in Sources */,
+				91AB45F523DB455C00EDD45D /* EditHabitDatasInteractorTests.swift in Sources */,
 				91D6C19223A78CB400730E2D /* PlaceInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
