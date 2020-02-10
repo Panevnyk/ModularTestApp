@@ -10,6 +10,8 @@ import Foundation
 
 public protocol EditHabitDatasInteractorInput {
     func addHabitData(_ habitData: HabitData)
+    func isHabitContainHabitData(by id: UUID) -> Bool
+    func editHabitData(_ habitData: HabitData)
     func getHabit() -> Habit
 }
 
@@ -49,6 +51,18 @@ public extension EditHabitDatasInteractor {
         habit.habitDatas.insert(habitData, at: 0)
         editHabitsDataDB.insert(habitData, at: 0)
         output.habitsWasAddedSuccessfuly(by: 0)
+    }
+
+    func isHabitContainHabitData(by id: UUID) -> Bool {
+        return habit.habitDatas.contains(where: {  $0.id == id })
+    }
+
+    func editHabitData(_ habitData: HabitData) {
+        guard let index = habit.habitDatas.firstIndex(of: habitData) else { return }
+        guard habit.canAddedHabitData(habitData) else { return }
+
+        habit.habitDatas.remove(at: index)
+        habit.habitDatas.insert(habitData, at: index)
     }
 
     func getHabit() -> Habit {

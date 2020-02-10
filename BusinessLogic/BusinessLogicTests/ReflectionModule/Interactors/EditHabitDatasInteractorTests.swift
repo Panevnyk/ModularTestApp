@@ -14,8 +14,8 @@ final class EditHabitDatasInteractorTests: XCTestCase {
     private let output = EditHabitDatasInteractorOutputMock()
     private let editHabitsDataDBMock = EditHabitDatasDBBoundaryMock()
 
-    // MARK: - Tests add HabitData output
-    func test_addHabitDataOutput_incorrectValue_dataWasNotAdded() {
+    // MARK: - Tests add HabitData output and adding into DB
+    func test_addHabitData_incorrectValue_dataWasNotAdded() {
         let habit = Habit(habitTitle: "", habitDataType: .boolean, habitDatas: [])
         let sut = makeSUT(habit: habit)
 
@@ -23,9 +23,10 @@ final class EditHabitDatasInteractorTests: XCTestCase {
         sut.addHabitData(habitData)
 
         XCTAssertEqual(output.isHabitAddingFailure, true)
+        XCTAssertNil(editHabitsDataDBMock.habitData)
     }
 
-    func test_addHabitDataOutput_correctValue_dataWasAdded() {
+    func test_addHabitData_correctValue_dataWasAdded() {
         let habit = Habit(habitTitle: "", habitDataType: .counting, habitDatas: [])
         let sut = makeSUT(habit: habit)
 
@@ -33,29 +34,61 @@ final class EditHabitDatasInteractorTests: XCTestCase {
         sut.addHabitData(habitData)
 
         XCTAssertEqual(output.isHabitsWasAddedSuccessfuly, true)
-    }
-
-    // MARK: - Tests add HabitData into DB
-    func test_addHabitDataDB_incorrectValue_dataWasNotAdded() {
-        let habit = Habit(habitTitle: "", habitDataType: .boolean, habitDatas: [])
-        let sut = makeSUT(habit: habit)
-
-        let habitData = HabitData(id: UUID(), value: 3, date: Date())
-        sut.addHabitData(habitData)
-
-        XCTAssertNil(editHabitsDataDBMock.habitData)
-    }
-
-    func test_addHabitDataDB_correctValue_dataWasAdded() {
-        let habit = Habit(habitTitle: "", habitDataType: .counting, habitDatas: [])
-        let sut = makeSUT(habit: habit)
-
-        let habitData = HabitData(id: UUID(), value: 3, date: Date())
-        sut.addHabitData(habitData)
-
         XCTAssertEqual(editHabitsDataDBMock.habitData?.id, habitData.id)
         XCTAssertEqual(editHabitsDataDBMock.habitData?.value as? Int, 3)
         XCTAssertEqual(editHabitsDataDBMock.habitData?.date, habitData.date)
+    }
+
+    // MARK: - Tests is Habit contain HabitData
+    func test_isHabitContainHabitData_correct() {
+        let habitData = HabitData(id: UUID(), value: 3, date: Date())
+        let habit = Habit(habitTitle: "", habitDataType: .counting, habitDatas: [habitData])
+        let sut = makeSUT(habit: habit)
+
+        XCTAssertEqual(sut.isHabitContainHabitData(by: habitData.id), true)
+    }
+
+    func test_isHabitContainHabitData_incorrect() {
+        let habitData = HabitData(id: UUID(), value: 3, date: Date())
+        let habit = Habit(habitTitle: "", habitDataType: .counting, habitDatas: [habitData])
+        let sut = makeSUT(habit: habit)
+
+        XCTAssertEqual(sut.isHabitContainHabitData(by: habitData.id), true)
+    }
+
+    // MARK: - Tests edit HabitData
+    func test_editHabitData_correctValue_valueWasChanged() {
+        let habitData1 = HabitData(id: UUID(), value: 1, date: Date())
+        let habitData2 = HabitData(id: UUID(), value: 2, date: Date())
+        let habitData3 = HabitData(id: UUID(), value: 3, date: Date())
+        let habit = Habit(habitTitle: "", habitDataType: .counting, habitDatas: [habitData1, habitData2, habitData3])
+        let sut = makeSUT(habit: habit)
+
+        let editedHabitData = HabitData(id: habitData2.id, value: 222, date: habitData2.date)
+        sut.editHabitData(editedHabitData)
+
+        let habitDatas = sut.getHabit().habitDatas
+        XCTAssertEqual(habitDatas.count, 3)
+        XCTAssertEqual(habitDatas[0].value as? Int, 1)
+        XCTAssertEqual(habitDatas[1].value as? Int, 222)
+        XCTAssertEqual(habitDatas[2].value as? Int, 3)
+    }
+
+    func test_editHabitData_incorrectValue_valueWasNotChanged() {
+        let habitData1 = HabitData(id: UUID(), value: 1, date: Date())
+        let habitData2 = HabitData(id: UUID(), value: 2, date: Date())
+        let habitData3 = HabitData(id: UUID(), value: 3, date: Date())
+        let habit = Habit(habitTitle: "", habitDataType: .counting, habitDatas: [habitData1, habitData2, habitData3])
+        let sut = makeSUT(habit: habit)
+
+        let editedHabitData = HabitData(id: habitData2.id, value: false, date: habitData2.date)
+        sut.editHabitData(editedHabitData)
+
+        let habitDatas = sut.getHabit().habitDatas
+        XCTAssertEqual(habitDatas.count, 3)
+        XCTAssertEqual(habitDatas[0].value as? Int, 1)
+        XCTAssertEqual(habitDatas[1].value as? Int, 2)
+        XCTAssertEqual(habitDatas[2].value as? Int, 3)
     }
 
     // MARK: - Helpers
