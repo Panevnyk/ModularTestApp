@@ -8,36 +8,56 @@
 
 public struct Habit {
     public var habitTitle: String
+    public var creationDate: Date
+    public var schedule: [HabitScheduleDay]
     public var habitDataType: HabitDataType
     public var habitDatas: [HabitData]
 
-    func canAddedHabitData(_ habitData: HabitData) -> Bool {
+    public init(habitTitle: String,
+                creationDate: Date = Date(),
+                schedule: [HabitScheduleDay] = HabitScheduleDay.allCases,
+                habitDataType: HabitDataType,
+                habitDatas: [HabitData]) {
+
+        self.habitTitle = habitTitle
+        self.creationDate = creationDate
+        self.schedule = schedule
+        self.habitDataType = habitDataType
+        self.habitDatas = habitDatas
+    }
+
+    public func canAddedHabitData(_ habitData: HabitData) -> Bool {
         switch habitDataType {
         case .boolean:
             return habitData.value is Bool
-        case .counting:
-            return habitData.value is Int
         case .range:
             return habitData.value is Int
-        case .time:
-            return habitData.value is Date
         case .description:
             return habitData.value is String
         }
     }
 }
 
+public enum HabitScheduleDay: CaseIterable {
+    case sunday
+    case monday
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+    case saturday
+}
+
 public enum HabitDataType {
     case boolean
-    case counting
     case range
-    case time
     case description
 }
 
 extension Habit: Equatable {
     public static func == (lhs: Habit, rhs: Habit) -> Bool {
         return lhs.habitTitle == rhs.habitTitle
+            && lhs.creationDate == rhs.creationDate
             && lhs.habitDataType == rhs.habitDataType
             && lhs.habitDatas == rhs.habitDatas
     }
