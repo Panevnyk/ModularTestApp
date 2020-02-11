@@ -9,18 +9,21 @@
 public struct Habit {
     public var habitTitle: String
     public var creationDate: Date
+    public var timePeriod: HabitTimePeriod
     public var schedule: [HabitScheduleDay]
     public var habitDataType: HabitDataType
     public var habitDatas: [HabitData]
 
     public init(habitTitle: String,
                 creationDate: Date = Date(),
+                timePeriod: HabitTimePeriod,
                 schedule: [HabitScheduleDay] = HabitScheduleDay.allCases,
                 habitDataType: HabitDataType,
                 habitDatas: [HabitData]) {
 
         self.habitTitle = habitTitle
         self.creationDate = creationDate
+        self.timePeriod = timePeriod
         self.schedule = schedule
         self.habitDataType = habitDataType
         self.habitDatas = habitDatas
@@ -36,6 +39,15 @@ public struct Habit {
             return habitData.value is String
         }
     }
+
+    public static func makeEmptyInstance() -> Habit {
+        return Habit(habitTitle: "",
+                     creationDate: Date(),
+                     timePeriod: .day,
+                     schedule: HabitScheduleDay.allCases,
+                     habitDataType: .boolean,
+                     habitDatas: [])
+    }
 }
 
 public enum HabitScheduleDay: CaseIterable {
@@ -48,6 +60,12 @@ public enum HabitScheduleDay: CaseIterable {
     case saturday
 }
 
+public enum HabitTimePeriod {
+    case day
+    case week
+    case month
+}
+
 public enum HabitDataType {
     case boolean
     case range
@@ -58,6 +76,7 @@ extension Habit: Equatable {
     public static func == (lhs: Habit, rhs: Habit) -> Bool {
         return lhs.habitTitle == rhs.habitTitle
             && lhs.creationDate == rhs.creationDate
+            && lhs.timePeriod == rhs.timePeriod
             && lhs.habitDataType == rhs.habitDataType
             && lhs.habitDatas == rhs.habitDatas
     }

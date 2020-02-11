@@ -14,13 +14,6 @@ final class HabitAnalyticsInteractorTests: XCTestCase {
     private let outputMock = HabitAnalyticsInteractorOutputMock()
     private let habitAnalyticsDBMock = HabitAnalyticsInteractorDBBoundaryMock()
 
-    private let dateFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
-        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)!
-        return dateFormatter
-    }()
-
     // MARK: - Tests sinceStart analytics
     func test_getHabitAnalyticsSinceStart() {
         makeSUT().loadHabitAnalytics(by: .sinceStart)
@@ -74,7 +67,7 @@ final class HabitAnalyticsInteractorTests: XCTestCase {
         XCTAssertEqual(displayedHabitDatas![1].date, makeDate("12/31/2018"))
     }
 
-    func test_getMonthlyHabitAnalytics_byDateBeforeHabitCreated() {
+    func test_getMonthlyHabitAnalytics_byMonthBeforeHabitCreated() {
         makeSUT().loadHabitAnalytics(by: .month(makeDate("11/30/2018")))
         XCTAssertEqual(outputMock.displayedHabitDatas?.count, 0)
     }
@@ -85,6 +78,33 @@ final class HabitAnalyticsInteractorTests: XCTestCase {
     }
 
     // MARK: - Tests by years analytics
+    func test_getYearlyHabitAnalytics_byLastDayOfYear() {
+        makeSUT().loadHabitAnalytics(by: .year(makeDate("12/31/2018")))
+
+        let displayedHabitDatas = outputMock.displayedHabitDatas
+        XCTAssertEqual(displayedHabitDatas?.count, 2)
+        XCTAssertEqual(displayedHabitDatas![0].date, makeDate("12/30/2018"))
+        XCTAssertEqual(displayedHabitDatas![1].date, makeDate("12/31/2018"))
+    }
+
+    func test_getYearlyHabitAnalytics_byFirstDayOfYear() {
+        makeSUT().loadHabitAnalytics(by: .year(makeDate("01/01/2018")))
+
+        let displayedHabitDatas = outputMock.displayedHabitDatas
+        XCTAssertEqual(displayedHabitDatas?.count, 2)
+        XCTAssertEqual(displayedHabitDatas![0].date, makeDate("12/30/2018"))
+        XCTAssertEqual(displayedHabitDatas![1].date, makeDate("12/31/2018"))
+    }
+
+    func test_getYearlyHabitAnalytics_byYearBeforeHabitCreated() {
+        makeSUT().loadHabitAnalytics(by: .year(makeDate("12/31/2017")))
+        XCTAssertEqual(outputMock.displayedHabitDatas?.count, 0)
+    }
+
+    func test_getYearlyHabitAnalytics_byDateFromFuture() {
+        makeSUT().loadHabitAnalytics(by: .year(makeDate("02/14/2019")))
+        XCTAssertEqual(outputMock.displayedHabitDatas?.count, 0)
+    }
 
     // MARK: - Helpers
     func makeSUT() -> HabitAnalyticsInteractor {
@@ -98,6 +118,7 @@ final class HabitAnalyticsInteractorTests: XCTestCase {
     func makeHabit() -> Habit {
         return Habit(habitTitle: "Test",
                      creationDate: makeDate("12/30/2018"),
+                     timePeriod: .day, 
                      schedule: HabitScheduleDay.allCases,
                      habitDataType: .boolean,
                      habitDatas: makeHabitDatas())
@@ -111,10 +132,6 @@ final class HabitAnalyticsInteractorTests: XCTestCase {
                 HabitData(id: UUID(), value: true, date: makeDate("01/25/2019")),
                 HabitData(id: UUID(), value: true, date: makeDate("02/11/2019")),
                 HabitData(id: UUID(), value: true, date: makeDate("02/13/2019"))]
-    }
-
-    func makeDate(_ stringDate: String) -> Date {
-        return dateFormatter.date(from: stringDate)!
     }
 }
 

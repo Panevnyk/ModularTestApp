@@ -16,7 +16,7 @@ final class EditHabitDatasInteractorTests: XCTestCase {
 
     // MARK: - Tests add HabitData output and adding into DB
     func test_addHabitData_incorrectValue_dataWasNotAdded() {
-        let habit = Habit(habitTitle: "", habitDataType: .boolean, habitDatas: [])
+        let habit = Habit(habitTitle: "", timePeriod: .day, habitDataType: .boolean, habitDatas: [])
         let sut = makeSUT(habit: habit)
 
         let habitData = HabitData(id: UUID(), value: 3, date: Date())
@@ -27,7 +27,7 @@ final class EditHabitDatasInteractorTests: XCTestCase {
     }
 
     func test_addHabitData_correctValue_dataWasAdded() {
-        let habit = Habit(habitTitle: "", habitDataType: .range, habitDatas: [])
+        let habit = Habit(habitTitle: "", timePeriod: .day, habitDataType: .range, habitDatas: [])
         let sut = makeSUT(habit: habit)
 
         let habitData = HabitData(id: UUID(), value: 3, date: Date())
@@ -42,7 +42,7 @@ final class EditHabitDatasInteractorTests: XCTestCase {
     // MARK: - Tests is Habit contain HabitData
     func test_isHabitContainHabitData_correct() {
         let habitData = HabitData(id: UUID(), value: 3, date: Date())
-        let habit = Habit(habitTitle: "", habitDataType: .range, habitDatas: [habitData])
+        let habit = Habit(habitTitle: "", timePeriod: .day, habitDataType: .range, habitDatas: [habitData])
         let sut = makeSUT(habit: habit)
 
         XCTAssertEqual(sut.isHabitContainHabitData(by: habitData.id), true)
@@ -50,7 +50,7 @@ final class EditHabitDatasInteractorTests: XCTestCase {
 
     func test_isHabitContainHabitData_incorrect() {
         let habitData = HabitData(id: UUID(), value: 3, date: Date())
-        let habit = Habit(habitTitle: "", habitDataType: .range, habitDatas: [habitData])
+        let habit = Habit(habitTitle: "", timePeriod: .day, habitDataType: .range, habitDatas: [habitData])
         let sut = makeSUT(habit: habit)
 
         XCTAssertEqual(sut.isHabitContainHabitData(by: habitData.id), true)
@@ -61,7 +61,7 @@ final class EditHabitDatasInteractorTests: XCTestCase {
         let habitData1 = HabitData(id: UUID(), value: 1, date: Date())
         let habitData2 = HabitData(id: UUID(), value: 2, date: Date())
         let habitData3 = HabitData(id: UUID(), value: 3, date: Date())
-        let habit = Habit(habitTitle: "", habitDataType: .range, habitDatas: [habitData1, habitData2, habitData3])
+        let habit = Habit(habitTitle: "", timePeriod: .day, habitDataType: .range, habitDatas: [habitData1, habitData2, habitData3])
         let sut = makeSUT(habit: habit)
 
         let updateHabitData = HabitData(id: habitData2.id, value: 222, date: habitData2.date)
@@ -83,7 +83,7 @@ final class EditHabitDatasInteractorTests: XCTestCase {
         let habitData1 = HabitData(id: UUID(), value: 1, date: Date())
         let habitData2 = HabitData(id: UUID(), value: 2, date: Date())
         let habitData3 = HabitData(id: UUID(), value: 3, date: Date())
-        let habit = Habit(habitTitle: "", habitDataType: .range, habitDatas: [habitData1, habitData2, habitData3])
+        let habit = Habit(habitTitle: "", timePeriod: .day, habitDataType: .range, habitDatas: [habitData1, habitData2, habitData3])
         let sut = makeSUT(habit: habit)
 
         let updateHabitData = HabitData(id: habitData2.id, value: false, date: habitData2.date)

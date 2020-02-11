@@ -24,7 +24,6 @@ public protocol HabitAnalyticsInteractorDBBoundary {
 
 }
 
-
 public class HabitAnalyticsInteractor: HabitAnalyticsInteractorInput {
     // MARK: - Properties
     private let output: HabitAnalyticsInteractorOutput
@@ -59,7 +58,7 @@ public extension HabitAnalyticsInteractor {
         case .month(let date):
             return getMonthHabitDatas(by: date)
         case .year(let date):
-            return []
+            return getYearHabitDatas(by: date)
         }
     }
 
@@ -70,5 +69,10 @@ public extension HabitAnalyticsInteractor {
     func getMonthHabitDatas(by monthDate: Date) -> [HabitData] {
         guard currentDate >= monthDate else { return [] }
         return habit.habitDatas.filter { $0.date >= monthDate.startOfMonth && $0.date <= monthDate.endOfMonth }
+    }
+
+    func getYearHabitDatas(by yearDate: Date) -> [HabitData] {
+        guard currentDate >= yearDate else { return [] }
+        return habit.habitDatas.filter { $0.date >= yearDate.startOfYear && $0.date <= yearDate.endOfYear }
     }
 }

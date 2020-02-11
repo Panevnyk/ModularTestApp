@@ -23,7 +23,7 @@ final class EditHabitsAreaInteractorTests: XCTestCase {
     func test_createQuestionPoolOutput_withOneQuestion_poolCreatedSuccessfuly() {
         let sut = makeSUT()
 
-        sut.addHabit(Habit(habitTitle: "", habitDataType: .boolean, habitDatas: []))
+        sut.addHabit(Habit(habitTitle: "", timePeriod: .day, habitDataType: .boolean, habitDatas: []))
         sut.saveHabitsArea()
 
         XCTAssertTrue(output.ishabitsAreaDidCreateSuccessfuly)
@@ -38,8 +38,8 @@ final class EditHabitsAreaInteractorTests: XCTestCase {
     func test_createQuestionPoolDB_withTwoQuestions_poolCreatedSuccessfuly() {
         let sut = makeSUT()
 
-        sut.addHabit(Habit(habitTitle: "Test1", habitDataType: .boolean, habitDatas: []))
-        sut.addHabit(Habit(habitTitle: "Test2", habitDataType: .range, habitDatas: []))
+        sut.addHabit(Habit(habitTitle: "Test1", timePeriod: .day, habitDataType: .boolean, habitDatas: []))
+        sut.addHabit(Habit(habitTitle: "Test2", timePeriod: .day, habitDataType: .range, habitDatas: []))
         sut.saveHabitsArea()
 
         let habits = editHabitsAreaDBMock.habitsArea?.habits
@@ -66,8 +66,8 @@ final class EditHabitsAreaInteractorTests: XCTestCase {
     func test_canCreateQuestionPool_withNoQuestions_falseResult() {
         let sut = makeSUT()
 
-        sut.addHabit(Habit(habitTitle: "Test1", habitDataType: .boolean, habitDatas: []))
-        sut.addHabit(Habit(habitTitle: "Test2", habitDataType: .range, habitDatas: []))
+        sut.addHabit(Habit(habitTitle: "Test1", timePeriod: .day, habitDataType: .boolean, habitDatas: []))
+        sut.addHabit(Habit(habitTitle: "Test2", timePeriod: .day, habitDataType: .range, habitDatas: []))
         let canSaveHabitsArea = sut.canSaveHabitsArea()
 
         XCTAssertTrue(canSaveHabitsArea)
