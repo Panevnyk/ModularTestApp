@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct PlaceRowView: View {
+struct HabitRowView: View {
     var viewModel: PlaceViewModel
     
     var body: some View {
@@ -16,8 +16,8 @@ struct PlaceRowView: View {
     }
 }
 
-struct PlaceRowView_Previews: PreviewProvider {
+struct HabitRowView_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceRowView(viewModel: PlaceViewModel(id: 0, name: "Test"))
+        HabitRowView(viewModel: PlaceViewModel(id: 0, name: "Test"))
     }
 }

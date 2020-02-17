@@ -10,26 +10,20 @@ import SwiftUI
 import Combine
 import BusinessLogic
 
-public struct PlaceListView: View {
+// FIXME: - Should be REMOVED, big crutch
+var interactor2: CreateHabitInteractor?
+
+public struct HabitsListView: View {
     // MARK: - Properties
     @State
     private var selection: Int? = nil
     @State
-    var showingAddPlace = false
+    var showingCreateHabit = false
     @ObservedObject
     private var dataSource = PlaceDataSource()
     
-    private var interactor: PlaceInteractorInput?
-    
-    var profileButton: some View {
-        Button(action: { self.showingAddPlace.toggle() }) {
-            Image(systemName: "pencil.tip.crop.circle.badge.plus")
-                .imageScale(.large)
-                .accessibility(label: Text("User Profile"))
-                .padding()
-        }
-    }
-    
+    private weak var interactor: PlaceInteractorInput?
+
     // MARK: - Init
     public init(interactor: PlaceInteractorInput?) {
         self.interactor = interactor
@@ -42,19 +36,32 @@ public struct PlaceListView: View {
             VStack {
                 List() {
                     ForEach(dataSource.placeViewModels) { viewModel in
-                        PlaceRowView(viewModel: viewModel)
+                        HabitRowView(viewModel: viewModel)
                     }.onDelete(perform: deleteItems)
                 }
             }
-            .navigationBarTitle(Text("List of places"))
-            .navigationBarItems(trailing: profileButton)
-            .sheet(isPresented: $showingAddPlace, onDismiss: fetchData) {
-                AddPlaceView(interactor: self.interactor)
+            .navigationBarTitle(Text("Habits"))
+            .navigationBarItems(trailing:
+                CreateHabitButton(action: { self.showingCreateHabit.toggle() }))
+            .sheet(isPresented: $showingCreateHabit, onDismiss: fetchData) {
+                self.createHabitView()
             }
         }
         .onAppear(perform: fetchData)
     }
-    
+
+    func createHabitView() -> CreateHabitView {
+        // FIXME: - Should be moved to iOSMain
+        let presenter = CreateHabitPresenter()
+        let db = CreateHabitDBBoundaryMock()
+        let interactor12 = CreateHabitInteractor(output: presenter,
+                                                createHabitDB: db)
+        let view = CreateHabitView(interactor: interactor12)
+        presenter.view = view
+        interactor2 = interactor12
+        return view
+    }
+
     private func fetchData() {
         interactor?.getAllSortedPlaces()
     }
@@ -68,14 +75,14 @@ public struct PlaceListView: View {
 }
 
 // MARK: UI methods
-private extension PlaceListView {
+private extension HabitsListView {
     func setupUI() {
         UITableView.appearance().tableFooterView = UIView()
     }
 }
 
 // MARK: PlacePresenterOutput
-extension PlaceListView: PlacePresenterOutput {
+extension HabitsListView: PlacePresenterOutput {
     public func display(placeViewModels: [PlaceViewModel]) {
         dataSource.placeViewModels = placeViewModels
     }
@@ -84,6 +91,6 @@ extension PlaceListView: PlacePresenterOutput {
 // MARK: - PreviewProvider
 struct PlaceView_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceListView(interactor: nil)
+        HabitsListView(interactor: nil)
     }
 }

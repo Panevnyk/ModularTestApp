@@ -53,6 +53,7 @@
 		9114901A23A92DFC00ABFA96 /* PlaceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAssembly.swift; sourceTree = "<group>"; };
 		9114901F23A9311E00ABFA96 /* iOSUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		914DBC2123ACF83F00092638 /* CoreDataDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreDataDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9185BE5D23F402C9001EFEB0 /* iOSMain.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSMain.entitlements; sourceTree = "<group>"; };
 		918D8D48239FFD0C0064AC83 /* iOSMain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		918D8D4B239FFD0C0064AC83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		918D8D4D239FFD0C0064AC83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +127,7 @@
 		918D8D4A239FFD0C0064AC83 /* iOSMain */ = {
 			isa = PBXGroup;
 			children = (
+				9185BE5D23F402C9001EFEB0 /* iOSMain.entitlements */,
 				9114901E23A92ECE00ABFA96 /* Assemblies */,
 				918D8D4B239FFD0C0064AC83 /* AppDelegate.swift */,
 				918D8D4D239FFD0C0064AC83 /* SceneDelegate.swift */,
@@ -411,6 +413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iOSMain/iOSMain.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iOSMain/Preview Content\"";
 				DEVELOPMENT_TEAM = G6KD9UARPF;
@@ -422,6 +425,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = vp.iOSMain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -431,6 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iOSMain/iOSMain.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iOSMain/Preview Content\"";
 				DEVELOPMENT_TEAM = G6KD9UARPF;
@@ -442,6 +447,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = vp.iOSMain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -15,13 +15,13 @@ import iOSUI
 final class PlaceAssembly {
     let presenter: PlaceInteractorOutput
     let interactor: PlaceInteractorInput
-    let view: PlaceListView
+    let view: HabitsListView
     
     init(placeDB: PlaceDBBoundary) {
         let presenter = PlacePresenter()
         let interactor = PlaceInteractor(output: presenter,
                                          placeDB: placeDB)
-        let view = PlaceListView(interactor: interactor)
+        let view = HabitsListView(interactor: interactor)
         presenter.view = view
         
         self.presenter = presenter

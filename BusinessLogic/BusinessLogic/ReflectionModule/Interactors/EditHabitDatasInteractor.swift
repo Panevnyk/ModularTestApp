@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol EditHabitDatasInteractorInput {
+public protocol EditHabitDatasInteractorInput: class {
     func addHabitData(_ habitData: HabitData)
     func isHabitContainHabitData(by id: UUID) -> Bool
     func updateHabitData(_ habitData: HabitData)
