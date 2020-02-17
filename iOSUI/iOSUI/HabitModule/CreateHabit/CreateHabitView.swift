@@ -98,8 +98,6 @@ struct CreateHabitView: View {
         .padding(.horizontal, 15)
         .padding(.vertical, 15)
     }
-
-    var subscribtion: AnyCancellable?
 }
 
 // MARK: - CreateHabitPresenterOutput
