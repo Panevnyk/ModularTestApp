@@ -6,26 +6,26 @@
 //  Copyright © 2019 Vladyslav Panevnyk. All rights reserved.
 //
 
-import CoreData
-import BusinessLogic
+//import CoreData
+//import BusinessLogic
 
-extension CoreDataService: PlaceDBBoundary {
-    public func getAllPlaces() -> [Place] {
+//extension CoreDataService: PlaceDBBoundary {
+//    public func getAllPlaces() -> [Place] {
 //        let placesMO: [PlaceMO] = getEntities() ?? []
 //        return placesMO.compactMap { makePlace(from: $0) }
-        return []
-    }
-
-    public func add(place: Place) {
+//        return []
+//    }
+//
+//    public func add(place: Place) {
 //        let placeMO = makePlaceMO(from: place, backgroundContext: backgroundContext)
 //        save(object: placeMO)
-    }
-
-    public func remove(place: Place) {
+//    }
+//
+//    public func remove(place: Place) {
 //        guard let placeMOForRemove = fetchPlaceMOFromDB(by: place, backgroundContext: backgroundContext)  else { return }
 //        remove(object: placeMOForRemove)
-    }
-}
+//    }
+//}
 
 //// MARK: - Helper methods
 //private extension CoreDataService {
