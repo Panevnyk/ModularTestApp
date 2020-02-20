@@ -11,16 +11,15 @@ import BusinessLogic
 import CoreDataDB
 import iOSUI
 
-
-final class PlaceAssembly {
-    let presenter: PlaceInteractorOutput
-    let interactor: PlaceInteractorInput
+final class HabitAssembly {
+    let presenter: HabitListInteractorOutput
+    let interactor: HabitListInteractorInput
     let view: HabitsListView
     
-    init(placeDB: PlaceDBBoundary) {
-        let presenter = PlacePresenter()
-        let interactor = PlaceInteractor(output: presenter,
-                                         placeDB: placeDB)
+    init(habitListDB: HabitListDBBoundary) {
+        let presenter = HabitListPresenter()
+        let interactor = HabitListInteractor(output: presenter,
+                                             habitListDB: habitListDB)
         let view = HabitsListView(interactor: interactor)
         presenter.view = view
         

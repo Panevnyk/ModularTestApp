@@ -9,7 +9,7 @@
 import CoreData
 import BusinessLogic
 
-extension CoreDataService: CreateHabitDBBoundary {
+extension CoreDataService: CreateHabitDBBoundary, HabitListDBBoundary {
     public func addHabit(_ habit: Habit) {
         let habitMO = makeHabitMO(from: habit, backgroundContext: backgroundContext)
         save(object: habitMO)
@@ -24,7 +24,7 @@ extension CoreDataService: CreateHabitDBBoundary {
 // MARK: - Transform Habit to HabitMO
 private extension CoreDataService {
     func makeHabitMO(from habit: Habit, backgroundContext: NSManagedObjectContext) -> HabitMO {
-        let habitMO = HabitMO()
+        let habitMO = HabitMO(context: backgroundContext)
         habitMO.habitTitle = habit.habitTitle
         habitMO.creationDate = habit.creationDate
         habitMO.timePeriod = Int64(habit.timePeriod.rawValue)
@@ -42,7 +42,7 @@ private extension CoreDataService {
     }
 
     func makeHabitDataMO(from habitData: HabitData, backgroundContext: NSManagedObjectContext) -> HabitDataMO {
-        let habitDataMO = HabitDataMO()
+        let habitDataMO = HabitDataMO(context: backgroundContext)
         habitDataMO.id = habitData.id
         habitDataMO.value = habitData.value as? String
         habitDataMO.date = habitData.date

@@ -9,15 +9,15 @@
 import SwiftUI
 
 struct HabitRowView: View {
-    var viewModel: PlaceViewModel
+    var viewModel: HabitViewModel
     
     var body: some View {
-        Text(viewModel.name)
+        Text(viewModel.title)
     }
 }
 
 struct HabitRowView_Previews: PreviewProvider {
     static var previews: some View {
-        HabitRowView(viewModel: PlaceViewModel(id: 0, name: "Test"))
+        HabitRowView(viewModel: HabitViewModel(id: 0, title: "Test"))
     }
 }

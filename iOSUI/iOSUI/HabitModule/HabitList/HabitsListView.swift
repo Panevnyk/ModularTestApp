@@ -10,22 +10,27 @@ import SwiftUI
 import Combine
 import BusinessLogic
 
-// FIXME: - Should be REMOVED, big crutch
-var interactor2: CreateHabitInteractor?
+public protocol HabitsListViewCoordinatorDelegate {
+    func createHabitViewAction(completion: OptionalClosure)
+}
 
 public struct HabitsListView: View {
     // MARK: - Properties
+
+    // Boundaries
+    private var interactor: HabitListInteractorInput?
+
+    // Delegates
+    public var coordinatorDelegate: HabitsListViewCoordinatorDelegate?
+
+    // UI
     @State
     private var selection: Int? = nil
-    @State
-    var showingCreateHabit = false
     @ObservedObject
-    private var dataSource = PlaceDataSource()
-    
-    private weak var interactor: PlaceInteractorInput?
+    private var dataSource = HabitDataSource()
 
     // MARK: - Init
-    public init(interactor: PlaceInteractorInput?) {
+    public init(interactor: HabitListInteractorInput?) {
         self.interactor = interactor
         setupUI()
     }
@@ -35,42 +40,34 @@ public struct HabitsListView: View {
         NavigationView {
             VStack {
                 List() {
-                    ForEach(dataSource.placeViewModels) { viewModel in
+                    ForEach(dataSource.habitViewModels) { viewModel in
                         HabitRowView(viewModel: viewModel)
                     }.onDelete(perform: deleteItems)
                 }
             }
             .navigationBarTitle(Text("Habits"))
             .navigationBarItems(trailing:
-                CreateHabitButton(action: { self.showingCreateHabit.toggle() }))
-            .sheet(isPresented: $showingCreateHabit, onDismiss: fetchData) {
-                self.createHabitView()
-            }
+                CreateHabitButton(action: { self.createHabitAction() }))
         }
         .onAppear(perform: fetchData)
     }
 
-    func createHabitView() -> CreateHabitView {
-        // FIXME: - Should be moved to iOSMain
-        let presenter = CreateHabitPresenter()
-        let db = CreateHabitDBBoundaryMock()
-        let interactor12 = CreateHabitInteractor(output: presenter,
-                                                createHabitDB: db)
-        let view = CreateHabitView(interactor: interactor12)
-        presenter.view = view
-        interactor2 = interactor12
-        return view
+    // TODO: - Shoud be used after close create action
+    private func fetchData() {
+        interactor?.loadHabits()
     }
 
-    private func fetchData() {
-        interactor?.getAllSortedPlaces()
+    private func createHabitAction() {
+        coordinatorDelegate?.createHabitViewAction {
+            self.fetchData()
+        }
     }
     
     private func deleteItems(at indexSet: IndexSet) {
-        indexSet.forEach { index in
-            interactor?.removePlace(by: index)
-        }
-        dataSource.placeViewModels.remove(atOffsets: indexSet)
+//        indexSet.forEach { index in
+//            interactor?.removePlace(by: index)
+//        }
+//        dataSource.habitViewModels.remove(atOffsets: indexSet)
     }
 }
 
@@ -82,9 +79,9 @@ private extension HabitsListView {
 }
 
 // MARK: PlacePresenterOutput
-extension HabitsListView: PlacePresenterOutput {
-    public func display(placeViewModels: [PlaceViewModel]) {
-        dataSource.placeViewModels = placeViewModels
+extension HabitsListView: HabitListPresenterOutput {
+    public func display(habitViewModels: [HabitViewModel]) {
+        dataSource.habitViewModels = habitViewModels
     }
 }
 

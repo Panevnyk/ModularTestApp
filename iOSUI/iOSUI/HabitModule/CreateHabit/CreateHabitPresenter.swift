@@ -9,25 +9,23 @@
 import UIKit
 import BusinessLogic
 
-protocol CreateHabitPresenterOutput {
+public protocol CreateHabitPresenterOutput {
 }
 
-final class CreateHabitPresenter: CreateHabitInteractorOutput {
-    func present(habit: Habit) {
-        
+final public class CreateHabitPresenter: CreateHabitInteractorOutput {
+    public var view: CreateHabitPresenterOutput?
+
+    public init() {}
+
+    public func present(habit: Habit) {
+
     }
 
-    var view: CreateHabitPresenterOutput?
-
-    func habitAddedSuccessfuly() {
+    public func habitAddedSuccessfuly() {
         print("!!! SUCCESS YEAH")
     }
     
-    func habitAddingFailure() {
+    public func habitAddingFailure() {
         print("!!! Failure ((((")
     }
-}
-
-class CreateHabitDBBoundaryMock: CreateHabitDBBoundary {
-    func addHabit(_ habit: Habit) {}
 }

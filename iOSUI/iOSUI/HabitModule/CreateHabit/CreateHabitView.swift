@@ -10,16 +10,20 @@ import SwiftUI
 import Combine
 import BusinessLogic
 
-struct CreateHabitView: View {
+public protocol CreateHabitViewCoordinatorDelegate {
+    func dissmiss()
+}
+
+public struct CreateHabitView: View {
     // MARK: - Properties
 
     // Boundaries
-    private weak var interactor: CreateHabitInteractorInput?
+    private var interactor: CreateHabitInteractorInput?
+
+    // Delegates
+    public var coordinatorDelegate: CreateHabitViewCoordinatorDelegate?
 
     // UI
-    @Environment(\.presentationMode)
-    private var presentationMode: Binding<PresentationMode>
-
     @State private var habitTitle = ""
     @State private var creationDate = Date()
     @State private var selectedIndex = 0
@@ -62,7 +66,7 @@ struct CreateHabitView: View {
     }
 
     // MARK: - Body
-    var body: some View {
+    public var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             HStack {
                 Text("Create a habit")
@@ -115,7 +119,7 @@ private extension CreateHabitView {
     }
 
     func closeAction() {
-        presentationMode.wrappedValue.dismiss()
+        coordinatorDelegate?.dissmiss()
     }
 }
 
