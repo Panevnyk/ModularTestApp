@@ -22,6 +22,7 @@
 		9185BE6723F453F3001EFEB0 /* KeyValueActionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185BE6623F453F3001EFEB0 /* KeyValueActionSheetView.swift */; };
 		9185BE6A23F4582B001EFEB0 /* CreateHabitPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185BE6923F4582B001EFEB0 /* CreateHabitPresenterTests.swift */; };
 		918E902623B4CAE300A3BD61 /* Color+AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E902523B4CAE300A3BD61 /* Color+AppStyle.swift */; };
+		9191366723FEEA070041E68A /* DateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191366623FEEA070041E68A /* DateFactory.swift */; };
 		91A4643D23F54C63009F2D28 /* EdgeInsets+Zero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A4643C23F54C63009F2D28 /* EdgeInsets+Zero.swift */; };
 		91A4643F23F5861E009F2D28 /* HabitScheduleDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A4643E23F5861E009F2D28 /* HabitScheduleDaysView.swift */; };
 		91BD282423F2D3EA002D4A6F /* CreateHabitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BD282323F2D3EA002D4A6F /* CreateHabitButton.swift */; };
@@ -77,6 +78,7 @@
 		9185BE6623F453F3001EFEB0 /* KeyValueActionSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueActionSheetView.swift; sourceTree = "<group>"; };
 		9185BE6923F4582B001EFEB0 /* CreateHabitPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHabitPresenterTests.swift; sourceTree = "<group>"; };
 		918E902523B4CAE300A3BD61 /* Color+AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppStyle.swift"; sourceTree = "<group>"; };
+		9191366623FEEA070041E68A /* DateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFactory.swift; sourceTree = "<group>"; };
 		91A4643C23F54C63009F2D28 /* EdgeInsets+Zero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EdgeInsets+Zero.swift"; sourceTree = "<group>"; };
 		91A4643E23F5861E009F2D28 /* HabitScheduleDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitScheduleDaysView.swift; sourceTree = "<group>"; };
 		91BD282323F2D3EA002D4A6F /* CreateHabitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHabitButton.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		91127C8023A3A01A0098CAFE /* iOSUITests */ = {
 			isa = PBXGroup;
 			children = (
+				9191366523FEE9F30041E68A /* Helpers */,
 				9185BE6823F45810001EFEB0 /* HabitModule */,
 				91127C8323A3A01A0098CAFE /* Info.plist */,
 			);
@@ -191,6 +194,14 @@
 				917867AF23FED74C009E53CB /* Constants.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9191366523FEE9F30041E68A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9191366623FEEA070041E68A /* DateFactory.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		91D6C19323A7ACBF00730E2D /* HabitModule */ = {
@@ -362,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9191366723FEEA070041E68A /* DateFactory.swift in Sources */,
 				91D6B9D723AA51EE0059EE9B /* HabitListPresenterTests.swift in Sources */,
 				9185BE6A23F4582B001EFEB0 /* CreateHabitPresenterTests.swift in Sources */,
 			);

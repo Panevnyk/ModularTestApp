@@ -7,11 +7,12 @@
 //
 
 import XCTest
+@testable import BusinessLogic
 @testable import iOSUI
 
 final class CreateHabitPresenterTests: XCTestCase {
     // MARK: - Mocks
-    private let output = CreateHabitInteractorOutputMock()
+    private let output = CreateHabitPresenterOutputMock()
     private let createHabitDBMock = CreateHabitDBBoundaryMock()
 
     // MARK: - Tests
@@ -26,8 +27,10 @@ final class CreateHabitPresenterTests: XCTestCase {
 // MARK: - Mock
 private extension CreateHabitPresenterTests {
     final class CreateHabitPresenterOutputMock: CreateHabitPresenterOutput {
-        func display(habit: Habit) {
+        func display(habit: Habit) {}
+    }
 
-        }
+    final class CreateHabitDBBoundaryMock: CreateHabitDBBoundary {
+        func addHabit(_ habit: Habit) {}
     }
 }

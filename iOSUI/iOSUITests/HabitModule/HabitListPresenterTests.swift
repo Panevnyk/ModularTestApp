@@ -27,7 +27,7 @@ final class HabitListPresenterTests: XCTestCase {
         XCTAssertEqual(viewModels?.first?.id, 0)
         XCTAssertEqual(viewModels?.last?.id, 1)
         XCTAssertEqual(viewModels?.first?.title, "Test1")
-        XCTAssertEqual(viewModels?.last?.tite, "Test2")
+        XCTAssertEqual(viewModels?.last?.title, "Test2")
     }
     
     // MARK: - Helper
@@ -48,7 +48,7 @@ final class HabitListPresenterTests: XCTestCase {
 }
 
 // MARK: - Mocks
-private extension PlacePresenterTests {
+private extension HabitListPresenterTests {
     class HabitListPresenterOutputMock: HabitListPresenterOutput {
         var presentedHabitViewModels: [HabitViewModel]?
         
