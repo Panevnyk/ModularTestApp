@@ -6,7 +6,7 @@
 //  Copyright © 2020 Vladyslav Panevnyk. All rights reserved.
 //
 
-public protocol CreateHabitInteractorInput {
+public protocol CreateHabitInteractorInput: class {
     func setHabitTitle(_ habitTitle: String)
     func setCreationDate(_ creationDate: Date)
     func setTimePeriod(_ timePeriod: HabitTimePeriod)
@@ -21,6 +21,7 @@ public protocol CreateHabitInteractorInput {
 public protocol CreateHabitInteractorOutput {
     func habitAddedSuccessfuly()
     func habitAddingFailure()
+    func present(habit: Habit)
 }
 
 public protocol CreateHabitDBBoundary {

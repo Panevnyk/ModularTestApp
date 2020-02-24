@@ -10,6 +10,14 @@ public struct HabitData {
     public var id: UUID
     public var value: Any
     public var date: Date
+
+    public init(id: UUID,
+                value: Any,
+                date: Date) {
+        self.id = id
+        self.value = value
+        self.date = date
+    }
 }
 
 extension HabitData: Equatable {

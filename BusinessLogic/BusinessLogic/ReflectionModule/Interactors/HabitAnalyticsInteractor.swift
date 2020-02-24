@@ -12,7 +12,7 @@ public enum HabitAnalyticsTimePeriod {
     case year(Date)
 }
 
-public protocol HabitAnalyticsInteractorInput {
+public protocol HabitAnalyticsInteractorInput: class {
     func loadHabitAnalytics(by timePeriod: HabitAnalyticsTimePeriod)
 }
 

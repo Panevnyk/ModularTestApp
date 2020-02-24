@@ -8,20 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		91127C7D23A3A01A0098CAFE /* iOSUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91127C7323A3A01A0098CAFE /* iOSUI.framework */; };
-		91127C8223A3A01A0098CAFE /* iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91127C8123A3A01A0098CAFE /* iOSUITests.swift */; };
 		91127C8423A3A01A0098CAFE /* iOSUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 91127C7623A3A01A0098CAFE /* iOSUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9114901D23A92EB900ABFA96 /* PlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114901C23A92EB900ABFA96 /* PlaceListView.swift */; };
+		9114901D23A92EB900ABFA96 /* HabitsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114901C23A92EB900ABFA96 /* HabitsListView.swift */; };
 		9159CD5323A9329E00BFE983 /* BusinessLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9159CD5223A9329E00BFE983 /* BusinessLogic.framework */; };
 		9159CD5423A9329E00BFE983 /* BusinessLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9159CD5223A9329E00BFE983 /* BusinessLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9159CD5723A9341F00BFE983 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159CD5623A9341F00BFE983 /* DetailsView.swift */; };
-		9159CD5923A9355500BFE983 /* PlaceRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159CD5823A9355500BFE983 /* PlaceRowView.swift */; };
-		917F049823B25B0D00104654 /* AddPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F049723B25B0D00104654 /* AddPlaceView.swift */; };
+		9159CD5923A9355500BFE983 /* HabitRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159CD5823A9355500BFE983 /* HabitRowView.swift */; };
+		917867B023FED74C009E53CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917867AF23FED74C009E53CB /* Constants.swift */; };
+		917F049823B25B0D00104654 /* CreateHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F049723B25B0D00104654 /* CreateHabitView.swift */; };
+		9185BE6123F44647001EFEB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9185BE6023F44647001EFEB0 /* Assets.xcassets */; };
+		9185BE6323F44A69001EFEB0 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185BE6223F44A69001EFEB0 /* CloseButton.swift */; };
+		9185BE6523F44C16001EFEB0 /* KeyValueDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185BE6423F44C16001EFEB0 /* KeyValueDatePickerView.swift */; };
+		9185BE6723F453F3001EFEB0 /* KeyValueActionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185BE6623F453F3001EFEB0 /* KeyValueActionSheetView.swift */; };
+		9185BE6A23F4582B001EFEB0 /* CreateHabitPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185BE6923F4582B001EFEB0 /* CreateHabitPresenterTests.swift */; };
 		918E902623B4CAE300A3BD61 /* Color+AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E902523B4CAE300A3BD61 /* Color+AppStyle.swift */; };
-		91D6B9D223AA18FF0059EE9B /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6B9D123AA18FF0059EE9B /* PlaceViewModel.swift */; };
-		91D6B9D423AA4FD60059EE9B /* PlaceDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6B9D323AA4FD60059EE9B /* PlaceDataSource.swift */; };
-		91D6B9D723AA51EE0059EE9B /* PlacePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6B9D623AA51EE0059EE9B /* PlacePresenterTests.swift */; };
+		9191366723FEEA070041E68A /* DateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191366623FEEA070041E68A /* DateFactory.swift */; };
+		91A4643D23F54C63009F2D28 /* EdgeInsets+Zero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A4643C23F54C63009F2D28 /* EdgeInsets+Zero.swift */; };
+		91A4643F23F5861E009F2D28 /* HabitScheduleDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A4643E23F5861E009F2D28 /* HabitScheduleDaysView.swift */; };
+		91BD282423F2D3EA002D4A6F /* CreateHabitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BD282323F2D3EA002D4A6F /* CreateHabitButton.swift */; };
+		91BD282623F2D852002D4A6F /* CreateHabitPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BD282523F2D852002D4A6F /* CreateHabitPresenter.swift */; };
+		91CD793E23F3EBA800A29123 /* HabitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CD793D23F3EBA800A29123 /* HabitTextField.swift */; };
+		91D6B9D223AA18FF0059EE9B /* HabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6B9D123AA18FF0059EE9B /* HabitViewModel.swift */; };
+		91D6B9D423AA4FD60059EE9B /* HabitDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6B9D323AA4FD60059EE9B /* HabitDataSource.swift */; };
+		91D6B9D723AA51EE0059EE9B /* HabitListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6B9D623AA51EE0059EE9B /* HabitListPresenterTests.swift */; };
 		91D6B9D923AA7A170059EE9B /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6B9D823AA7A170059EE9B /* Test.swift */; };
-		91D6C19723A7ACF600730E2D /* PlacePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6C19623A7ACF600730E2D /* PlacePresenter.swift */; };
+		91D6C19723A7ACF600730E2D /* HabitListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6C19623A7ACF600730E2D /* HabitListPresenter.swift */; };
 		91FAE0DA23B4E859005DBEA7 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAE0D923B4E859005DBEA7 /* AddButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,19 +65,30 @@
 		91127C7623A3A01A0098CAFE /* iOSUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSUI.h; sourceTree = "<group>"; };
 		91127C7723A3A01A0098CAFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91127C7C23A3A01A0098CAFE /* iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		91127C8123A3A01A0098CAFE /* iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSUITests.swift; sourceTree = "<group>"; };
 		91127C8323A3A01A0098CAFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9114901C23A92EB900ABFA96 /* PlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListView.swift; sourceTree = "<group>"; };
+		9114901C23A92EB900ABFA96 /* HabitsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsListView.swift; sourceTree = "<group>"; };
 		9159CD5223A9329E00BFE983 /* BusinessLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BusinessLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9159CD5623A9341F00BFE983 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
-		9159CD5823A9355500BFE983 /* PlaceRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRowView.swift; sourceTree = "<group>"; };
-		917F049723B25B0D00104654 /* AddPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceView.swift; sourceTree = "<group>"; };
+		9159CD5823A9355500BFE983 /* HabitRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitRowView.swift; sourceTree = "<group>"; };
+		917867AF23FED74C009E53CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		917F049723B25B0D00104654 /* CreateHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHabitView.swift; sourceTree = "<group>"; };
+		9185BE6023F44647001EFEB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9185BE6223F44A69001EFEB0 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		9185BE6423F44C16001EFEB0 /* KeyValueDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueDatePickerView.swift; sourceTree = "<group>"; };
+		9185BE6623F453F3001EFEB0 /* KeyValueActionSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueActionSheetView.swift; sourceTree = "<group>"; };
+		9185BE6923F4582B001EFEB0 /* CreateHabitPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHabitPresenterTests.swift; sourceTree = "<group>"; };
 		918E902523B4CAE300A3BD61 /* Color+AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppStyle.swift"; sourceTree = "<group>"; };
-		91D6B9D123AA18FF0059EE9B /* PlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
-		91D6B9D323AA4FD60059EE9B /* PlaceDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDataSource.swift; sourceTree = "<group>"; };
-		91D6B9D623AA51EE0059EE9B /* PlacePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePresenterTests.swift; sourceTree = "<group>"; };
+		9191366623FEEA070041E68A /* DateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFactory.swift; sourceTree = "<group>"; };
+		91A4643C23F54C63009F2D28 /* EdgeInsets+Zero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EdgeInsets+Zero.swift"; sourceTree = "<group>"; };
+		91A4643E23F5861E009F2D28 /* HabitScheduleDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitScheduleDaysView.swift; sourceTree = "<group>"; };
+		91BD282323F2D3EA002D4A6F /* CreateHabitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHabitButton.swift; sourceTree = "<group>"; };
+		91BD282523F2D852002D4A6F /* CreateHabitPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHabitPresenter.swift; sourceTree = "<group>"; };
+		91CD793D23F3EBA800A29123 /* HabitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTextField.swift; sourceTree = "<group>"; };
+		91D6B9D123AA18FF0059EE9B /* HabitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewModel.swift; sourceTree = "<group>"; };
+		91D6B9D323AA4FD60059EE9B /* HabitDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDataSource.swift; sourceTree = "<group>"; };
+		91D6B9D623AA51EE0059EE9B /* HabitListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListPresenterTests.swift; sourceTree = "<group>"; };
 		91D6B9D823AA7A170059EE9B /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
-		91D6C19623A7ACF600730E2D /* PlacePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePresenter.swift; sourceTree = "<group>"; };
+		91D6C19623A7ACF600730E2D /* HabitListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListPresenter.swift; sourceTree = "<group>"; };
 		91FAE0D923B4E859005DBEA7 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,11 +134,12 @@
 		91127C7523A3A01A0098CAFE /* iOSUI */ = {
 			isa = PBXGroup;
 			children = (
-				91FAE0D823B4E840005DBEA7 /* UIComponents */,
 				918E902423B4CACC00A3BD61 /* Extensions */,
-				91D6C19323A7ACBF00730E2D /* PlaceModule */,
+				91FAE0D823B4E840005DBEA7 /* UIComponents */,
+				91D6C19323A7ACBF00730E2D /* HabitModule */,
 				9159CD5623A9341F00BFE983 /* DetailsView.swift */,
 				91D6B9D823AA7A170059EE9B /* Test.swift */,
+				9185BE6023F44647001EFEB0 /* Assets.xcassets */,
 				91127C7623A3A01A0098CAFE /* iOSUI.h */,
 				91127C7723A3A01A0098CAFE /* Info.plist */,
 			);
@@ -126,56 +149,68 @@
 		91127C8023A3A01A0098CAFE /* iOSUITests */ = {
 			isa = PBXGroup;
 			children = (
-				91D6B9D523AA51BC0059EE9B /* PlaceModule */,
-				91127C8123A3A01A0098CAFE /* iOSUITests.swift */,
+				9191366523FEE9F30041E68A /* Helpers */,
+				9185BE6823F45810001EFEB0 /* HabitModule */,
 				91127C8323A3A01A0098CAFE /* Info.plist */,
 			);
 			path = iOSUITests;
 			sourceTree = "<group>";
 		};
-		917F049523B25AEB00104654 /* PlaceList */ = {
+		917F049523B25AEB00104654 /* HabitList */ = {
 			isa = PBXGroup;
 			children = (
-				9114901C23A92EB900ABFA96 /* PlaceListView.swift */,
-				9159CD5823A9355500BFE983 /* PlaceRowView.swift */,
-				91D6C19623A7ACF600730E2D /* PlacePresenter.swift */,
-				91D6B9D323AA4FD60059EE9B /* PlaceDataSource.swift */,
-				91D6B9D123AA18FF0059EE9B /* PlaceViewModel.swift */,
+				9114901C23A92EB900ABFA96 /* HabitsListView.swift */,
+				9159CD5823A9355500BFE983 /* HabitRowView.swift */,
+				91D6C19623A7ACF600730E2D /* HabitListPresenter.swift */,
+				91D6B9D323AA4FD60059EE9B /* HabitDataSource.swift */,
+				91D6B9D123AA18FF0059EE9B /* HabitViewModel.swift */,
 			);
-			path = PlaceList;
+			path = HabitList;
 			sourceTree = "<group>";
 		};
-		917F049623B25AF200104654 /* AddPlace */ = {
+		917F049623B25AF200104654 /* CreateHabit */ = {
 			isa = PBXGroup;
 			children = (
-				917F049723B25B0D00104654 /* AddPlaceView.swift */,
+				917F049723B25B0D00104654 /* CreateHabitView.swift */,
+				91BD282523F2D852002D4A6F /* CreateHabitPresenter.swift */,
 			);
-			path = AddPlace;
+			path = CreateHabit;
+			sourceTree = "<group>";
+		};
+		9185BE6823F45810001EFEB0 /* HabitModule */ = {
+			isa = PBXGroup;
+			children = (
+				9185BE6923F4582B001EFEB0 /* CreateHabitPresenterTests.swift */,
+				91D6B9D623AA51EE0059EE9B /* HabitListPresenterTests.swift */,
+			);
+			path = HabitModule;
 			sourceTree = "<group>";
 		};
 		918E902423B4CACC00A3BD61 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				918E902523B4CAE300A3BD61 /* Color+AppStyle.swift */,
+				91A4643C23F54C63009F2D28 /* EdgeInsets+Zero.swift */,
+				917867AF23FED74C009E53CB /* Constants.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		91D6B9D523AA51BC0059EE9B /* PlaceModule */ = {
+		9191366523FEE9F30041E68A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				91D6B9D623AA51EE0059EE9B /* PlacePresenterTests.swift */,
+				9191366623FEEA070041E68A /* DateFactory.swift */,
 			);
-			path = PlaceModule;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
-		91D6C19323A7ACBF00730E2D /* PlaceModule */ = {
+		91D6C19323A7ACBF00730E2D /* HabitModule */ = {
 			isa = PBXGroup;
 			children = (
-				917F049623B25AF200104654 /* AddPlace */,
-				917F049523B25AEB00104654 /* PlaceList */,
+				917F049623B25AF200104654 /* CreateHabit */,
+				917F049523B25AEB00104654 /* HabitList */,
 			);
-			path = PlaceModule;
+			path = HabitModule;
 			sourceTree = "<group>";
 		};
 		91D6C19A23A7B1DE00730E2D /* Frameworks */ = {
@@ -190,6 +225,12 @@
 			isa = PBXGroup;
 			children = (
 				91FAE0D923B4E859005DBEA7 /* AddButton.swift */,
+				9185BE6223F44A69001EFEB0 /* CloseButton.swift */,
+				91BD282323F2D3EA002D4A6F /* CreateHabitButton.swift */,
+				91CD793D23F3EBA800A29123 /* HabitTextField.swift */,
+				9185BE6423F44C16001EFEB0 /* KeyValueDatePickerView.swift */,
+				9185BE6623F453F3001EFEB0 /* KeyValueActionSheetView.swift */,
+				91A4643E23F5861E009F2D28 /* HabitScheduleDaysView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -288,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9185BE6123F44647001EFEB0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,15 +348,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				918E902623B4CAE300A3BD61 /* Color+AppStyle.swift in Sources */,
-				9114901D23A92EB900ABFA96 /* PlaceListView.swift in Sources */,
-				91D6B9D223AA18FF0059EE9B /* PlaceViewModel.swift in Sources */,
+				917867B023FED74C009E53CB /* Constants.swift in Sources */,
+				91BD282423F2D3EA002D4A6F /* CreateHabitButton.swift in Sources */,
+				9114901D23A92EB900ABFA96 /* HabitsListView.swift in Sources */,
+				9185BE6723F453F3001EFEB0 /* KeyValueActionSheetView.swift in Sources */,
+				91D6B9D223AA18FF0059EE9B /* HabitViewModel.swift in Sources */,
+				91A4643F23F5861E009F2D28 /* HabitScheduleDaysView.swift in Sources */,
+				91A4643D23F54C63009F2D28 /* EdgeInsets+Zero.swift in Sources */,
+				9185BE6323F44A69001EFEB0 /* CloseButton.swift in Sources */,
 				91FAE0DA23B4E859005DBEA7 /* AddButton.swift in Sources */,
-				91D6B9D423AA4FD60059EE9B /* PlaceDataSource.swift in Sources */,
+				91D6B9D423AA4FD60059EE9B /* HabitDataSource.swift in Sources */,
 				91D6B9D923AA7A170059EE9B /* Test.swift in Sources */,
-				9159CD5923A9355500BFE983 /* PlaceRowView.swift in Sources */,
-				91D6C19723A7ACF600730E2D /* PlacePresenter.swift in Sources */,
-				917F049823B25B0D00104654 /* AddPlaceView.swift in Sources */,
+				91CD793E23F3EBA800A29123 /* HabitTextField.swift in Sources */,
+				9159CD5923A9355500BFE983 /* HabitRowView.swift in Sources */,
+				91D6C19723A7ACF600730E2D /* HabitListPresenter.swift in Sources */,
+				91BD282623F2D852002D4A6F /* CreateHabitPresenter.swift in Sources */,
+				917F049823B25B0D00104654 /* CreateHabitView.swift in Sources */,
 				9159CD5723A9341F00BFE983 /* DetailsView.swift in Sources */,
+				9185BE6523F44C16001EFEB0 /* KeyValueDatePickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,8 +373,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91D6B9D723AA51EE0059EE9B /* PlacePresenterTests.swift in Sources */,
-				91127C8223A3A01A0098CAFE /* iOSUITests.swift in Sources */,
+				9191366723FEEA070041E68A /* DateFactory.swift in Sources */,
+				91D6B9D723AA51EE0059EE9B /* HabitListPresenterTests.swift in Sources */,
+				9185BE6A23F4582B001EFEB0 /* CreateHabitPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +530,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vp.iOSUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -504,6 +557,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vp.iOSUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

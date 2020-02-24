@@ -50,7 +50,7 @@ public struct Habit {
     }
 }
 
-public enum HabitScheduleDay: CaseIterable {
+public enum HabitScheduleDay: Int, CaseIterable {
     case sunday
     case monday
     case tuesday
@@ -60,13 +60,24 @@ public enum HabitScheduleDay: CaseIterable {
     case saturday
 }
 
-public enum HabitTimePeriod {
+public enum HabitTimePeriod: Int, CaseIterable {
     case day
     case week
     case month
+
+    public var title: String {
+        switch self {
+        case .day:
+            return "Day"
+        case .week:
+            return "Week"
+        case .month:
+            return "Month"
+        }
+    }
 }
 
-public enum HabitDataType {
+public enum HabitDataType: Int {
     case boolean
     case range
     case description

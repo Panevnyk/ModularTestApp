@@ -8,16 +8,16 @@
 
 import SwiftUI
 
-struct PlaceRowView: View {
-    var viewModel: PlaceViewModel
+struct HabitRowView: View {
+    var viewModel: HabitViewModel
     
     var body: some View {
-        Text(viewModel.name)
+        Text(viewModel.title)
     }
 }
 
-struct PlaceRowView_Previews: PreviewProvider {
+struct HabitRowView_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceRowView(viewModel: PlaceViewModel(id: 0, name: "Test"))
+        HabitRowView(viewModel: HabitViewModel(id: 0, title: "Test"))
     }
 }

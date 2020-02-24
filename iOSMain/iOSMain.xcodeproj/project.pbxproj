@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		91127C3D23A39DCA0098CAFE /* BusinessLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91127C3C23A39DCA0098CAFE /* BusinessLogic.framework */; };
 		91127C3E23A39DCA0098CAFE /* BusinessLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91127C3C23A39DCA0098CAFE /* BusinessLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9114901B23A92DFC00ABFA96 /* PlaceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114901A23A92DFC00ABFA96 /* PlaceAssembly.swift */; };
+		9114901B23A92DFC00ABFA96 /* HabitAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114901A23A92DFC00ABFA96 /* HabitAssembly.swift */; };
 		9114902023A9311E00ABFA96 /* iOSUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9114901F23A9311E00ABFA96 /* iOSUI.framework */; };
 		9114902123A9311E00ABFA96 /* iOSUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9114901F23A9311E00ABFA96 /* iOSUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		914DBC2223ACF83F00092638 /* CoreDataDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914DBC2123ACF83F00092638 /* CoreDataDB.framework */; };
 		914DBC2323ACF83F00092638 /* CoreDataDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 914DBC2123ACF83F00092638 /* CoreDataDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		917867AC23FEC150009E53CB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917867AB23FEC150009E53CB /* AppCoordinator.swift */; };
+		917867AE23FECB52009E53CB /* CreateHabitAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917867AD23FECB52009E53CB /* CreateHabitAssembly.swift */; };
 		918D8D4C239FFD0C0064AC83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918D8D4B239FFD0C0064AC83 /* AppDelegate.swift */; };
 		918D8D4E239FFD0C0064AC83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918D8D4D239FFD0C0064AC83 /* SceneDelegate.swift */; };
 		918D8D52239FFD0D0064AC83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918D8D51239FFD0D0064AC83 /* Assets.xcassets */; };
@@ -50,9 +52,12 @@
 
 /* Begin PBXFileReference section */
 		91127C3C23A39DCA0098CAFE /* BusinessLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BusinessLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9114901A23A92DFC00ABFA96 /* PlaceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAssembly.swift; sourceTree = "<group>"; };
+		9114901A23A92DFC00ABFA96 /* HabitAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitAssembly.swift; sourceTree = "<group>"; };
 		9114901F23A9311E00ABFA96 /* iOSUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		914DBC2123ACF83F00092638 /* CoreDataDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreDataDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		917867AB23FEC150009E53CB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		917867AD23FECB52009E53CB /* CreateHabitAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHabitAssembly.swift; sourceTree = "<group>"; };
+		9185BE5D23F402C9001EFEB0 /* iOSMain.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSMain.entitlements; sourceTree = "<group>"; };
 		918D8D48239FFD0C0064AC83 /* iOSMain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		918D8D4B239FFD0C0064AC83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		918D8D4D239FFD0C0064AC83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,9 +104,18 @@
 		9114901E23A92ECE00ABFA96 /* Assemblies */ = {
 			isa = PBXGroup;
 			children = (
-				9114901A23A92DFC00ABFA96 /* PlaceAssembly.swift */,
+				9114901A23A92DFC00ABFA96 /* HabitAssembly.swift */,
+				917867AD23FECB52009E53CB /* CreateHabitAssembly.swift */,
 			);
 			path = Assemblies;
+			sourceTree = "<group>";
+		};
+		9137232123FAC37400E78ABA /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				917867AB23FEC150009E53CB /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		918D8D3F239FFD0C0064AC83 = {
@@ -126,6 +140,8 @@
 		918D8D4A239FFD0C0064AC83 /* iOSMain */ = {
 			isa = PBXGroup;
 			children = (
+				9185BE5D23F402C9001EFEB0 /* iOSMain.entitlements */,
+				9137232123FAC37400E78ABA /* Coordinators */,
 				9114901E23A92ECE00ABFA96 /* Assemblies */,
 				918D8D4B239FFD0C0064AC83 /* AppDelegate.swift */,
 				918D8D4D239FFD0C0064AC83 /* SceneDelegate.swift */,
@@ -257,9 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				917867AE23FECB52009E53CB /* CreateHabitAssembly.swift in Sources */,
+				917867AC23FEC150009E53CB /* AppCoordinator.swift in Sources */,
 				918D8D4C239FFD0C0064AC83 /* AppDelegate.swift in Sources */,
 				918D8D4E239FFD0C0064AC83 /* SceneDelegate.swift in Sources */,
-				9114901B23A92DFC00ABFA96 /* PlaceAssembly.swift in Sources */,
+				9114901B23A92DFC00ABFA96 /* HabitAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iOSMain/iOSMain.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iOSMain/Preview Content\"";
 				DEVELOPMENT_TEAM = G6KD9UARPF;
@@ -422,6 +441,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = vp.iOSMain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -431,6 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iOSMain/iOSMain.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iOSMain/Preview Content\"";
 				DEVELOPMENT_TEAM = G6KD9UARPF;
@@ -442,6 +463,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = vp.iOSMain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

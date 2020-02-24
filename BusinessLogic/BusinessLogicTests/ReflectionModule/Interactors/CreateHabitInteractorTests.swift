@@ -86,6 +86,8 @@ private extension CreateHabitInteractorTests {
         var isHabitDidCreateSuccessfuly = false
         var isHabitCreationFailure = false
 
+        func present(habit: Habit) {}
+
         func habitAddedSuccessfuly() {
             isHabitDidCreateSuccessfuly = true
         }

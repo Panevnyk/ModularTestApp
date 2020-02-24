@@ -12,16 +12,16 @@ import Combine
 struct AddButton: View {
     @Binding
     var isDisabled: Bool
-    var addAction: () -> Void
+    var action: () -> Void
     
     var body: some View {
-        Button(action: addAction) {
+        Button(action: action) {
             Text("ADD")
                 .foregroundColor(.white)
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .frame(height: 40)
                 .background(isDisabled ? Color.kBlueDisabled : Color.kBlue)
-                .cornerRadius(6)
+                .cornerRadius(4)
         }
         .disabled(isDisabled)
     }
@@ -29,6 +29,6 @@ struct AddButton: View {
 
 struct AddButton_Previews: PreviewProvider {
     static var previews: some View {
-        AddButton(isDisabled: .constant(false), addAction: {})
+        AddButton(isDisabled: .constant(false), action: {})
     }
 }

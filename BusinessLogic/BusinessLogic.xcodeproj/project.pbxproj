@@ -11,12 +11,6 @@
 		91127BF823A392CA0098CAFE /* BusinessLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = 91127BEA23A392CA0098CAFE /* BusinessLogic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91127C0F23A395610098CAFE /* BusinessLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91127C0623A395610098CAFE /* BusinessLogic.framework */; };
 		91127C1F23A396D50098CAFE /* BusinessLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = 91127BEA23A392CA0098CAFE /* BusinessLogic.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		91127C9423A3AEB10098CAFE /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91127C9323A3AEB10098CAFE /* Place.swift */; };
-		91127C9523A3AEB10098CAFE /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91127C9323A3AEB10098CAFE /* Place.swift */; };
-		91127C9823A3AF700098CAFE /* PlaceCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91127C9723A3AF700098CAFE /* PlaceCoordinate.swift */; };
-		91127C9923A3AF700098CAFE /* PlaceCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91127C9723A3AF700098CAFE /* PlaceCoordinate.swift */; };
-		91127C9B23A3AF9B0098CAFE /* PlaceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91127C9A23A3AF9B0098CAFE /* PlaceInteractor.swift */; };
-		91127C9C23A3AF9B0098CAFE /* PlaceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91127C9A23A3AF9B0098CAFE /* PlaceInteractor.swift */; };
 		911F8DF723E049F600B9B48B /* EditHabitDatasInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911F8DF623E049F600B9B48B /* EditHabitDatasInteractor.swift */; };
 		911F8DF823E049F600B9B48B /* EditHabitDatasInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911F8DF623E049F600B9B48B /* EditHabitDatasInteractor.swift */; };
 		911F8DFD23E0586100B9B48B /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911F8DFC23E0586100B9B48B /* Habit.swift */; };
@@ -29,6 +23,10 @@
 		9142BB0F23F1A17D00F12DC8 /* HabitAnalyticsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9142BB0D23F1A17700F12DC8 /* HabitAnalyticsInteractorTests.swift */; };
 		9142BB1223F1B38E00F12DC8 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9142BB1123F1B38E00F12DC8 /* Date+Extensions.swift */; };
 		9142BB1323F1B38E00F12DC8 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9142BB1123F1B38E00F12DC8 /* Date+Extensions.swift */; };
+		917867B223FEDC3F009E53CB /* HabitListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917867B123FEDC3F009E53CB /* HabitListInteractor.swift */; };
+		917867B423FEDC5D009E53CB /* HabitListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917867B323FEDC5D009E53CB /* HabitListInteractorTests.swift */; };
+		917867B523FEE1A8009E53CB /* HabitListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917867B323FEDC5D009E53CB /* HabitListInteractorTests.swift */; };
+		9191366423FEE7370041E68A /* HabitListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917867B123FEDC3F009E53CB /* HabitListInteractor.swift */; };
 		91AB45EE23DB359600EDD45D /* EditHabitsAreaInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45ED23DB359600EDD45D /* EditHabitsAreaInteractorTests.swift */; };
 		91AB45EF23DB359600EDD45D /* EditHabitsAreaInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45ED23DB359600EDD45D /* EditHabitsAreaInteractorTests.swift */; };
 		91AB45F123DB35DC00EDD45D /* EditHabitsAreaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB45F023DB35DC00EDD45D /* EditHabitsAreaInteractor.swift */; };
@@ -42,8 +40,6 @@
 		91BD281E23F2BF3D002D4A6F /* CreateHabitInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BD281D23F2BF3D002D4A6F /* CreateHabitInteractorTests.swift */; };
 		91BD281F23F2BF3D002D4A6F /* CreateHabitInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BD281D23F2BF3D002D4A6F /* CreateHabitInteractorTests.swift */; };
 		91BD282223F2CEED002D4A6F /* DateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BD282123F2CEED002D4A6F /* DateFactory.swift */; };
-		91D6C19123A78CB400730E2D /* PlaceInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6C19023A78CB400730E2D /* PlaceInteractorTests.swift */; };
-		91D6C19223A78CB400730E2D /* PlaceInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6C19023A78CB400730E2D /* PlaceInteractorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,15 +67,14 @@
 		91127BF723A392CA0098CAFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91127C0623A395610098CAFE /* BusinessLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BusinessLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91127C0E23A395610098CAFE /* BusinessLogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BusinessLogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		91127C9323A3AEB10098CAFE /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
-		91127C9723A3AF700098CAFE /* PlaceCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCoordinate.swift; sourceTree = "<group>"; };
-		91127C9A23A3AF9B0098CAFE /* PlaceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInteractor.swift; sourceTree = "<group>"; };
 		911F8DF623E049F600B9B48B /* EditHabitDatasInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHabitDatasInteractor.swift; sourceTree = "<group>"; };
 		911F8DFC23E0586100B9B48B /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		911F8DFF23E058EF00B9B48B /* HabitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitData.swift; sourceTree = "<group>"; };
 		9142BB0A23F1A0CC00F12DC8 /* HabitAnalyticsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitAnalyticsInteractor.swift; sourceTree = "<group>"; };
 		9142BB0D23F1A17700F12DC8 /* HabitAnalyticsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitAnalyticsInteractorTests.swift; sourceTree = "<group>"; };
 		9142BB1123F1B38E00F12DC8 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		917867B123FEDC3F009E53CB /* HabitListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListInteractor.swift; sourceTree = "<group>"; };
+		917867B323FEDC5D009E53CB /* HabitListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListInteractorTests.swift; sourceTree = "<group>"; };
 		91AB45ED23DB359600EDD45D /* EditHabitsAreaInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHabitsAreaInteractorTests.swift; sourceTree = "<group>"; };
 		91AB45F023DB35DC00EDD45D /* EditHabitsAreaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHabitsAreaInteractor.swift; sourceTree = "<group>"; };
 		91AB45F323DB455C00EDD45D /* EditHabitDatasInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHabitDatasInteractorTests.swift; sourceTree = "<group>"; };
@@ -87,7 +82,6 @@
 		91BD281A23F2BB0F002D4A6F /* CreateHabitInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHabitInteractor.swift; sourceTree = "<group>"; };
 		91BD281D23F2BF3D002D4A6F /* CreateHabitInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHabitInteractorTests.swift; sourceTree = "<group>"; };
 		91BD282123F2CEED002D4A6F /* DateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFactory.swift; sourceTree = "<group>"; };
-		91D6C19023A78CB400730E2D /* PlaceInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInteractorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				91AB45E823DB341300EDD45D /* ReflectionModule */,
-				91127C9223A3AE6D0098CAFE /* PlaceModule */,
 				91127BEA23A392CA0098CAFE /* BusinessLogic.h */,
 				91127BEB23A392CA0098CAFE /* Info.plist */,
 			);
@@ -160,35 +153,9 @@
 			children = (
 				91BD282023F2CED0002D4A6F /* Helpers */,
 				91AB45EB23DB353300EDD45D /* ReflectionModule */,
-				91D6C18E23A78C7900730E2D /* PlaceModule */,
 				91127BF723A392CA0098CAFE /* Info.plist */,
 			);
 			path = BusinessLogicTests;
-			sourceTree = "<group>";
-		};
-		91127C9223A3AE6D0098CAFE /* PlaceModule */ = {
-			isa = PBXGroup;
-			children = (
-				91127C9D23A3B0080098CAFE /* Interactor */,
-				91127C9623A3AF640098CAFE /* Models */,
-			);
-			path = PlaceModule;
-			sourceTree = "<group>";
-		};
-		91127C9623A3AF640098CAFE /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				91AB45E323DB2BA800EDD45D /* Place */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		91127C9D23A3B0080098CAFE /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				91127C9A23A3AF9B0098CAFE /* PlaceInteractor.swift */,
-			);
-			path = Interactor;
 			sourceTree = "<group>";
 		};
 		9142BB1023F1B37300F12DC8 /* Extension */ = {
@@ -197,15 +164,6 @@
 				9142BB1123F1B38E00F12DC8 /* Date+Extensions.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		91AB45E323DB2BA800EDD45D /* Place */ = {
-			isa = PBXGroup;
-			children = (
-				91127C9323A3AEB10098CAFE /* Place.swift */,
-				91127C9723A3AF700098CAFE /* PlaceCoordinate.swift */,
-			);
-			path = Place;
 			sourceTree = "<group>";
 		};
 		91AB45E823DB341300EDD45D /* ReflectionModule */ = {
@@ -231,6 +189,7 @@
 		91AB45EA23DB343300EDD45D /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				917867B123FEDC3F009E53CB /* HabitListInteractor.swift */,
 				91BD281A23F2BB0F002D4A6F /* CreateHabitInteractor.swift */,
 				91AB45F023DB35DC00EDD45D /* EditHabitsAreaInteractor.swift */,
 				911F8DF623E049F600B9B48B /* EditHabitDatasInteractor.swift */,
@@ -250,6 +209,7 @@
 		91AB45EC23DB355500EDD45D /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				917867B323FEDC5D009E53CB /* HabitListInteractorTests.swift */,
 				91BD281D23F2BF3D002D4A6F /* CreateHabitInteractorTests.swift */,
 				91AB45ED23DB359600EDD45D /* EditHabitsAreaInteractorTests.swift */,
 				91AB45F323DB455C00EDD45D /* EditHabitDatasInteractorTests.swift */,
@@ -264,22 +224,6 @@
 				91BD282123F2CEED002D4A6F /* DateFactory.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		91D6C18E23A78C7900730E2D /* PlaceModule */ = {
-			isa = PBXGroup;
-			children = (
-				91D6C18F23A78C8200730E2D /* Interactor */,
-			);
-			path = PlaceModule;
-			sourceTree = "<group>";
-		};
-		91D6C18F23A78C8200730E2D /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				91D6C19023A78CB400730E2D /* PlaceInteractorTests.swift */,
-			);
-			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -460,15 +404,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9142BB0B23F1A0CC00F12DC8 /* HabitAnalyticsInteractor.swift in Sources */,
-				91127C9823A3AF700098CAFE /* PlaceCoordinate.swift in Sources */,
 				9142BB1223F1B38E00F12DC8 /* Date+Extensions.swift in Sources */,
 				911F8E0023E058EF00B9B48B /* HabitData.swift in Sources */,
 				911F8DF723E049F600B9B48B /* EditHabitDatasInteractor.swift in Sources */,
 				91BD281B23F2BB0F002D4A6F /* CreateHabitInteractor.swift in Sources */,
 				91AB45F123DB35DC00EDD45D /* EditHabitsAreaInteractor.swift in Sources */,
-				91127C9423A3AEB10098CAFE /* Place.swift in Sources */,
+				917867B223FEDC3F009E53CB /* HabitListInteractor.swift in Sources */,
 				911F8DFD23E0586100B9B48B /* Habit.swift in Sources */,
-				91127C9B23A3AF9B0098CAFE /* PlaceInteractor.swift in Sources */,
 				91BD281823F2B003002D4A6F /* HabitsArea.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,7 +424,7 @@
 				91AB45EE23DB359600EDD45D /* EditHabitsAreaInteractorTests.swift in Sources */,
 				91BD281E23F2BF3D002D4A6F /* CreateHabitInteractorTests.swift in Sources */,
 				91AB45F423DB455C00EDD45D /* EditHabitDatasInteractorTests.swift in Sources */,
-				91D6C19123A78CB400730E2D /* PlaceInteractorTests.swift in Sources */,
+				917867B423FEDC5D009E53CB /* HabitListInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,15 +433,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9142BB0C23F1A0CC00F12DC8 /* HabitAnalyticsInteractor.swift in Sources */,
-				91127C9923A3AF700098CAFE /* PlaceCoordinate.swift in Sources */,
 				9142BB1323F1B38E00F12DC8 /* Date+Extensions.swift in Sources */,
 				911F8E0123E058EF00B9B48B /* HabitData.swift in Sources */,
 				911F8DF823E049F600B9B48B /* EditHabitDatasInteractor.swift in Sources */,
 				91BD281C23F2BB0F002D4A6F /* CreateHabitInteractor.swift in Sources */,
 				91AB45F223DB35DC00EDD45D /* EditHabitsAreaInteractor.swift in Sources */,
-				91127C9523A3AEB10098CAFE /* Place.swift in Sources */,
+				9191366423FEE7370041E68A /* HabitListInteractor.swift in Sources */,
 				911F8DFE23E0586100B9B48B /* Habit.swift in Sources */,
-				91127C9C23A3AF9B0098CAFE /* PlaceInteractor.swift in Sources */,
 				91BD281923F2B003002D4A6F /* HabitsArea.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,10 +449,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9142BB0F23F1A17D00F12DC8 /* HabitAnalyticsInteractorTests.swift in Sources */,
+				917867B523FEE1A8009E53CB /* HabitListInteractorTests.swift in Sources */,
 				91AB45EF23DB359600EDD45D /* EditHabitsAreaInteractorTests.swift in Sources */,
 				91BD281F23F2BF3D002D4A6F /* CreateHabitInteractorTests.swift in Sources */,
 				91AB45F523DB455C00EDD45D /* EditHabitDatasInteractorTests.swift in Sources */,
-				91D6C19223A78CB400730E2D /* PlaceInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,6 +702,7 @@
 				PRODUCT_NAME = BusinessLogic;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -790,6 +731,7 @@
 				PRODUCT_NAME = BusinessLogic;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

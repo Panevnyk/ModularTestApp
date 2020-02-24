@@ -1,5 +1,5 @@
 //
-//  PlaceViewModel.swift
+//  PlaceDataSource.swift
 //  iOSUI
 //
 //  Created by Vladyslav Panevnyk on 18.12.2019.
@@ -9,7 +9,6 @@
 import Combine
 import SwiftUI
 
-public struct PlaceViewModel: Identifiable {
-    public var id: Int
-    public var name: String
+class HabitDataSource: ObservableObject {
+    @Published var habitViewModels: [HabitViewModel] = []
 }

@@ -27,6 +27,8 @@
 		914DBC2923AD002100092638 /* NSManagedObjectContext+CRUDWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914DBC2723AD002100092638 /* NSManagedObjectContext+CRUDWrapper.swift */; };
 		914DBC2F23AD10C700092638 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 914DBC2D23AD10C700092638 /* CoreDataModel.xcdatamodeld */; };
 		914DBC3023AD10C700092638 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 914DBC2D23AD10C700092638 /* CoreDataModel.xcdatamodeld */; };
+		918B5C0123F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918B5C0023F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift */; };
+		918B5C0223F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918B5C0023F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,7 @@
 		914DBC2423ACFA8300092638 /* CoreDataService+PlaceDBBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataService+PlaceDBBoundary.swift"; sourceTree = "<group>"; };
 		914DBC2723AD002100092638 /* NSManagedObjectContext+CRUDWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+CRUDWrapper.swift"; sourceTree = "<group>"; };
 		914DBC2E23AD10C700092638 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		918B5C0023F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataService+CreateHabitDBBoundary.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				914DBC2423ACFA8300092638 /* CoreDataService+PlaceDBBoundary.swift */,
+				918B5C0023F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift */,
 			);
 			path = "CoreDataService+Boundaries";
 			sourceTree = "<group>";
@@ -378,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				918B5C0123F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift in Sources */,
 				913C74A623B0ECC600DDF98F /* NSManagedObject+InitWithContext.swift in Sources */,
 				914DBC2523ACFA8300092638 /* CoreDataService+PlaceDBBoundary.swift in Sources */,
 				914DBC2823AD002100092638 /* NSManagedObjectContext+CRUDWrapper.swift in Sources */,
@@ -398,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				918B5C0223F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift in Sources */,
 				913C74A723B0ECC600DDF98F /* NSManagedObject+InitWithContext.swift in Sources */,
 				912F26A223ACEDB400AD85D1 /* CoreDataService.swift in Sources */,
 				914DBC2623ACFA8300092638 /* CoreDataService+PlaceDBBoundary.swift in Sources */,
@@ -553,6 +559,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -579,6 +586,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -659,6 +667,7 @@
 				PRODUCT_NAME = CoreDataDB;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -685,6 +694,7 @@
 				PRODUCT_NAME = CoreDataDB;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

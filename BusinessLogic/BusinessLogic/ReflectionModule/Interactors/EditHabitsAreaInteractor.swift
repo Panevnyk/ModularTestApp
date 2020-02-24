@@ -6,7 +6,7 @@
 //  Copyright © 2020 Vladyslav Panevnyk. All rights reserved.
 //
 
-public protocol EditHabitsAreaInteractorInput {
+public protocol EditHabitsAreaInteractorInput: class {
     func addHabit(_ habit: Habit)
     func saveHabitsArea()
     func canSaveHabitsArea() -> Bool
