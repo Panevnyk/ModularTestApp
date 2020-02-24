@@ -74,6 +74,9 @@ public struct HabitsListView: View {
 // MARK: UI methods
 private extension HabitsListView {
     func setupUI() {
+        UITableView.appearance().allowsSelection = false
+        UITableViewCell.appearance().selectionStyle = .none
+        UITableView.appearance().separatorStyle = .none
         UITableView.appearance().tableFooterView = UIView()
     }
 }
