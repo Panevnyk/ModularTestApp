@@ -141,7 +141,7 @@
 		91127BE923A392CA0098CAFE /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
-				91AB45E823DB341300EDD45D /* ReflectionModule */,
+				91AB45E823DB341300EDD45D /* HabitModule */,
 				91127BEA23A392CA0098CAFE /* BusinessLogic.h */,
 				91127BEB23A392CA0098CAFE /* Info.plist */,
 			);
@@ -152,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				91BD282023F2CED0002D4A6F /* Helpers */,
-				91AB45EB23DB353300EDD45D /* ReflectionModule */,
+				91AB45EB23DB353300EDD45D /* HabitModule */,
 				91127BF723A392CA0098CAFE /* Info.plist */,
 			);
 			path = BusinessLogicTests;
@@ -166,14 +166,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		91AB45E823DB341300EDD45D /* ReflectionModule */ = {
+		91AB45E823DB341300EDD45D /* HabitModule */ = {
 			isa = PBXGroup;
 			children = (
 				9142BB1023F1B37300F12DC8 /* Extension */,
 				91AB45EA23DB343300EDD45D /* Interactors */,
 				91AB45E923DB342500EDD45D /* Models */,
 			);
-			path = ReflectionModule;
+			path = HabitModule;
 			sourceTree = "<group>";
 		};
 		91AB45E923DB342500EDD45D /* Models */ = {
@@ -198,12 +198,12 @@
 			path = Interactors;
 			sourceTree = "<group>";
 		};
-		91AB45EB23DB353300EDD45D /* ReflectionModule */ = {
+		91AB45EB23DB353300EDD45D /* HabitModule */ = {
 			isa = PBXGroup;
 			children = (
 				91AB45EC23DB355500EDD45D /* Interactors */,
 			);
-			path = ReflectionModule;
+			path = HabitModule;
 			sourceTree = "<group>";
 		};
 		91AB45EC23DB355500EDD45D /* Interactors */ = {

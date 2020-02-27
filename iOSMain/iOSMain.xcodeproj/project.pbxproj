@@ -37,7 +37,7 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		91127C3F23A39DCA0098CAFE /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
@@ -437,6 +437,7 @@
 				INFOPLIST_FILE = iOSMain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
+					"@loader_path/Frameworks",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = vp.iOSMain;
@@ -459,6 +460,7 @@
 				INFOPLIST_FILE = iOSMain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
+					"@loader_path/Frameworks",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = vp.iOSMain;
