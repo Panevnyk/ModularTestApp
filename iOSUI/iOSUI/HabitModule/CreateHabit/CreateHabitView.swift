@@ -8,7 +8,7 @@
 
 import SwiftUI
 import Combine
-import BusinessLogic
+import Domain
 
 public protocol CreateHabitViewCoordinatorDelegate {
     func dissmiss()

@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		91127C3D23A39DCA0098CAFE /* BusinessLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91127C3C23A39DCA0098CAFE /* BusinessLogic.framework */; };
-		91127C3E23A39DCA0098CAFE /* BusinessLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91127C3C23A39DCA0098CAFE /* BusinessLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9114901B23A92DFC00ABFA96 /* HabitAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114901A23A92DFC00ABFA96 /* HabitAssembly.swift */; };
 		9114902023A9311E00ABFA96 /* iOSUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9114901F23A9311E00ABFA96 /* iOSUI.framework */; };
 		9114902123A9311E00ABFA96 /* iOSUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9114901F23A9311E00ABFA96 /* iOSUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		914DBC2223ACF83F00092638 /* CoreDataDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914DBC2123ACF83F00092638 /* CoreDataDB.framework */; };
-		914DBC2323ACF83F00092638 /* CoreDataDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 914DBC2123ACF83F00092638 /* CoreDataDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		917867AC23FEC150009E53CB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917867AB23FEC150009E53CB /* AppCoordinator.swift */; };
 		917867AE23FECB52009E53CB /* CreateHabitAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917867AD23FECB52009E53CB /* CreateHabitAssembly.swift */; };
 		918D8D4C239FFD0C0064AC83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918D8D4B239FFD0C0064AC83 /* AppDelegate.swift */; };
@@ -21,6 +18,9 @@
 		918D8D52239FFD0D0064AC83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918D8D51239FFD0D0064AC83 /* Assets.xcassets */; };
 		918D8D55239FFD0D0064AC83 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918D8D54239FFD0D0064AC83 /* Preview Assets.xcassets */; };
 		918D8D58239FFD0D0064AC83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 918D8D56239FFD0D0064AC83 /* LaunchScreen.storyboard */; };
+		919BD9A424080BCC002382B6 /* CoreDataDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 914DBC2123ACF83F00092638 /* CoreDataDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		919BD9A524080BEC002382B6 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 919BD99D24080A82002382B6 /* Domain.framework */; };
+		919BD9A624080BEC002382B6 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 919BD99D24080A82002382B6 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		91D6B9DB23AA849F0059EE9B /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6B9DA23AA849F0059EE9B /* Test.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,9 +41,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				919BD9A624080BEC002382B6 /* Domain.framework in Embed Frameworks */,
+				919BD9A424080BCC002382B6 /* CoreDataDB.framework in Embed Frameworks */,
 				9114902123A9311E00ABFA96 /* iOSUI.framework in Embed Frameworks */,
-				91127C3E23A39DCA0098CAFE /* BusinessLogic.framework in Embed Frameworks */,
-				914DBC2323ACF83F00092638 /* CoreDataDB.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +67,7 @@
 		918D8D59239FFD0D0064AC83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		918D8D5E239FFD0D0064AC83 /* iOSMainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSMainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		918D8D64239FFD0D0064AC83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		919BD99D24080A82002382B6 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D6B9DA23AA849F0059EE9B /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,8 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				919BD9A524080BEC002382B6 /* Domain.framework in Frameworks */,
 				9114902023A9311E00ABFA96 /* iOSUI.framework in Frameworks */,
-				91127C3D23A39DCA0098CAFE /* BusinessLogic.framework in Frameworks */,
 				914DBC2223ACF83F00092638 /* CoreDataDB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +95,7 @@
 		91127C2023A397920098CAFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				919BD99D24080A82002382B6 /* Domain.framework */,
 				914DBC2123ACF83F00092638 /* CoreDataDB.framework */,
 				9114901F23A9311E00ABFA96 /* iOSUI.framework */,
 				91127C3C23A39DCA0098CAFE /* BusinessLogic.framework */,

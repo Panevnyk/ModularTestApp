@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import BusinessLogic
+@testable import Domain
 @testable import iOSUI
 
 final class HabitListPresenterTests: XCTestCase {

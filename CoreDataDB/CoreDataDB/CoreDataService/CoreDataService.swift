@@ -7,7 +7,7 @@
 //
 
 import CoreData
-import BusinessLogic
+import Domain
 
 protocol CoreDataServiceProtocol: AnyObject {
     func save<T>(object: T) where T: NSManagedObject

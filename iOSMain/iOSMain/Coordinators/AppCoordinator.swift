@@ -9,7 +9,7 @@
 import UIKit
 import SwiftUI
 import iOSUI
-import BusinessLogic
+import Domain
 import CoreDataDB
 
 final class AppCoordinator {

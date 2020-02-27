@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		91127C7D23A3A01A0098CAFE /* iOSUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91127C7323A3A01A0098CAFE /* iOSUI.framework */; };
 		91127C8423A3A01A0098CAFE /* iOSUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 91127C7623A3A01A0098CAFE /* iOSUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9159CD5323A9329E00BFE983 /* BusinessLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9159CD5223A9329E00BFE983 /* BusinessLogic.framework */; };
-		9159CD5423A9329E00BFE983 /* BusinessLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9159CD5223A9329E00BFE983 /* BusinessLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9159CD5723A9341F00BFE983 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159CD5623A9341F00BFE983 /* DetailsView.swift */; };
 		917867B023FED74C009E53CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917867AF23FED74C009E53CB /* Constants.swift */; };
 		9185BE6123F44647001EFEB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9185BE6023F44647001EFEB0 /* Assets.xcassets */; };
@@ -28,6 +26,8 @@
 		9191DCD72403CF5A00802806 /* DateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191DCD62403CF5A00802806 /* DateFactory.swift */; };
 		9191DCDA2403CF6400802806 /* CreateHabitPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191DCD82403CF6400802806 /* CreateHabitPresenterTests.swift */; };
 		9191DCDB2403CF6400802806 /* HabitListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191DCD92403CF6400802806 /* HabitListPresenterTests.swift */; };
+		919BD99A240809F6002382B6 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 919BD999240809F6002382B6 /* Domain.framework */; };
+		919BD99B240809F6002382B6 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 919BD999240809F6002382B6 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		91A4643D23F54C63009F2D28 /* EdgeInsets+Zero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A4643C23F54C63009F2D28 /* EdgeInsets+Zero.swift */; };
 		91A4643F23F5861E009F2D28 /* HabitScheduleDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A4643E23F5861E009F2D28 /* HabitScheduleDaysView.swift */; };
 		91BD0F712403FCF9009A75DB /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BD0F702403FCF9009A75DB /* RadioButton.swift */; };
@@ -48,13 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9159CD5523A9329E00BFE983 /* Embed Frameworks */ = {
+		919BD99C240809F6002382B6 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9159CD5423A9329E00BFE983 /* BusinessLogic.framework in Embed Frameworks */,
+				919BD99B240809F6002382B6 /* Domain.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +85,8 @@
 		9191DCD62403CF5A00802806 /* DateFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFactory.swift; sourceTree = "<group>"; };
 		9191DCD82403CF6400802806 /* CreateHabitPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateHabitPresenterTests.swift; sourceTree = "<group>"; };
 		9191DCD92403CF6400802806 /* HabitListPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitListPresenterTests.swift; sourceTree = "<group>"; };
+		919BD995240809ED002382B6 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		919BD999240809F6002382B6 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A4643C23F54C63009F2D28 /* EdgeInsets+Zero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EdgeInsets+Zero.swift"; sourceTree = "<group>"; };
 		91A4643E23F5861E009F2D28 /* HabitScheduleDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitScheduleDaysView.swift; sourceTree = "<group>"; };
 		91BD0F702403FCF9009A75DB /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
@@ -99,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9159CD5323A9329E00BFE983 /* BusinessLogic.framework in Frameworks */,
+				919BD99A240809F6002382B6 /* Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +220,8 @@
 		91D6C19A23A7B1DE00730E2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				919BD999240809F6002382B6 /* Domain.framework */,
+				919BD995240809ED002382B6 /* Domain.framework */,
 				9159CD5223A9329E00BFE983 /* BusinessLogic.framework */,
 			);
 			name = Frameworks;
@@ -260,7 +264,7 @@
 				91127C6F23A3A01A0098CAFE /* Sources */,
 				91127C7023A3A01A0098CAFE /* Frameworks */,
 				91127C7123A3A01A0098CAFE /* Resources */,
-				9159CD5523A9329E00BFE983 /* Embed Frameworks */,
+				919BD99C240809F6002382B6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

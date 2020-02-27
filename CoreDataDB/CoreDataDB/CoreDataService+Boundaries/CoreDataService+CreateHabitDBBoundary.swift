@@ -7,7 +7,7 @@
 //
 
 import CoreData
-import BusinessLogic
+import Domain
 
 extension CoreDataService: CreateHabitDBBoundary, HabitListDBBoundary {
     public func addHabit(_ habit: Habit) {

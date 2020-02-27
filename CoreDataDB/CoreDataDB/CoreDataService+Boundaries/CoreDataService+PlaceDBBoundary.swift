@@ -7,7 +7,7 @@
 //
 
 //import CoreData
-//import BusinessLogic
+//import Domain
 
 //extension CoreDataService: PlaceDBBoundary {
 //    public func getAllPlaces() -> [Place] {

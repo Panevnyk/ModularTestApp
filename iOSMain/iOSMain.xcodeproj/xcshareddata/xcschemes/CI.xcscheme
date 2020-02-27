@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "91127BEF23A392CA0098CAFE"
-               BuildableName = "BusinessLogicTests.xctest"
-               BlueprintName = "BusinessLogicTests"
-               ReferencedContainer = "container:../BusinessLogic/BusinessLogic.xcodeproj">
+               BuildableName = "DomainTests.xctest"
+               BlueprintName = "DomainTests"
+               ReferencedContainer = "container:../BusinessLogic/Domain.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference

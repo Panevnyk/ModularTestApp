@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import BusinessLogic
+import Domain
 
 public protocol CreateHabitPresenterOutput {
 }
