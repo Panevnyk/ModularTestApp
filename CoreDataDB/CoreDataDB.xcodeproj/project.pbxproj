@@ -17,8 +17,6 @@
 		912F26A723ACEDC100AD85D1 /* CoreDataDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912F266523ACE3FD00AD85D1 /* CoreDataDBTests.swift */; };
 		913C74A623B0ECC600DDF98F /* NSManagedObject+InitWithContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913C74A523B0ECC600DDF98F /* NSManagedObject+InitWithContext.swift */; };
 		913C74A723B0ECC600DDF98F /* NSManagedObject+InitWithContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913C74A523B0ECC600DDF98F /* NSManagedObject+InitWithContext.swift */; };
-		914DBC2523ACFA8300092638 /* CoreDataService+PlaceDBBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914DBC2423ACFA8300092638 /* CoreDataService+PlaceDBBoundary.swift */; };
-		914DBC2623ACFA8300092638 /* CoreDataService+PlaceDBBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914DBC2423ACFA8300092638 /* CoreDataService+PlaceDBBoundary.swift */; };
 		914DBC2823AD002100092638 /* NSManagedObjectContext+CRUDWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914DBC2723AD002100092638 /* NSManagedObjectContext+CRUDWrapper.swift */; };
 		914DBC2923AD002100092638 /* NSManagedObjectContext+CRUDWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914DBC2723AD002100092638 /* NSManagedObjectContext+CRUDWrapper.swift */; };
 		914DBC2F23AD10C700092638 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 914DBC2D23AD10C700092638 /* CoreDataModel.xcdatamodeld */; };
@@ -88,7 +86,6 @@
 		912F269123ACECF200AD85D1 /* CoreDataDB_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataDB_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		913C74A523B0ECC600DDF98F /* NSManagedObject+InitWithContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+InitWithContext.swift"; sourceTree = "<group>"; };
 		914DBBF523ACF1F000092638 /* BusinessLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BusinessLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		914DBC2423ACFA8300092638 /* CoreDataService+PlaceDBBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataService+PlaceDBBoundary.swift"; sourceTree = "<group>"; };
 		914DBC2723AD002100092638 /* NSManagedObjectContext+CRUDWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+CRUDWrapper.swift"; sourceTree = "<group>"; };
 		914DBC2E23AD10C700092638 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		918B5C0023F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataService+CreateHabitDBBoundary.swift"; sourceTree = "<group>"; };
@@ -208,7 +205,6 @@
 		913C74A923B0EE5F00DDF98F /* CoreDataService+Boundaries */ = {
 			isa = PBXGroup;
 			children = (
-				914DBC2423ACFA8300092638 /* CoreDataService+PlaceDBBoundary.swift */,
 				918B5C0023F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift */,
 			);
 			path = "CoreDataService+Boundaries";
@@ -394,7 +390,6 @@
 			files = (
 				918B5C0123F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift in Sources */,
 				913C74A623B0ECC600DDF98F /* NSManagedObject+InitWithContext.swift in Sources */,
-				914DBC2523ACFA8300092638 /* CoreDataService+PlaceDBBoundary.swift in Sources */,
 				914DBC2823AD002100092638 /* NSManagedObjectContext+CRUDWrapper.swift in Sources */,
 				914DBC2F23AD10C700092638 /* CoreDataModel.xcdatamodeld in Sources */,
 				912F267223ACE44C00AD85D1 /* CoreDataService.swift in Sources */,
@@ -416,7 +411,6 @@
 				918B5C0223F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift in Sources */,
 				913C74A723B0ECC600DDF98F /* NSManagedObject+InitWithContext.swift in Sources */,
 				912F26A223ACEDB400AD85D1 /* CoreDataService.swift in Sources */,
-				914DBC2623ACFA8300092638 /* CoreDataService+PlaceDBBoundary.swift in Sources */,
 				914DBC3023AD10C700092638 /* CoreDataModel.xcdatamodeld in Sources */,
 				914DBC2923AD002100092638 /* NSManagedObjectContext+CRUDWrapper.swift in Sources */,
 			);

@@ -16,10 +16,20 @@ final class CreateHabitPresenterTests: XCTestCase {
     private let createHabitDBMock = CreateHabitDBBoundaryMock()
 
     // MARK: - Tests
+    func test_presentHabitAddedSuccessfuly() {
+        makeSUT().presentHabitAddedSuccessfuly()
+        XCTAssertEqual(output.isHabitAddedSuccessfully, true)
+    }
+
+    func test_presentHabitAddingFailure() {
+        makeSUT().presentHabitAddingFailure()
+        XCTAssertEqual(output.isHabitAddingFailure, true)
+    }
 
     // MARK: - Helpers
     func makeSUT() -> CreateHabitPresenter {
         let sut = CreateHabitPresenter()
+        sut.view = output
         return sut
     }
 }
@@ -27,7 +37,16 @@ final class CreateHabitPresenterTests: XCTestCase {
 // MARK: - Mock
 private extension CreateHabitPresenterTests {
     final class CreateHabitPresenterOutputMock: CreateHabitPresenterOutput {
-        func display(habit: Habit) {}
+        var isHabitAddedSuccessfully = false
+        var isHabitAddingFailure = false
+
+        func displayHabitAddedSuccessfuly() {
+            isHabitAddedSuccessfully = true
+        }
+
+        func displayHabitAddingFailure() {
+            isHabitAddingFailure = true
+        }
     }
 
     final class CreateHabitDBBoundaryMock: CreateHabitDBBoundary {

@@ -14,12 +14,12 @@ import iOSUI
 final class CreateHabitAssembly {
     let presenter: CreateHabitInteractorOutput
     let interactor: CreateHabitInteractorInput
-    let view: CreateHabitView
+    var view: CreateHabitView
 
-    init(createHabitDB: CreateHabitDBBoundary) {
+    init(createHabitDB: CreateHabitDBBoundary, coordinatorDelegate: CreateHabitViewCoordinatorDelegate?) {
         let presenter = CreateHabitPresenter()
         let interactor = CreateHabitInteractor(output: presenter, createHabitDB: createHabitDB)
-        let view = CreateHabitView(interactor: interactor)
+        let view = CreateHabitView(interactor: interactor, coordinatorDelegate: coordinatorDelegate)
         presenter.view = view
 
         self.presenter = presenter

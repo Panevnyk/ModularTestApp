@@ -88,11 +88,11 @@ private extension CreateHabitInteractorTests {
 
         func present(habit: Habit) {}
 
-        func habitAddedSuccessfuly() {
+        func presentHabitAddedSuccessfuly() {
             isHabitDidCreateSuccessfuly = true
         }
 
-        func habitAddingFailure() {
+        func presentHabitAddingFailure() {
             isHabitCreationFailure = true
         }
     }

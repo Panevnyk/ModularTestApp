@@ -15,6 +15,8 @@ struct RadioButton: View {
     @State
     var isSelected: Bool
 
+    var didSelect: ((_ isSelected: Bool) -> Void)?
+
     var body: some View {
         Button(action: tapAction, label: {
             Image(isSelected ? "selectedCheckbox" : "nonSelectedCheckbox")
@@ -26,11 +28,12 @@ struct RadioButton: View {
 
     private func tapAction() {
         isSelected.toggle()
+        didSelect?(isSelected)
     }
 }
 
 struct RadioButton_Previews: PreviewProvider {
     static var previews: some View {
-        RadioButton(isSelected: false)
+        RadioButton(isSelected: false, didSelect: nil)
     }
 }

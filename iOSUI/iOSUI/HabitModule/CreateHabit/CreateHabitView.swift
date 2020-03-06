@@ -12,6 +12,7 @@ import Domain
 
 public protocol CreateHabitViewCoordinatorDelegate {
     func dissmiss()
+    func habitAddedSuccessfuly()
 }
 
 public struct CreateHabitView: View {
@@ -19,9 +20,7 @@ public struct CreateHabitView: View {
 
     // Boundaries
     private var interactor: CreateHabitInteractorInput?
-
-    // Delegates
-    public var coordinatorDelegate: CreateHabitViewCoordinatorDelegate?
+    private var coordinatorDelegate: CreateHabitViewCoordinatorDelegate?
 
     // UI
     @State private var habitTitle = ""
@@ -61,8 +60,9 @@ public struct CreateHabitView: View {
     }
 
     // MARK: - Init
-    public init(interactor: CreateHabitInteractorInput?) {
+    public init(interactor: CreateHabitInteractorInput?, coordinatorDelegate: CreateHabitViewCoordinatorDelegate?) {
         self.interactor = interactor
+        self.coordinatorDelegate = coordinatorDelegate
     }
 
     // MARK: - Body
@@ -105,7 +105,13 @@ public struct CreateHabitView: View {
 }
 
 // MARK: - CreateHabitPresenterOutput
-extension CreateHabitView: CreateHabitPresenterOutput {}
+extension CreateHabitView: CreateHabitPresenterOutput {
+    public func displayHabitAddedSuccessfuly() {
+        coordinatorDelegate?.habitAddedSuccessfuly()
+    }
+    
+    public func displayHabitAddingFailure() {}
+}
 
 // MARK: - Actions
 private extension CreateHabitView {
@@ -125,7 +131,7 @@ private extension CreateHabitView {
 
 struct AddPlaceView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateHabitView(interactor: nil)
+        CreateHabitView(interactor: nil, coordinatorDelegate: nil)
     }
 }
 

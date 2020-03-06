@@ -10,7 +10,8 @@ import SwiftUI
 
 struct HabitRowView: View {
     var viewModel: HabitViewModel
-    
+    var didSelect: ((_ isSelected: Bool, _ viewModel: HabitViewModel) -> Void)?
+
     var body: some View {
         HStack(alignment: .top, spacing: 4) {
             VStack(alignment: .leading, spacing: 16) {
@@ -24,7 +25,7 @@ struct HabitRowView: View {
 
             VStack(alignment: .leading, spacing: 0) {
                 Spacer()
-                RadioButton(isSelected: false)
+                RadioButton(isSelected: viewModel.isSelected, didSelect: didSelect)
                 Spacer()
             }
         }
@@ -34,10 +35,15 @@ struct HabitRowView: View {
         .background(Color(.quaternarySystemFill))
         .cornerRadius(6)
     }
+
+    func didSelect(_ isSelected: Bool) {
+        didSelect?(isSelected, viewModel)
+    }
 }
 
 struct HabitRowView_Previews: PreviewProvider {
     static var previews: some View {
-        HabitRowView(viewModel: HabitViewModel(id: 0, title: "Morning exercise"))
+        HabitRowView(viewModel: HabitViewModel(id: 0, title: "Morning exercise", isSelected: false),
+                     didSelect: nil)
     }
 }

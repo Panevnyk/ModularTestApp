@@ -29,6 +29,16 @@ final class HabitListPresenterTests: XCTestCase {
         XCTAssertEqual(viewModels?.first?.title, "Test1")
         XCTAssertEqual(viewModels?.last?.title, "Test2")
     }
+
+    func test_presentHabitDidRemoveSuccessfully() {
+        makeSUT().presentHabitDidRemoveSuccessfully(by: 1)
+        XCTAssertEqual(output.displayedHabitDidRemoveSuccessfullyIndex, 1)
+    }
+
+    func test_presentHabitDidRemoveFailure() {
+        makeSUT().presentHabitDidRemoveFailure(by: 1)
+        XCTAssertEqual(output.displayedHabitDidRemoveFailureIndex, 1)
+    }
     
     // MARK: - Helper
     func makeSUT() -> HabitListPresenter {
@@ -51,9 +61,19 @@ final class HabitListPresenterTests: XCTestCase {
 private extension HabitListPresenterTests {
     class HabitListPresenterOutputMock: HabitListPresenterOutput {
         var presentedHabitViewModels: [HabitViewModel]?
+        var displayedHabitDidRemoveSuccessfullyIndex: Int?
+        var displayedHabitDidRemoveFailureIndex: Int?
         
         func display(habitViewModels: [HabitViewModel]) {
             presentedHabitViewModels = habitViewModels
+        }
+
+        func displayHabitDidRemoveSuccessfully(by index: Int) {
+            displayedHabitDidRemoveSuccessfullyIndex = index
+        }
+
+        func displayHabitDidRemoveFailure(by index: Int) {
+            displayedHabitDidRemoveFailureIndex = index
         }
     }
 }

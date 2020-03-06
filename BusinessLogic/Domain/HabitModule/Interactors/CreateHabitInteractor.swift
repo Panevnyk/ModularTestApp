@@ -21,8 +21,8 @@ public protocol CreateHabitInteractorInput: class {
 }
 
 public protocol CreateHabitInteractorOutput {
-    func habitAddedSuccessfuly()
-    func habitAddingFailure()
+    func presentHabitAddedSuccessfuly()
+    func presentHabitAddingFailure()
     func present(habit: Habit)
 }
 
@@ -75,12 +75,12 @@ public extension CreateHabitInteractor {
 
     func addHabit() {
         guard canAddHabit() else {
-            output.habitAddingFailure()
+            output.presentHabitAddingFailure()
             return
         }
 
         createHabitDB.addHabit(habit)
-        output.habitAddedSuccessfuly()
+        output.presentHabitAddedSuccessfuly()
     }
 
     func getHabit() -> Habit {

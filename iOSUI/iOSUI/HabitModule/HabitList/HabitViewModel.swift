@@ -12,4 +12,5 @@ import SwiftUI
 public struct HabitViewModel: Identifiable {
     public var id: Int
     public var title: String
+    public var isSelected: Bool
 }

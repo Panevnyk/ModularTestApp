@@ -163,10 +163,10 @@
 		917F049523B25AEB00104654 /* HabitList */ = {
 			isa = PBXGroup;
 			children = (
-				9191DCCB2403CF3700802806 /* HabitDataSource.swift */,
+				9191DCCA2403CF3700802806 /* HabitsListView.swift */,
 				9191DCC82403CF3700802806 /* HabitListPresenter.swift */,
 				9191DCC92403CF3700802806 /* HabitRowView.swift */,
-				9191DCCA2403CF3700802806 /* HabitsListView.swift */,
+				9191DCCB2403CF3700802806 /* HabitDataSource.swift */,
 				9191DCCC2403CF3800802806 /* HabitViewModel.swift */,
 			);
 			path = HabitList;

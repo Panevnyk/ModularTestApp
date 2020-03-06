@@ -17,7 +17,7 @@ public protocol EditHabitDatasInteractorInput: class {
 
 public protocol EditHabitDatasInteractorOutput {
     func habitsWasAddedSuccessfuly(by index: Int)
-    func habitAddingFailure()
+    func presentHabitAddingFailure()
 
     func habitsWasUpdatedSuccessfuly(by index: Int)
     func habitUpdatingFailure()
@@ -48,7 +48,7 @@ public final class EditHabitDatasInteractor: EditHabitDatasInteractorInput {
 public extension EditHabitDatasInteractor {
     func addHabitData(_ habitData: HabitData) {
         guard habit.canAddedHabitData(habitData) else {
-            output.habitAddingFailure()
+            output.presentHabitAddingFailure()
             return
         }
 

@@ -14,11 +14,10 @@ final class HabitListInteractorTests: XCTestCase {
     private let output = HabitListInteractorOutputMock()
     private let habitListDBMock = HabitListDBBoundaryMock()
 
-    // MARK: - Tests
+    // MARK: - Tests load habits
     func test_loadHabits() {
-        let habits = makeHabits(titles: ["T1", "T2", "T3"])
         let sut = makeSUT()
-        habitListDBMock.mockedHabits = habits
+        habitListDBMock.mockedHabits = makeHabits(titles: ["T1", "T2", "T3"])
 
         sut.loadHabits()
 
@@ -26,6 +25,40 @@ final class HabitListInteractorTests: XCTestCase {
         XCTAssertEqual(output.presentedHabits?[0].habitTitle, "T1")
         XCTAssertEqual(output.presentedHabits?[1].habitTitle, "T2")
         XCTAssertEqual(output.presentedHabits?[2].habitTitle, "T3")
+    }
+
+    // MARK: - Tests remove habit
+    func test_removeHabit_withCorrectDataAndIndex() {
+        let sut = makeSUT()
+        habitListDBMock.mockedHabits = makeHabits(titles: ["T1", "T2", "T3"])
+        habitListDBMock.isHabitRemovingFromDBSuccessfullyFinished = true
+
+        sut.loadHabits()
+        sut.removeHabit(by: 0)
+
+        XCTAssertEqual(output.habitRemoveSuccessullyIndex, 0)
+    }
+
+    func test_removeHabit_withOutOfBoundsIndex() {
+        let sut = makeSUT()
+        habitListDBMock.mockedHabits = makeHabits(titles: ["T1", "T2", "T3"])
+        habitListDBMock.isHabitRemovingFromDBSuccessfullyFinished = true
+
+        sut.loadHabits()
+        sut.removeHabit(by: 3)
+
+        XCTAssertEqual(output.habitRemoveFailureIndex, 3)
+    }
+
+    func test_removeHabit_withFailOnDataBase() {
+        let sut = makeSUT()
+        habitListDBMock.mockedHabits = makeHabits(titles: ["T1", "T2", "T3"])
+        habitListDBMock.isHabitRemovingFromDBSuccessfullyFinished = false
+
+        sut.loadHabits()
+        sut.removeHabit(by: 2)
+
+        XCTAssertEqual(output.habitRemoveFailureIndex, 2)
     }
 
     // MARK: - Helpers
@@ -52,17 +85,32 @@ final class HabitListInteractorTests: XCTestCase {
 private extension HabitListInteractorTests {
     final class HabitListInteractorOutputMock: HabitListInteractorOutput {
         var presentedHabits: [Habit]?
+        var habitRemoveSuccessullyIndex: Int?
+        var habitRemoveFailureIndex: Int?
 
         func present(habits: [Habit]) {
             presentedHabits = habits
+        }
+
+        func presentHabitDidRemoveSuccessfully(by index: Int) {
+            habitRemoveSuccessullyIndex = index
+        }
+
+        func presentHabitDidRemoveFailure(by index: Int) {
+            habitRemoveFailureIndex = index
         }
     }
 
     final class HabitListDBBoundaryMock: HabitListDBBoundary {
         var mockedHabits: [Habit] = []
+        var isHabitRemovingFromDBSuccessfullyFinished = false
 
         func getAllHabits() -> [Habit] {
             return mockedHabits
+        }
+
+        func remove(habit: Habit) -> Bool {
+            return isHabitRemovingFromDBSuccessfullyFinished
         }
     }
 }

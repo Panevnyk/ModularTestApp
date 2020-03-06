@@ -9,6 +9,7 @@
 import Foundation
 
 public struct Habit {
+    public var id: UUID
     public var habitTitle: String
     public var creationDate: Date
     public var timePeriod: HabitTimePeriod
@@ -16,13 +17,15 @@ public struct Habit {
     public var habitDataType: HabitDataType
     public var habitDatas: [HabitData]
 
-    public init(habitTitle: String,
+    public init(id: UUID,
+                habitTitle: String,
                 creationDate: Date = Date(),
                 timePeriod: HabitTimePeriod,
                 schedule: [HabitScheduleDay] = HabitScheduleDay.allCases,
                 habitDataType: HabitDataType,
                 habitDatas: [HabitData]) {
 
+        self.id = id
         self.habitTitle = habitTitle
         self.creationDate = creationDate
         self.timePeriod = timePeriod
@@ -43,7 +46,8 @@ public struct Habit {
     }
 
     public static func makeEmptyInstance() -> Habit {
-        return Habit(habitTitle: "",
+        return Habit(id: UUID(),
+                     habitTitle: "",
                      creationDate: Date(),
                      timePeriod: .day,
                      schedule: HabitScheduleDay.allCases,
@@ -87,7 +91,8 @@ public enum HabitDataType: Int {
 
 extension Habit: Equatable {
     public static func == (lhs: Habit, rhs: Habit) -> Bool {
-        return lhs.habitTitle == rhs.habitTitle
+        return lhs.id == rhs.id
+            && lhs.habitTitle == rhs.habitTitle
             && lhs.creationDate == rhs.creationDate
             && lhs.timePeriod == rhs.timePeriod
             && lhs.habitDataType == rhs.habitDataType

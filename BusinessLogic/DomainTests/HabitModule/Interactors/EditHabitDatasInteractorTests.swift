@@ -22,7 +22,7 @@ final class EditHabitDatasInteractorTests: XCTestCase {
         let habitData = HabitData(id: UUID(), value: 3, date: Date())
         sut.addHabitData(habitData)
 
-        XCTAssertEqual(output.isHabitAddingFailure, true)
+        XCTAssertEqual(output.isPresentHabitAddingFailure, true)
         XCTAssertNil(editHabitsDataDBMock.insertedHabitData)
     }
 
@@ -112,7 +112,7 @@ final class EditHabitDatasInteractorTests: XCTestCase {
 private extension EditHabitDatasInteractorTests {
     final class EditHabitDatasInteractorOutputMock: EditHabitDatasInteractorOutput {
         var isHabitsWasAddedSuccessfuly = false
-        var isHabitAddingFailure = false
+        var isPresentHabitAddingFailure = false
         var isHabitsWasUpdatedSuccessfuly = false
         var isHabitUpdatingFailure = false
 
@@ -120,8 +120,8 @@ private extension EditHabitDatasInteractorTests {
             isHabitsWasAddedSuccessfuly = true
         }
 
-        func habitAddingFailure() {
-            isHabitAddingFailure = true
+        func presentHabitAddingFailure() {
+            isPresentHabitAddingFailure = true
         }
 
         func habitsWasUpdatedSuccessfuly(by index: Int) {

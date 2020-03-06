@@ -8,20 +8,25 @@
 
 public protocol HabitListInteractorInput: class {
     func loadHabits()
+    func removeHabit(by index: Int)
 }
 
 public protocol HabitListInteractorOutput {
     func present(habits: [Habit])
+    func presentHabitDidRemoveSuccessfully(by index: Int)
+    func presentHabitDidRemoveFailure(by index: Int)
 }
 
 public protocol HabitListDBBoundary {
     func getAllHabits() -> [Habit]
+    func remove(habit: Habit) -> Bool
 }
 
 public final class HabitListInteractor: HabitListInteractorInput {
     // MARK: - Properties
     private let output: HabitListInteractorOutput
     private let habitListDB: HabitListDBBoundary
+    private var habits: [Habit] = []
 
     // MARK: - Init
     public init(output: HabitListInteractorOutput,
@@ -34,7 +39,28 @@ public final class HabitListInteractor: HabitListInteractorInput {
 // MARK: - Public
 public extension HabitListInteractor {
     func loadHabits() {
-        let habits = habitListDB.getAllHabits()
+        habits = habitListDB.getAllHabits()
         output.present(habits: habits)
+    }
+
+    func removeHabit(by index: Int) {
+        guard let habit = getHabit(by: index) else {
+            output.presentHabitDidRemoveFailure(by: index)
+            return
+        }
+
+        if habitListDB.remove(habit: habit) {
+            output.presentHabitDidRemoveSuccessfully(by: index)
+        } else {
+            output.presentHabitDidRemoveFailure(by: index)
+        }
+    }
+}
+
+// MARK: - Helpers
+private extension HabitListInteractor {
+    func getHabit(by index: Int) -> Habit? {
+        guard habits.count > index else { return nil }
+        return habits[index]
     }
 }

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "91127C7223A3A01A0098CAFE"
-               BuildableName = "iOSUI.framework"
-               BlueprintName = "iOSUI"
-               ReferencedContainer = "container:iOSUI.xcodeproj">
+               BlueprintIdentifier = "91127C0523A395610098CAFE"
+               BuildableName = "Domain.framework"
+               BlueprintName = "Domain_iOS"
+               ReferencedContainer = "container:Domain.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,16 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "91127C7B23A3A01A0098CAFE"
-               BuildableName = "iOSUITests.xctest"
-               BlueprintName = "iOSUITests"
-               ReferencedContainer = "container:iOSUI.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -60,10 +50,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "91127C7223A3A01A0098CAFE"
-            BuildableName = "iOSUI.framework"
-            BlueprintName = "iOSUI"
-            ReferencedContainer = "container:iOSUI.xcodeproj">
+            BlueprintIdentifier = "91127C0523A395610098CAFE"
+            BuildableName = "Domain.framework"
+            BlueprintName = "Domain_iOS"
+            ReferencedContainer = "container:Domain.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

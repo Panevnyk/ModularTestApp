@@ -19,9 +19,7 @@ public struct HabitsListView: View {
 
     // Boundaries
     private var interactor: HabitListInteractorInput?
-
-    // Delegates
-    public var coordinatorDelegate: HabitsListViewCoordinatorDelegate?
+    private var coordinatorDelegate: HabitsListViewCoordinatorDelegate?
 
     // UI
     @State
@@ -30,8 +28,9 @@ public struct HabitsListView: View {
     private var dataSource = HabitDataSource()
 
     // MARK: - Init
-    public init(interactor: HabitListInteractorInput?) {
+    public init(interactor: HabitListInteractorInput?, coordinatorDelegate: HabitsListViewCoordinatorDelegate?) {
         self.interactor = interactor
+        self.coordinatorDelegate = coordinatorDelegate
         setupUI()
     }
     
@@ -41,7 +40,8 @@ public struct HabitsListView: View {
             VStack {
                 List() {
                     ForEach(dataSource.habitViewModels) { viewModel in
-                        HabitRowView(viewModel: viewModel)
+                        HabitRowView(viewModel: viewModel,
+                                     didSelect: self.didSelectItem)
                     }.onDelete(perform: deleteItems)
                 }
             }
@@ -62,12 +62,16 @@ public struct HabitsListView: View {
             self.fetchData()
         }
     }
+
+    func didSelectItem(_ isSelected: Bool, _ viewModel: HabitViewModel) {
+        print(isSelected)
+    }
     
     private func deleteItems(at indexSet: IndexSet) {
-//        indexSet.forEach { index in
-//            interactor?.removePlace(by: index)
-//        }
-//        dataSource.habitViewModels.remove(atOffsets: indexSet)
+        indexSet.forEach { index in
+            interactor?.removeHabit(by: index)
+        }
+        dataSource.habitViewModels.remove(atOffsets: indexSet)
     }
 }
 
@@ -86,11 +90,19 @@ extension HabitsListView: HabitListPresenterOutput {
     public func display(habitViewModels: [HabitViewModel]) {
         dataSource.habitViewModels = habitViewModels
     }
+
+    public func displayHabitDidRemoveSuccessfully(by index: Int) {
+
+    }
+
+    public func displayHabitDidRemoveFailure(by index: Int) {
+
+    }
 }
 
 // MARK: - PreviewProvider
 struct PlaceView_Previews: PreviewProvider {
     static var previews: some View {
-        HabitsListView(interactor: nil)
+        HabitsListView(interactor: nil, coordinatorDelegate: nil)
     }
 }

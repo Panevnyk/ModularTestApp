@@ -9,6 +9,7 @@
 import CoreData
 import Domain
 
+// MARK: - CreateHabitDBBoundary, HabitListDBBoundary
 extension CoreDataService: CreateHabitDBBoundary, HabitListDBBoundary {
     public func addHabit(_ habit: Habit) {
         let habitMO = makeHabitMO(from: habit, backgroundContext: backgroundContext)
@@ -19,12 +20,29 @@ extension CoreDataService: CreateHabitDBBoundary, HabitListDBBoundary {
         let habitsMO: [HabitMO] = getEntities() ?? []
         return habitsMO.compactMap { makeHabit(from: $0) }
     }
+
+    public func remove(habit: Habit) -> Bool {
+        guard let habitMOForRemove = fetchPlaceMOFromDB(by: habit, backgroundContext: backgroundContext) else { return false }
+        remove(object: habitMOForRemove)
+        return true
+    }
+
+    private func fetchPlaceMOFromDB(by habit: Habit, backgroundContext: NSManagedObjectContext) -> HabitMO? {
+        let predicate = NSPredicate(format: "id = %@", habit.id.uuidString)
+        do {
+            return try backgroundContext.entity(withType: HabitMO.self, predicate: predicate)
+        } catch let error {
+            print("CoreDataService module fail to fetch habit object error: \(error)")
+        }
+        return nil
+    }
 }
 
 // MARK: - Transform Habit to HabitMO
 private extension CoreDataService {
     func makeHabitMO(from habit: Habit, backgroundContext: NSManagedObjectContext) -> HabitMO {
         let habitMO = HabitMO(context: backgroundContext)
+        habitMO.id = habit.id
         habitMO.habitTitle = habit.habitTitle
         habitMO.creationDate = habit.creationDate
         habitMO.timePeriod = Int64(habit.timePeriod.rawValue)
@@ -53,12 +71,14 @@ private extension CoreDataService {
 // MARK: - Transform HabitMO to Habit
 private extension CoreDataService {
     func makeHabit(from habitMO: HabitMO) -> Habit? {
-        guard let habitTitle = habitMO.habitTitle,
+        guard let id = habitMO.id,
+            let habitTitle = habitMO.habitTitle,
             let creationDate = habitMO.creationDate,
             let timePeriod = HabitTimePeriod(rawValue: Int(habitMO.timePeriod)),
             let habitDataType = HabitDataType(rawValue: Int(habitMO.habitDataType)) else { return nil }
 
-        return Habit(habitTitle: habitTitle,
+        return Habit(id: id,
+                     habitTitle: habitTitle,
                      creationDate: creationDate,
                      timePeriod: timePeriod,
                      schedule: HabitScheduleDay.scheduleRepresentable(from: habitMO.schedule),
