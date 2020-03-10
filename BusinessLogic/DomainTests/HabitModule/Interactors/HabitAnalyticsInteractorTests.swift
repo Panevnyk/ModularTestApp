@@ -116,7 +116,8 @@ final class HabitAnalyticsInteractorTests: XCTestCase {
     }
 
     func makeHabit() -> Habit {
-        return Habit(habitTitle: "Test",
+        return Habit(id: UUID(),
+                     habitTitle: "Test",
                      creationDate: makeDate("12/30/2018"),
                      timePeriod: .day, 
                      schedule: HabitScheduleDay.allCases,

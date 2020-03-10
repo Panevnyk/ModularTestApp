@@ -50,6 +50,7 @@ public extension HabitListInteractor {
         }
 
         if habitListDB.remove(habit: habit) {
+            habits.remove(at: index)
             output.presentHabitDidRemoveSuccessfully(by: index)
         } else {
             output.presentHabitDidRemoveFailure(by: index)
