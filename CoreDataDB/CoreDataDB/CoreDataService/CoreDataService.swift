@@ -93,6 +93,16 @@ extension CoreDataService: CoreDataServiceProtocol {
             }
         }
     }
+
+    func getEntities<T>(completion: ((_ : [T]?) -> Void)?) where T: NSManagedObject {
+        persistentContainerQueue.addOperation { [weak self] in
+            guard let self = self else {
+                completion?(nil)
+                return
+            }
+            completion?(self.getEntities())
+        }
+    }
     
     func getEntities<T>() -> [T]? where T: NSManagedObject {
         do {

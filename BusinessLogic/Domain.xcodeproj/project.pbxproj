@@ -23,6 +23,7 @@
 		9142BB0F23F1A17D00F12DC8 /* HabitAnalyticsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9142BB0D23F1A17700F12DC8 /* HabitAnalyticsInteractorTests.swift */; };
 		9142BB1223F1B38E00F12DC8 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9142BB1123F1B38E00F12DC8 /* Date+Extensions.swift */; };
 		9142BB1323F1B38E00F12DC8 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9142BB1123F1B38E00F12DC8 /* Date+Extensions.swift */; };
+		914D0592241942A10013D8EA /* DateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BD282123F2CEED002D4A6F /* DateFactory.swift */; };
 		917867B223FEDC3F009E53CB /* HabitListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917867B123FEDC3F009E53CB /* HabitListInteractor.swift */; };
 		917867B423FEDC5D009E53CB /* HabitListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917867B323FEDC5D009E53CB /* HabitListInteractorTests.swift */; };
 		917867B523FEE1A8009E53CB /* HabitListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917867B323FEDC5D009E53CB /* HabitListInteractorTests.swift */; };
@@ -448,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				914D0592241942A10013D8EA /* DateFactory.swift in Sources */,
 				9142BB0F23F1A17D00F12DC8 /* HabitAnalyticsInteractorTests.swift in Sources */,
 				917867B523FEE1A8009E53CB /* HabitListInteractorTests.swift in Sources */,
 				91AB45EF23DB359600EDD45D /* EditHabitsAreaInteractorTests.swift in Sources */,

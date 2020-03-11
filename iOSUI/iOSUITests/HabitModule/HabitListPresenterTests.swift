@@ -48,7 +48,8 @@ final class HabitListPresenterTests: XCTestCase {
     }
 
     func makeHabit(title: String) -> Habit {
-        return Habit(habitTitle: title,
+        return Habit(id: UUID(),
+                     habitTitle: title,
                      creationDate: makeDate("12/30/2018"),
                      timePeriod: .day,
                      schedule: HabitScheduleDay.allCases,

@@ -19,6 +19,7 @@ public protocol HabitListInteractorOutput {
 
 public protocol HabitListDBBoundary {
     func getAllHabits() -> [Habit]
+    func getAllHabits(completion: ((_ : [Habit]) -> Void)?)
     func remove(habit: Habit) -> Bool
 }
 
@@ -39,6 +40,11 @@ public final class HabitListInteractor: HabitListInteractorInput {
 // MARK: - Public
 public extension HabitListInteractor {
     func loadHabits() {
+//        habitListDB.getAllHabits(completion: { [weak self] (habits) in
+//            guard let self = self else { return }
+//            self.habits = habits
+//            self.output.present(habits: habits)
+//        })
         habits = habitListDB.getAllHabits()
         output.present(habits: habits)
     }

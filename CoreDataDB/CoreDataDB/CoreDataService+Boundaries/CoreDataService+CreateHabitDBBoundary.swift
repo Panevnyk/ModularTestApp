@@ -11,14 +11,21 @@ import Domain
 
 // MARK: - CreateHabitDBBoundary, HabitListDBBoundary
 extension CoreDataService: CreateHabitDBBoundary, HabitListDBBoundary {
+    public func getAllHabits() -> [Habit] {
+        let habitsMO: [HabitMO] = getEntities() ?? []
+        return habitsMO.compactMap { makeHabit(from: $0) }
+    }
+
     public func addHabit(_ habit: Habit) {
         let habitMO = makeHabitMO(from: habit, backgroundContext: backgroundContext)
         save(object: habitMO)
     }
 
-    public func getAllHabits() -> [Habit] {
-        let habitsMO: [HabitMO] = getEntities() ?? []
-        return habitsMO.compactMap { makeHabit(from: $0) }
+    public func getAllHabits(completion: ((_ : [Habit]) -> Void)?) {
+        getEntities { (habitsMO: [HabitMO]?) in
+            let habits = habitsMO?.compactMap { self.makeHabit(from: $0) }
+            completion?(habits ?? [])
+        }
     }
 
     public func remove(habit: Habit) -> Bool {
