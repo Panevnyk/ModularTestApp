@@ -7,7 +7,7 @@
 //
 
 import CoreData
-import BusinessLogic
+import Domain
 
 protocol CoreDataServiceProtocol: AnyObject {
     func save<T>(object: T) where T: NSManagedObject
@@ -67,31 +67,40 @@ public class CoreDataService {
 // MARK: - CoreDataServiceProtocol
 extension CoreDataService: CoreDataServiceProtocol {
     func save<T>(object: T) where T: NSManagedObject {
+        writeBlock {
+            _ = self.backgroundContext.addEntity(withType: T.self)
+        }
+    }
+    
+    func remove<T>(object: T) where T: NSManagedObject {
+        writeBlock {
+            self.backgroundContext.delete(object)
+        }
+    }
+    
+    func writeBlock(action: @escaping (() -> Void)) {
         persistentContainerQueue.addOperation { [weak self] in
             guard let self = self else { return }
-            
             self.backgroundContext.performAndWait {
-                
-//                do {
-//                    let predicate = NSPredicate(format: "\(#keyPath(T.id)) = %@", id)
-//                    try backgroundContext.entity(withType: T.self, predicate: predicate)
-//                        ?? backgroundContext.addEntity(withType: T.self)
-//                } catch let error {
-//                    print("Error saving context: \(error)")
-//                }
-                
-                _ = self.backgroundContext.addEntity(withType: T.self)
-                
+                action()
                 guard self.backgroundContext.hasChanges else { return }
-                
                 do {
                     try self.backgroundContext.save()
                     self.backgroundContext.refreshAllObjects()
-                    
                 } catch let error {
                     print("Error saving context: \(error)")
                 }
             }
+        }
+    }
+
+    func getEntities<T>(completion: ((_ : [T]?) -> Void)?) where T: NSManagedObject {
+        persistentContainerQueue.addOperation { [weak self] in
+            guard let self = self else {
+                completion?(nil)
+                return
+            }
+            completion?(self.getEntities())
         }
     }
     

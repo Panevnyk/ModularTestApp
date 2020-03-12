@@ -1,0 +1,13 @@
+default_platform(:iOS)
+
+platform :iOS do
+  desc "Run unit tests "
+  lane :tests do
+
+    run_tests(
+      workspace: "iOSMain/iOSMain.xcworkspace",
+      scheme: "CI",
+      devices: ["iPhone 11"]
+    )
+  end
+end

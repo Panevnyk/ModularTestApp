@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1120"
+   LastUpgradeVersion = "1130"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -42,16 +42,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "91127BEF23A392CA0098CAFE"
-               BuildableName = "BusinessLogicTests.xctest"
-               BlueprintName = "BusinessLogicTests"
-               ReferencedContainer = "container:../BusinessLogic/BusinessLogic.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "91127C7B23A3A01A0098CAFE"
                BuildableName = "iOSUITests.xctest"
                BlueprintName = "iOSUITests"
@@ -62,10 +52,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "912F265F23ACE3FD00AD85D1"
-               BuildableName = "CoreDataDBTests.xctest"
-               BlueprintName = "CoreDataDBTests"
+               BlueprintIdentifier = "912F269023ACECF200AD85D1"
+               BuildableName = "CoreDataDB_iOSTests.xctest"
+               BlueprintName = "CoreDataDB_iOSTests"
                ReferencedContainer = "container:../CoreDataDB/CoreDataDB.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "91127C0D23A395610098CAFE"
+               BuildableName = "DomainTests.xctest"
+               BlueprintName = "Domain_iOSTests"
+               ReferencedContainer = "container:../BusinessLogic/Domain.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

@@ -17,16 +17,18 @@
 		912F26A723ACEDC100AD85D1 /* CoreDataDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912F266523ACE3FD00AD85D1 /* CoreDataDBTests.swift */; };
 		913C74A623B0ECC600DDF98F /* NSManagedObject+InitWithContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913C74A523B0ECC600DDF98F /* NSManagedObject+InitWithContext.swift */; };
 		913C74A723B0ECC600DDF98F /* NSManagedObject+InitWithContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913C74A523B0ECC600DDF98F /* NSManagedObject+InitWithContext.swift */; };
-		914DBBF623ACF1F000092638 /* BusinessLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914DBBF523ACF1F000092638 /* BusinessLogic.framework */; };
-		914DBBF723ACF1F000092638 /* BusinessLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 914DBBF523ACF1F000092638 /* BusinessLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		914DBBF923ACF21700092638 /* BusinessLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914DBBF523ACF1F000092638 /* BusinessLogic.framework */; };
-		914DBBFA23ACF21700092638 /* BusinessLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 914DBBF523ACF1F000092638 /* BusinessLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		914DBC2523ACFA8300092638 /* CoreDataService+PlaceDBBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914DBC2423ACFA8300092638 /* CoreDataService+PlaceDBBoundary.swift */; };
-		914DBC2623ACFA8300092638 /* CoreDataService+PlaceDBBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914DBC2423ACFA8300092638 /* CoreDataService+PlaceDBBoundary.swift */; };
 		914DBC2823AD002100092638 /* NSManagedObjectContext+CRUDWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914DBC2723AD002100092638 /* NSManagedObjectContext+CRUDWrapper.swift */; };
 		914DBC2923AD002100092638 /* NSManagedObjectContext+CRUDWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914DBC2723AD002100092638 /* NSManagedObjectContext+CRUDWrapper.swift */; };
 		914DBC2F23AD10C700092638 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 914DBC2D23AD10C700092638 /* CoreDataModel.xcdatamodeld */; };
 		914DBC3023AD10C700092638 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 914DBC2D23AD10C700092638 /* CoreDataModel.xcdatamodeld */; };
+		918B5C0123F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918B5C0023F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift */; };
+		918B5C0223F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918B5C0023F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift */; };
+		919BD98F240809B4002382B6 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 919BD98E240809B4002382B6 /* Domain.framework */; };
+		919BD990240809B4002382B6 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 919BD98E240809B4002382B6 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		919BD992240809C2002382B6 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 919BD98E240809B4002382B6 /* Domain.framework */; };
+		919BD993240809C2002382B6 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 919BD98E240809B4002382B6 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		919BD9A124080AC8002382B6 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 919BD9A024080AC8002382B6 /* Domain.framework */; };
+		919BD9A224080AC8002382B6 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 919BD9A024080AC8002382B6 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,24 +49,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		914DBBF823ACF1F000092638 /* Embed Frameworks */ = {
+		919BD991240809B4002382B6 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				914DBBF723ACF1F000092638 /* BusinessLogic.framework in Embed Frameworks */,
+				919BD9A224080AC8002382B6 /* Domain.framework in Embed Frameworks */,
+				919BD990240809B4002382B6 /* Domain.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		914DBBFB23ACF21700092638 /* Embed Frameworks */ = {
+		919BD994240809C2002382B6 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				914DBBFA23ACF21700092638 /* BusinessLogic.framework in Embed Frameworks */,
+				919BD993240809C2002382B6 /* Domain.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,9 +86,12 @@
 		912F269123ACECF200AD85D1 /* CoreDataDB_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataDB_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		913C74A523B0ECC600DDF98F /* NSManagedObject+InitWithContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+InitWithContext.swift"; sourceTree = "<group>"; };
 		914DBBF523ACF1F000092638 /* BusinessLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BusinessLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		914DBC2423ACFA8300092638 /* CoreDataService+PlaceDBBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataService+PlaceDBBoundary.swift"; sourceTree = "<group>"; };
 		914DBC2723AD002100092638 /* NSManagedObjectContext+CRUDWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+CRUDWrapper.swift"; sourceTree = "<group>"; };
 		914DBC2E23AD10C700092638 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		918B5C0023F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataService+CreateHabitDBBoundary.swift"; sourceTree = "<group>"; };
+		919BD98E240809B4002382B6 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		919BD99F24080ABE002382B6 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		919BD9A024080AC8002382B6 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				914DBBF623ACF1F000092638 /* BusinessLogic.framework in Frameworks */,
+				919BD9A124080AC8002382B6 /* Domain.framework in Frameworks */,
+				919BD98F240809B4002382B6 /* Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				914DBBF923ACF21700092638 /* BusinessLogic.framework in Frameworks */,
+				919BD992240809C2002382B6 /* Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +177,9 @@
 		912F267F23ACEC0200AD85D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				919BD9A024080AC8002382B6 /* Domain.framework */,
+				919BD99F24080ABE002382B6 /* Domain.framework */,
+				919BD98E240809B4002382B6 /* Domain.framework */,
 				914DBBF523ACF1F000092638 /* BusinessLogic.framework */,
 			);
 			name = Frameworks;
@@ -195,7 +205,7 @@
 		913C74A923B0EE5F00DDF98F /* CoreDataService+Boundaries */ = {
 			isa = PBXGroup;
 			children = (
-				914DBC2423ACFA8300092638 /* CoreDataService+PlaceDBBoundary.swift */,
+				918B5C0023F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift */,
 			);
 			path = "CoreDataService+Boundaries";
 			sourceTree = "<group>";
@@ -230,7 +240,7 @@
 				912F265323ACE3FD00AD85D1 /* Sources */,
 				912F265423ACE3FD00AD85D1 /* Frameworks */,
 				912F265523ACE3FD00AD85D1 /* Resources */,
-				914DBBF823ACF1F000092638 /* Embed Frameworks */,
+				919BD991240809B4002382B6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -267,7 +277,7 @@
 				912F268523ACECF200AD85D1 /* Sources */,
 				912F268623ACECF200AD85D1 /* Frameworks */,
 				912F268723ACECF200AD85D1 /* Resources */,
-				914DBBFB23ACF21700092638 /* Embed Frameworks */,
+				919BD994240809C2002382B6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -378,8 +388,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				918B5C0123F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift in Sources */,
 				913C74A623B0ECC600DDF98F /* NSManagedObject+InitWithContext.swift in Sources */,
-				914DBC2523ACFA8300092638 /* CoreDataService+PlaceDBBoundary.swift in Sources */,
 				914DBC2823AD002100092638 /* NSManagedObjectContext+CRUDWrapper.swift in Sources */,
 				914DBC2F23AD10C700092638 /* CoreDataModel.xcdatamodeld in Sources */,
 				912F267223ACE44C00AD85D1 /* CoreDataService.swift in Sources */,
@@ -398,9 +408,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				918B5C0223F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift in Sources */,
 				913C74A723B0ECC600DDF98F /* NSManagedObject+InitWithContext.swift in Sources */,
 				912F26A223ACEDB400AD85D1 /* CoreDataService.swift in Sources */,
-				914DBC2623ACFA8300092638 /* CoreDataService+PlaceDBBoundary.swift in Sources */,
 				914DBC3023AD10C700092638 /* CoreDataModel.xcdatamodeld in Sources */,
 				914DBC2923AD002100092638 /* NSManagedObjectContext+CRUDWrapper.swift in Sources */,
 			);
@@ -553,6 +563,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -579,6 +590,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -659,6 +671,7 @@
 				PRODUCT_NAME = CoreDataDB;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -685,6 +698,7 @@
 				PRODUCT_NAME = CoreDataDB;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
