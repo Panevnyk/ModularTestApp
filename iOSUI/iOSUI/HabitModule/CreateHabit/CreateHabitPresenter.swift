@@ -7,9 +7,11 @@
 //
 
 import UIKit
-import BusinessLogic
+import Domain
 
 public protocol CreateHabitPresenterOutput {
+    func displayHabitAddedSuccessfuly()
+    func displayHabitAddingFailure()
 }
 
 final public class CreateHabitPresenter: CreateHabitInteractorOutput {
@@ -17,15 +19,13 @@ final public class CreateHabitPresenter: CreateHabitInteractorOutput {
 
     public init() {}
 
-    public func present(habit: Habit) {
+    public func present(habit: Habit) {}
 
-    }
-
-    public func habitAddedSuccessfuly() {
-        print("!!! SUCCESS YEAH")
+    public func presentHabitAddedSuccessfuly() {
+        view?.displayHabitAddedSuccessfuly()
     }
     
-    public func habitAddingFailure() {
-        print("!!! Failure ((((")
+    public func presentHabitAddingFailure() {
+        view?.displayHabitAddingFailure()
     }
 }

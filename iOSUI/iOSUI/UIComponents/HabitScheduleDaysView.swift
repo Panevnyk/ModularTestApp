@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-import BusinessLogic
+import Domain
 
 struct HabitScheduleDaysView: View {
     @Binding

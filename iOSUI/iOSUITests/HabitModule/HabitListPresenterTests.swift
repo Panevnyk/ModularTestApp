@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import BusinessLogic
+@testable import Domain
 @testable import iOSUI
 
 final class HabitListPresenterTests: XCTestCase {
@@ -29,6 +29,16 @@ final class HabitListPresenterTests: XCTestCase {
         XCTAssertEqual(viewModels?.first?.title, "Test1")
         XCTAssertEqual(viewModels?.last?.title, "Test2")
     }
+
+    func test_presentHabitDidRemoveSuccessfully() {
+        makeSUT().presentHabitDidRemoveSuccessfully(by: 1)
+        XCTAssertEqual(output.displayedHabitDidRemoveSuccessfullyIndex, 1)
+    }
+
+    func test_presentHabitDidRemoveFailure() {
+        makeSUT().presentHabitDidRemoveFailure(by: 1)
+        XCTAssertEqual(output.displayedHabitDidRemoveFailureIndex, 1)
+    }
     
     // MARK: - Helper
     func makeSUT() -> HabitListPresenter {
@@ -38,7 +48,8 @@ final class HabitListPresenterTests: XCTestCase {
     }
 
     func makeHabit(title: String) -> Habit {
-        return Habit(habitTitle: title,
+        return Habit(id: UUID(),
+                     habitTitle: title,
                      creationDate: makeDate("12/30/2018"),
                      timePeriod: .day,
                      schedule: HabitScheduleDay.allCases,
@@ -51,9 +62,19 @@ final class HabitListPresenterTests: XCTestCase {
 private extension HabitListPresenterTests {
     class HabitListPresenterOutputMock: HabitListPresenterOutput {
         var presentedHabitViewModels: [HabitViewModel]?
+        var displayedHabitDidRemoveSuccessfullyIndex: Int?
+        var displayedHabitDidRemoveFailureIndex: Int?
         
         func display(habitViewModels: [HabitViewModel]) {
             presentedHabitViewModels = habitViewModels
+        }
+
+        func displayHabitDidRemoveSuccessfully(by index: Int) {
+            displayedHabitDidRemoveSuccessfullyIndex = index
+        }
+
+        func displayHabitDidRemoveFailure(by index: Int) {
+            displayedHabitDidRemoveFailureIndex = index
         }
     }
 }

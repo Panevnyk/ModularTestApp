@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import BusinessLogic
+import Domain
 import CoreDataDB
 import SwiftUI
 

@@ -14,7 +14,7 @@ struct CloseButton: View {
     var body: some View {
         Button(action: action) {
             Image("close")
-                .resizable(capInsets: EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0), resizingMode: .stretch)
+                .resizable(capInsets: .zero, resizingMode: .stretch)
                 .frame(width: 20, height: 20)
         }
         .frame(width: 40, height: 40)

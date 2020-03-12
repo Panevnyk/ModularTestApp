@@ -10,12 +10,13 @@
         <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="habitDataType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="habitTitle" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="schedule" optional="YES" attributeType="String"/>
         <attribute name="timePeriod" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="habitDatas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="HabitDataMO" inverseName="habit" inverseEntity="HabitDataMO"/>
     </entity>
     <elements>
         <element name="HabitDataMO" positionX="-45" positionY="36" width="128" height="103"/>
-        <element name="HabitMO" positionX="-54" positionY="36" width="128" height="133"/>
+        <element name="HabitMO" positionX="-54" positionY="36" width="128" height="148"/>
     </elements>
 </model>

@@ -7,7 +7,7 @@
 //
 
 import CoreData
-import BusinessLogic
+import Domain
 
 protocol CoreDataServiceProtocol: AnyObject {
     func save<T>(object: T) where T: NSManagedObject
@@ -91,6 +91,16 @@ extension CoreDataService: CoreDataServiceProtocol {
                     print("Error saving context: \(error)")
                 }
             }
+        }
+    }
+
+    func getEntities<T>(completion: ((_ : [T]?) -> Void)?) where T: NSManagedObject {
+        persistentContainerQueue.addOperation { [weak self] in
+            guard let self = self else {
+                completion?(nil)
+                return
+            }
+            completion?(self.getEntities())
         }
     }
     

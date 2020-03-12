@@ -9,7 +9,7 @@
 import UIKit
 import SwiftUI
 import iOSUI
-import BusinessLogic
+import Domain
 import CoreDataDB
 
 final class AppCoordinator {
@@ -17,6 +17,7 @@ final class AppCoordinator {
 
     private weak var habitListViewController: UIViewController?
     private weak var createHabitViewController: UIViewController?
+    private var createHabitCompletion: OptionalClosure = nil
 
     let coreDataService = CoreDataService()
 
@@ -26,11 +27,10 @@ final class AppCoordinator {
     }
 
     func start() {
-        let habitAssembly = HabitAssembly(habitListDB: coreDataService)
-        var view = habitAssembly.view
-        view.coordinatorDelegate = self
+        let habitAssembly = HabitAssembly(habitListDB: coreDataService,
+                                          coordinatorDelegate: self)
 
-        let habitListHostingController = UIHostingController(rootView: view)
+        let habitListHostingController = UIHostingController(rootView: habitAssembly.view)
         self.habitListViewController = habitListHostingController
 
         window.rootViewController = habitListHostingController
@@ -41,14 +41,14 @@ final class AppCoordinator {
 // MARK: - HabitsListViewCoordinatorDelegate
 extension AppCoordinator: HabitsListViewCoordinatorDelegate {
     func createHabitViewAction(completion: OptionalClosure) {
-        let createHabitAssembly = CreateHabitAssembly(createHabitDB: coreDataService)
-        var view = createHabitAssembly.view
-        view.coordinatorDelegate = self
+        let createHabitAssembly = CreateHabitAssembly(createHabitDB: coreDataService,
+                                                      coordinatorDelegate: self)
 
         if let habitListViewController = habitListViewController {
-            let createHabitHostingController = UIHostingController(rootView: view)
+            let createHabitHostingController = UIHostingController(rootView: createHabitAssembly.view)
             self.createHabitViewController = createHabitHostingController
-            habitListViewController.present(createHabitHostingController, animated: true, completion: completion)
+            habitListViewController.present(createHabitHostingController, animated: true, completion: nil)
+            createHabitCompletion = completion
         }
     }
 }
@@ -56,6 +56,11 @@ extension AppCoordinator: HabitsListViewCoordinatorDelegate {
 // MARK: - CreateHabitViewCoordinatorDelegate
 extension AppCoordinator: CreateHabitViewCoordinatorDelegate {
     func dissmiss() {
-        habitListViewController?.dismiss(animated: true)
+        createHabitViewController?.dismiss(animated: true)
+    }
+
+    func habitAddedSuccessfuly() {
+        dissmiss()
+        createHabitCompletion?()
     }
 }
