@@ -5,7 +5,7 @@ platform :iOS do
   lane :tests do
 
     run_tests(
-      workspace: "iOSMain.xcworkspace",
+      workspace: "iOSMain/iOSMain.xcworkspace",
       scheme: "CI",
       devices: ["iPhone 11"]
     )
