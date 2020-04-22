@@ -1,13 +1,56 @@
 default_platform(:iOS)
 
 platform :iOS do
-  desc "Run unit tests "
-  lane :tests do
 
-    run_tests(
-      workspace: "iOSMain/iOSMain.xcworkspace",
-      scheme: "CI",
-      devices: ["iPhone 11"]
-    )
-  end
+#============================== tests ==============================
+
+lane :tests do
+	# run tests
+	run_tests(
+		workspace: "iOSMain/iOSMain.xcworkspace",
+		scheme: "CI",
+		devices: ["iPhone 11"]
+	)
+end
+
+
+#============================== uploadToItunesConnect ==============================
+
+lane :uploadToItunesConnect  do
+
+	# remove all documentation created during build
+	clean_build_artifacts
+
+	# clean derived data
+	clear_derived_data
+
+	# run tests
+	scan(
+		scheme: "CI",
+		workspace: "iOSMain/iOSMain.xcworkspace",
+		clean: true,
+		code_coverage: true
+	)
+
+	# generate code coverage document
+	slather(
+		llvm_cov: true,
+		build_directory: "SlatherOutput",
+		proj: "iOSMain/iOSMain.xcodeproj",
+		workspace: "iOSMain/iOSMain.xcworkspace",
+		scheme: "CI",
+		proj: "MyProject.xcodeproj"
+	)
+
+	# load certificates
+	cert
+	
+	# load provision profiles
+	sigh(
+		provisioning_name: "Panevnyk Habbity Provisioning Profile",
+		ignore_profiles_with_different_name: true,
+		skip_certificate_verification: true
+	)
+end
+
 end
