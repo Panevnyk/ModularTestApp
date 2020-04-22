@@ -8,13 +8,13 @@
     <testcase classname='iOSUITests.CreateHabitPresenterTests' name='test_presentHabitAddingFailure' time='0.000'/>
   </testsuite>
   <testsuite name='iOSUITests.HabitListPresenterTests' tests='3' failures='0'>
-    <testcase classname='iOSUITests.HabitListPresenterTests' name='test_presentHabitDidRemoveFailure' time='0.001'/>
+    <testcase classname='iOSUITests.HabitListPresenterTests' name='test_presentHabitDidRemoveFailure' time='0.000'/>
     <testcase classname='iOSUITests.HabitListPresenterTests' name='test_presentHabitDidRemoveSuccessfully' time='0.000'/>
-    <testcase classname='iOSUITests.HabitListPresenterTests' name='test_presentHabits' time='0.002'/>
+    <testcase classname='iOSUITests.HabitListPresenterTests' name='test_presentHabits' time='0.003'/>
   </testsuite>
   <testsuite name='CoreDataDB_iOSTests.CoreDataDBTests' tests='2' failures='0'>
     <testcase classname='CoreDataDB_iOSTests.CoreDataDBTests' name='testExample' time='0.001'/>
-    <testcase classname='CoreDataDB_iOSTests.CoreDataDBTests' name='testPerformanceExample' time='0.319'/>
+    <testcase classname='CoreDataDB_iOSTests.CoreDataDBTests' name='testPerformanceExample' time='0.306'/>
   </testsuite>
   <testsuite name='DomainTests.CreateHabitInteractorTests' tests='6' failures='0'>
     <testcase classname='DomainTests.CreateHabitInteractorTests' name='test_addHabit_failure' time='0.003'/>
@@ -27,7 +27,7 @@
   <testsuite name='DomainTests.EditHabitDatasInteractorTests' tests='6' failures='0'>
     <testcase classname='DomainTests.EditHabitDatasInteractorTests' name='test_addHabitData_correctValue_dataWasAdded' time='0.001'/>
     <testcase classname='DomainTests.EditHabitDatasInteractorTests' name='test_addHabitData_incorrectValue_dataWasNotAdded' time='0.000'/>
-    <testcase classname='DomainTests.EditHabitDatasInteractorTests' name='test_isHabitContainHabitData_correct' time='0.001'/>
+    <testcase classname='DomainTests.EditHabitDatasInteractorTests' name='test_isHabitContainHabitData_correct' time='0.000'/>
     <testcase classname='DomainTests.EditHabitDatasInteractorTests' name='test_isHabitContainHabitData_incorrect' time='0.000'/>
     <testcase classname='DomainTests.EditHabitDatasInteractorTests' name='test_updateHabitData_correctValue_valueWasChanged' time='0.000'/>
     <testcase classname='DomainTests.EditHabitDatasInteractorTests' name='test_updateHabitData_incorrectValue_valueWasNotChanged' time='0.000'/>
@@ -51,14 +51,14 @@
     <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getYearlyHabitAnalytics_byDateFromFuture' time='0.001'/>
     <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getYearlyHabitAnalytics_byFirstDayOfYear' time='0.002'/>
     <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getYearlyHabitAnalytics_byLastDayOfYear' time='0.002'/>
-    <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getYearlyHabitAnalytics_byYearBeforeHabitCreated' time='0.001'/>
+    <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getYearlyHabitAnalytics_byYearBeforeHabitCreated' time='0.002'/>
   </testsuite>
   <testsuite name='DomainTests.HabitListInteractorTests' tests='9' failures='0'>
     <testcase classname='DomainTests.HabitListInteractorTests' name='test_loadHabits' time='0.001'/>
     <testcase classname='DomainTests.HabitListInteractorTests' name='test_removeHabit_checkDB' time='0.001'/>
     <testcase classname='DomainTests.HabitListInteractorTests' name='test_removeHabit_checkOutput' time='0.001'/>
-    <testcase classname='DomainTests.HabitListInteractorTests' name='test_removeHabit_withFailOnDataBase' time='0.000'/>
-    <testcase classname='DomainTests.HabitListInteractorTests' name='test_removeHabit_withOutOfBoundsIndex' time='0.000'/>
+    <testcase classname='DomainTests.HabitListInteractorTests' name='test_removeHabit_withFailOnDataBase' time='0.001'/>
+    <testcase classname='DomainTests.HabitListInteractorTests' name='test_removeHabit_withOutOfBoundsIndex' time='0.001'/>
     <testcase classname='DomainTests.HabitListInteractorTests' name='test_removeMultipleHabits_checkDB' time='0.001'/>
     <testcase classname='DomainTests.HabitListInteractorTests' name='test_removeMultipleHabits_checkDB_withLastRemoveOutOfBounds' time='0.001'/>
     <testcase classname='DomainTests.HabitListInteractorTests' name='test_removeMultipleHabits_checkOutput' time='0.001'/>

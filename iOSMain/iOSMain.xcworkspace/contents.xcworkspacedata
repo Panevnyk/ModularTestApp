@@ -5,7 +5,7 @@
       location = "group:../CoreDataDB/CoreDataDB.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/vpanevnyk/Developer/Test/ModularTestApp/BusinessLogic/Domain.xcodeproj">
+      location = "group:../Domain/Domain.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:../iOSUI/iOSUI.xcodeproj">

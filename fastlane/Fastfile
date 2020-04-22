@@ -32,24 +32,58 @@ lane :uploadToItunesConnect  do
 		code_coverage: true
 	)
 
-	# generate code coverage document
-	slather(
-		llvm_cov: true,
-		build_directory: "SlatherOutput",
-		proj: "iOSMain/iOSMain.xcodeproj",
-		workspace: "iOSMain/iOSMain.xcworkspace",
-		scheme: "CI",
-		proj: "MyProject.xcodeproj"
+	# increment build number
+	increment_build_number(
+		xcodeproj: "iOSMain/iOSMain.xcodeproj"
 	)
 
-	# load certificates
-	cert
+	# commit
+	commit_version_bump(
+		xcodeproj: "iOSMain/iOSMain.xcodeproj",
+		message: "Build number bump by fastlane",
+		force: true
+	)
+
+	# push
+	push_to_git_remote(
+		tags: false
+	)
+
+	# import certificates
+	cert(
+		filename: "Certificates/3X9QPBQVLL.cer",
+		username: "v.panevnyk@gmail.com",
+		team_name: "Vladyslav Panevnyk"
+
+	)
 	
 	# load provision profiles
 	sigh(
-		provisioning_name: "Panevnyk Habbity Provisioning Profile",
+		provisioning_name: "App Store Habbity Provisioning Profile",
 		ignore_profiles_with_different_name: true,
+		username: "v.panevnyk@gmail.com",
+		app_identifier: "com.bandle.habbityApp",
 		skip_certificate_verification: true
+	)
+
+	# create IPA 
+	gym(
+		scheme: "iOSMain",
+		workspace: "iOSMain/iOSMain.xcworkspace",
+		clean: true,
+		output_name: "Habbity.ipa",
+		configuration: "Release",
+		include_symbols: true,
+		include_bitcode: true
+	)
+
+	# upload build to AppStoreConnect
+	pilot(
+		username: "v.panevnyk@gmail.com",
+		team_name: "Vladyslav Panevnyk",
+		app_identifier: "com.bandle.habbityApp",
+		ipa: "Habbity.ipa",
+		skip_waiting_for_build_processing: true
 	)
 end
 

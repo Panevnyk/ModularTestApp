@@ -92,6 +92,8 @@
 		919BD98E240809B4002382B6 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		919BD99F24080ABE002382B6 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		919BD9A024080AC8002382B6 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91C732392450928200D92856 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91C7323C2450928600D92856 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,8 @@
 		912F267F23ACEC0200AD85D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				91C7323C2450928600D92856 /* Domain.framework */,
+				91C732392450928200D92856 /* Domain.framework */,
 				919BD9A024080AC8002382B6 /* Domain.framework */,
 				919BD99F24080ABE002382B6 /* Domain.framework */,
 				919BD98E240809B4002382B6 /* Domain.framework */,

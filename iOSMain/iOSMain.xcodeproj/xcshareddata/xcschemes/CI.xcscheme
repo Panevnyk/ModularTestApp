@@ -65,7 +65,7 @@
                BlueprintIdentifier = "91127C0D23A395610098CAFE"
                BuildableName = "DomainTests.xctest"
                BlueprintName = "Domain_iOSTests"
-               ReferencedContainer = "container:../BusinessLogic/Domain.xcodeproj">
+               ReferencedContainer = "container:../Domain/Domain.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
