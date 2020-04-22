@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuites name='DomainTests.xctest' tests='46' failures='0'>
+<testsuites name='DomainTests.xctest' tests='45' failures='0'>
   <testsuite name='iOSMainTests.Test' tests='1' failures='0'>
     <testcase classname='iOSMainTests.Test' name='testExample' time='0.001'/>
   </testsuite>
@@ -10,15 +10,14 @@
   <testsuite name='iOSUITests.HabitListPresenterTests' tests='3' failures='0'>
     <testcase classname='iOSUITests.HabitListPresenterTests' name='test_presentHabitDidRemoveFailure' time='0.000'/>
     <testcase classname='iOSUITests.HabitListPresenterTests' name='test_presentHabitDidRemoveSuccessfully' time='0.000'/>
-    <testcase classname='iOSUITests.HabitListPresenterTests' name='test_presentHabits' time='0.003'/>
+    <testcase classname='iOSUITests.HabitListPresenterTests' name='test_presentHabits' time='0.002'/>
   </testsuite>
-  <testsuite name='CoreDataDB_iOSTests.CoreDataDBTests' tests='2' failures='0'>
+  <testsuite name='CoreDataDB_iOSTests.CoreDataDBTests' tests='1' failures='0'>
     <testcase classname='CoreDataDB_iOSTests.CoreDataDBTests' name='testExample' time='0.001'/>
-    <testcase classname='CoreDataDB_iOSTests.CoreDataDBTests' name='testPerformanceExample' time='0.306'/>
   </testsuite>
   <testsuite name='DomainTests.CreateHabitInteractorTests' tests='6' failures='0'>
     <testcase classname='DomainTests.CreateHabitInteractorTests' name='test_addHabit_failure' time='0.003'/>
-    <testcase classname='DomainTests.CreateHabitInteractorTests' name='test_addHabit_success' time='0.001'/>
+    <testcase classname='DomainTests.CreateHabitInteractorTests' name='test_addHabit_success' time='0.002'/>
     <testcase classname='DomainTests.CreateHabitInteractorTests' name='test_canAddHabit_emptyData_falseResult' time='0.000'/>
     <testcase classname='DomainTests.CreateHabitInteractorTests' name='test_canAddHabit_withEmptySchedule_falseResult' time='0.000'/>
     <testcase classname='DomainTests.CreateHabitInteractorTests' name='test_canAddHabit_withHabitTitle_trueResult' time='0.000'/>
@@ -50,7 +49,7 @@
     <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getMonthlyHabitAnalytics_byMonthBeforeHabitCreated' time='0.001'/>
     <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getYearlyHabitAnalytics_byDateFromFuture' time='0.001'/>
     <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getYearlyHabitAnalytics_byFirstDayOfYear' time='0.002'/>
-    <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getYearlyHabitAnalytics_byLastDayOfYear' time='0.002'/>
+    <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getYearlyHabitAnalytics_byLastDayOfYear' time='0.001'/>
     <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getYearlyHabitAnalytics_byYearBeforeHabitCreated' time='0.002'/>
   </testsuite>
   <testsuite name='DomainTests.HabitListInteractorTests' tests='9' failures='0'>
