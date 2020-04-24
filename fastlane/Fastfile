@@ -7,7 +7,7 @@ platform :iOS do
 lane :tests do
 	# run tests
 	run_tests(
-		workspace: "iOSMain/iOSMain.xcworkspace",
+		workspace: "HabbityMain/HabbityMain.xcworkspace",
 		scheme: "CI",
 		devices: ["iPhone 11"]
 	)
@@ -27,27 +27,27 @@ lane :uploadToItunesConnect  do
 	# run tests
 	scan(
 		scheme: "CI",
-		workspace: "iOSMain/iOSMain.xcworkspace",
+		workspace: "HabbityMain/HabbityMain.xcworkspace",
 		clean: true,
 		code_coverage: true
 	)
 
 	# increment build number
-	#increment_build_number(
-	#	xcodeproj: "iOSMain/iOSMain.xcodeproj"
-	#)
+	increment_build_number(
+		xcodeproj: "HabbityMain/HabbityMain.xcodeproj"
+	)
 
 	# commit
-	#commit_version_bump(
-	#	xcodeproj: "iOSMain/iOSMain.xcodeproj",
-	#	message: "Build number bump by fastlane",
-	#	force: true
-	#)
+	commit_version_bump(
+		xcodeproj: "HabbityMain/HabbityMain.xcodeproj",
+		message: "Build number bump by fastlane",
+		force: true
+	)
 
 	# push
-	#push_to_git_remote(
-	#	tags: false
-	#)
+	push_to_git_remote(
+		tags: false
+	)
 
 	# import certificates
 	cert(
@@ -68,8 +68,8 @@ lane :uploadToItunesConnect  do
 
 	# create IPA 
 	gym(
-		scheme: "iOSMain",
-		workspace: "iOSMain/iOSMain.xcworkspace",
+		scheme: "HabbityMain",
+		workspace: "HabbityMain/HabbityMain.xcworkspace",
 		clean: true,
 		output_name: "Habbity.ipa",
 		configuration: "Release",

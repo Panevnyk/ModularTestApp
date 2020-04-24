@@ -1,6 +1,6 @@
 //
 //  Test.swift
-//  iOSMainTests
+//  HabbityMainTests
 //
 //  Created by Vladyslav Panevnyk on 18.12.2019.
 //  Copyright © 2019 Vladyslav Panevnyk. All rights reserved.

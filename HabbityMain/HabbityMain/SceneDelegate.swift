@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  iOSMain
+//  HabbityMain
 //
 //  Created by Vladyslav Panevnyk on 12/10/19.
 //  Copyright © 2019 Vladyslav Panevnyk. All rights reserved.

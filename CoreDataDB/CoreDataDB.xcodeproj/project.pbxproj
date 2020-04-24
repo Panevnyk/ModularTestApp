@@ -24,11 +24,8 @@
 		918B5C0123F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918B5C0023F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift */; };
 		918B5C0223F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918B5C0023F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift */; };
 		919BD98F240809B4002382B6 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 919BD98E240809B4002382B6 /* Domain.framework */; };
-		919BD990240809B4002382B6 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 919BD98E240809B4002382B6 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		919BD992240809C2002382B6 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 919BD98E240809B4002382B6 /* Domain.framework */; };
-		919BD993240809C2002382B6 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 919BD98E240809B4002382B6 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		919BD9A124080AC8002382B6 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 919BD9A024080AC8002382B6 /* Domain.framework */; };
-		919BD9A224080AC8002382B6 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 919BD9A024080AC8002382B6 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,32 +44,6 @@
 			remoteInfo = CoreDataDB_iOS;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		919BD991240809B4002382B6 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				919BD9A224080AC8002382B6 /* Domain.framework in Embed Frameworks */,
-				919BD990240809B4002382B6 /* Domain.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		919BD994240809C2002382B6 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				919BD993240809C2002382B6 /* Domain.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		912F265723ACE3FD00AD85D1 /* CoreDataDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,7 +215,6 @@
 				912F265323ACE3FD00AD85D1 /* Sources */,
 				912F265423ACE3FD00AD85D1 /* Frameworks */,
 				912F265523ACE3FD00AD85D1 /* Resources */,
-				919BD991240809B4002382B6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,7 +251,6 @@
 				912F268523ACECF200AD85D1 /* Sources */,
 				912F268623ACECF200AD85D1 /* Frameworks */,
 				912F268723ACECF200AD85D1 /* Resources */,
-				919BD994240809C2002382B6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

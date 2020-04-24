@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "918D8D47239FFD0C0064AC83"
-               BuildableName = "iOSMain.app"
-               BlueprintName = "iOSMain"
-               ReferencedContainer = "container:iOSMain.xcodeproj">
+               BuildableName = "Habbity.app"
+               BlueprintName = "HabbityMain"
+               ReferencedContainer = "container:HabbityMain.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,39 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "918D8D5D239FFD0D0064AC83"
-               BuildableName = "iOSMainTests.xctest"
-               BlueprintName = "iOSMainTests"
-               ReferencedContainer = "container:iOSMain.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "91127C7B23A3A01A0098CAFE"
-               BuildableName = "iOSUITests.xctest"
-               BlueprintName = "iOSUITests"
-               ReferencedContainer = "container:../iOSUI/iOSUI.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "912F269023ACECF200AD85D1"
-               BuildableName = "CoreDataDB_iOSTests.xctest"
-               BlueprintName = "CoreDataDB_iOSTests"
-               ReferencedContainer = "container:../CoreDataDB/CoreDataDB.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "91127C0D23A395610098CAFE"
-               BuildableName = "DomainTests.xctest"
-               BlueprintName = "Domain_iOSTests"
-               ReferencedContainer = "container:../Domain/Domain.xcodeproj">
+               BuildableName = "HabbityMainTests.xctest"
+               BlueprintName = "HabbityMainTests"
+               ReferencedContainer = "container:HabbityMain.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -85,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "918D8D47239FFD0C0064AC83"
-            BuildableName = "iOSMain.app"
-            BlueprintName = "iOSMain"
-            ReferencedContainer = "container:iOSMain.xcodeproj">
+            BuildableName = "Habbity.app"
+            BlueprintName = "HabbityMain"
+            ReferencedContainer = "container:HabbityMain.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -102,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "918D8D47239FFD0C0064AC83"
-            BuildableName = "iOSMain.app"
-            BlueprintName = "iOSMain"
-            ReferencedContainer = "container:iOSMain.xcodeproj">
+            BuildableName = "Habbity.app"
+            BlueprintName = "HabbityMain"
+            ReferencedContainer = "container:HabbityMain.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

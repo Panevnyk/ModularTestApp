@@ -27,7 +27,6 @@
 		9191DCDA2403CF6400802806 /* CreateHabitPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191DCD82403CF6400802806 /* CreateHabitPresenterTests.swift */; };
 		9191DCDB2403CF6400802806 /* HabitListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191DCD92403CF6400802806 /* HabitListPresenterTests.swift */; };
 		919BD99A240809F6002382B6 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 919BD999240809F6002382B6 /* Domain.framework */; };
-		919BD99B240809F6002382B6 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 919BD999240809F6002382B6 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		91A4643D23F54C63009F2D28 /* EdgeInsets+Zero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A4643C23F54C63009F2D28 /* EdgeInsets+Zero.swift */; };
 		91A4643F23F5861E009F2D28 /* HabitScheduleDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A4643E23F5861E009F2D28 /* HabitScheduleDaysView.swift */; };
 		91BD0F712403FCF9009A75DB /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BD0F702403FCF9009A75DB /* RadioButton.swift */; };
@@ -46,20 +45,6 @@
 			remoteInfo = iOSUI;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		919BD99C240809F6002382B6 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				919BD99B240809F6002382B6 /* Domain.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		91127C7323A3A01A0098CAFE /* iOSUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOSUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -264,7 +249,6 @@
 				91127C6F23A3A01A0098CAFE /* Sources */,
 				91127C7023A3A01A0098CAFE /* Frameworks */,
 				91127C7123A3A01A0098CAFE /* Resources */,
-				919BD99C240809F6002382B6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

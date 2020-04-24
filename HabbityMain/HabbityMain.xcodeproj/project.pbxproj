@@ -57,15 +57,15 @@
 		914DBC2123ACF83F00092638 /* CoreDataDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreDataDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		917867AB23FEC150009E53CB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		917867AD23FECB52009E53CB /* CreateHabitAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHabitAssembly.swift; sourceTree = "<group>"; };
-		9185BE5D23F402C9001EFEB0 /* iOSMain.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSMain.entitlements; sourceTree = "<group>"; };
-		918D8D48239FFD0C0064AC83 /* iOSMain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMain.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9185BE5D23F402C9001EFEB0 /* HabbityMain.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HabbityMain.entitlements; sourceTree = "<group>"; };
+		918D8D48239FFD0C0064AC83 /* Habbity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habbity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		918D8D4B239FFD0C0064AC83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		918D8D4D239FFD0C0064AC83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		918D8D51239FFD0D0064AC83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		918D8D54239FFD0D0064AC83 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		918D8D57239FFD0D0064AC83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		918D8D59239FFD0D0064AC83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		918D8D5E239FFD0D0064AC83 /* iOSMainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSMainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		918D8D5E239FFD0D0064AC83 /* HabbityMainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HabbityMainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		918D8D64239FFD0D0064AC83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		919BD99D24080A82002382B6 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D6B9DA23AA849F0059EE9B /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
@@ -123,8 +123,8 @@
 		918D8D3F239FFD0C0064AC83 = {
 			isa = PBXGroup;
 			children = (
-				918D8D4A239FFD0C0064AC83 /* iOSMain */,
-				918D8D61239FFD0D0064AC83 /* iOSMainTests */,
+				918D8D4A239FFD0C0064AC83 /* HabbityMain */,
+				918D8D61239FFD0D0064AC83 /* HabbityMainTests */,
 				918D8D49239FFD0C0064AC83 /* Products */,
 				91127C2023A397920098CAFE /* Frameworks */,
 			);
@@ -133,16 +133,16 @@
 		918D8D49239FFD0C0064AC83 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				918D8D48239FFD0C0064AC83 /* iOSMain.app */,
-				918D8D5E239FFD0D0064AC83 /* iOSMainTests.xctest */,
+				918D8D48239FFD0C0064AC83 /* Habbity.app */,
+				918D8D5E239FFD0D0064AC83 /* HabbityMainTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		918D8D4A239FFD0C0064AC83 /* iOSMain */ = {
+		918D8D4A239FFD0C0064AC83 /* HabbityMain */ = {
 			isa = PBXGroup;
 			children = (
-				9185BE5D23F402C9001EFEB0 /* iOSMain.entitlements */,
+				9185BE5D23F402C9001EFEB0 /* HabbityMain.entitlements */,
 				9137232123FAC37400E78ABA /* Coordinators */,
 				9114901E23A92ECE00ABFA96 /* Assemblies */,
 				918D8D4B239FFD0C0064AC83 /* AppDelegate.swift */,
@@ -152,7 +152,7 @@
 				918D8D59239FFD0D0064AC83 /* Info.plist */,
 				918D8D53239FFD0D0064AC83 /* Preview Content */,
 			);
-			path = iOSMain;
+			path = HabbityMain;
 			sourceTree = "<group>";
 		};
 		918D8D53239FFD0D0064AC83 /* Preview Content */ = {
@@ -163,21 +163,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		918D8D61239FFD0D0064AC83 /* iOSMainTests */ = {
+		918D8D61239FFD0D0064AC83 /* HabbityMainTests */ = {
 			isa = PBXGroup;
 			children = (
 				918D8D64239FFD0D0064AC83 /* Info.plist */,
 				91D6B9DA23AA849F0059EE9B /* Test.swift */,
 			);
-			path = iOSMainTests;
+			path = HabbityMainTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		918D8D47239FFD0C0064AC83 /* iOSMain */ = {
+		918D8D47239FFD0C0064AC83 /* HabbityMain */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 918D8D67239FFD0D0064AC83 /* Build configuration list for PBXNativeTarget "iOSMain" */;
+			buildConfigurationList = 918D8D67239FFD0D0064AC83 /* Build configuration list for PBXNativeTarget "HabbityMain" */;
 			buildPhases = (
 				918D8D44239FFD0C0064AC83 /* Sources */,
 				918D8D45239FFD0C0064AC83 /* Frameworks */,
@@ -188,14 +188,14 @@
 			);
 			dependencies = (
 			);
-			name = iOSMain;
+			name = HabbityMain;
 			productName = iOSMain;
-			productReference = 918D8D48239FFD0C0064AC83 /* iOSMain.app */;
+			productReference = 918D8D48239FFD0C0064AC83 /* Habbity.app */;
 			productType = "com.apple.product-type.application";
 		};
-		918D8D5D239FFD0D0064AC83 /* iOSMainTests */ = {
+		918D8D5D239FFD0D0064AC83 /* HabbityMainTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 918D8D6A239FFD0D0064AC83 /* Build configuration list for PBXNativeTarget "iOSMainTests" */;
+			buildConfigurationList = 918D8D6A239FFD0D0064AC83 /* Build configuration list for PBXNativeTarget "HabbityMainTests" */;
 			buildPhases = (
 				918D8D5A239FFD0D0064AC83 /* Sources */,
 				918D8D5B239FFD0D0064AC83 /* Frameworks */,
@@ -206,9 +206,9 @@
 			dependencies = (
 				918D8D60239FFD0D0064AC83 /* PBXTargetDependency */,
 			);
-			name = iOSMainTests;
+			name = HabbityMainTests;
 			productName = iOSMainTests;
-			productReference = 918D8D5E239FFD0D0064AC83 /* iOSMainTests.xctest */;
+			productReference = 918D8D5E239FFD0D0064AC83 /* HabbityMainTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -231,7 +231,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 918D8D43239FFD0C0064AC83 /* Build configuration list for PBXProject "iOSMain" */;
+			buildConfigurationList = 918D8D43239FFD0C0064AC83 /* Build configuration list for PBXProject "HabbityMain" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -244,8 +244,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				918D8D47239FFD0C0064AC83 /* iOSMain */,
-				918D8D5D239FFD0D0064AC83 /* iOSMainTests */,
+				918D8D47239FFD0C0064AC83 /* HabbityMain */,
+				918D8D5D239FFD0D0064AC83 /* HabbityMainTests */,
 			);
 		};
 /* End PBXProject section */
@@ -296,7 +296,7 @@
 /* Begin PBXTargetDependency section */
 		918D8D60239FFD0D0064AC83 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 918D8D47239FFD0C0064AC83 /* iOSMain */;
+			target = 918D8D47239FFD0C0064AC83 /* HabbityMain */;
 			targetProxy = 918D8D5F239FFD0D0064AC83 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -431,21 +431,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = iOSMain/iOSMain.entitlements;
+				CODE_SIGN_ENTITLEMENTS = HabbityMain/HabbityMain.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_ASSET_PATHS = "\"iOSMain/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HabbityMain/Preview Content\"";
 				DEVELOPMENT_TEAM = G6KD9UARPF;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = iOSMain/Info.plist;
+				INFOPLIST_FILE = HabbityMain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@loader_path/Frameworks",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bandle.habbityApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Habbity;
 				PROVISIONING_PROFILE_SPECIFIER = "Panevnyk Habbity Provisioning Profile";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
@@ -458,21 +458,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = iOSMain/iOSMain.entitlements;
+				CODE_SIGN_ENTITLEMENTS = HabbityMain/HabbityMain.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_ASSET_PATHS = "\"iOSMain/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HabbityMain/Preview Content\"";
 				DEVELOPMENT_TEAM = G6KD9UARPF;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = iOSMain/Info.plist;
+				INFOPLIST_FILE = HabbityMain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@loader_path/Frameworks",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bandle.habbityApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Habbity;
 				PROVISIONING_PROFILE_SPECIFIER = "Panevnyk Habbity Provisioning Profile";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
@@ -489,19 +489,19 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6KD9UARPF;
-				INFOPLIST_FILE = iOSMainTests/Info.plist;
+				INFOPLIST_FILE = HabbityMainTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vp.iOSMainTests;
+				PRODUCT_BUNDLE_IDENTIFIER = vp.HabbityMainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSMain.app/iOSMain";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Habbity.app/Habbity";
 			};
 			name = Debug;
 		};
@@ -513,25 +513,25 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6KD9UARPF;
-				INFOPLIST_FILE = iOSMainTests/Info.plist;
+				INFOPLIST_FILE = HabbityMainTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vp.iOSMainTests;
+				PRODUCT_BUNDLE_IDENTIFIER = vp.HabbityMainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSMain.app/iOSMain";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Habbity.app/Habbity";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		918D8D43239FFD0C0064AC83 /* Build configuration list for PBXProject "iOSMain" */ = {
+		918D8D43239FFD0C0064AC83 /* Build configuration list for PBXProject "HabbityMain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				918D8D65239FFD0D0064AC83 /* Debug */,
@@ -540,7 +540,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		918D8D67239FFD0D0064AC83 /* Build configuration list for PBXNativeTarget "iOSMain" */ = {
+		918D8D67239FFD0D0064AC83 /* Build configuration list for PBXNativeTarget "HabbityMain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				918D8D68239FFD0D0064AC83 /* Debug */,
@@ -549,7 +549,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		918D8D6A239FFD0D0064AC83 /* Build configuration list for PBXNativeTarget "iOSMainTests" */ = {
+		918D8D6A239FFD0D0064AC83 /* Build configuration list for PBXNativeTarget "HabbityMainTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				918D8D6B239FFD0D0064AC83 /* Debug */,

@@ -11,6 +11,6 @@
       location = "group:../iOSUI/iOSUI.xcodeproj">
    </FileRef>
    <FileRef
-      location = "container:iOSMain.xcodeproj">
+      location = "group:HabbityMain.xcodeproj">
    </FileRef>
 </Workspace>
