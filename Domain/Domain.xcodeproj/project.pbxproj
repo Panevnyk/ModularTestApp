@@ -700,7 +700,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "vp.Domain-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = vp.Domain.iOS;
 				PRODUCT_NAME = Domain;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -729,7 +729,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "vp.Domain-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = vp.Domain.iOS;
 				PRODUCT_NAME = Domain;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

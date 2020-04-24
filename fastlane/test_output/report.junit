@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testsuites name='DomainTests.xctest' tests='45' failures='0'>
   <testsuite name='iOSMainTests.Test' tests='1' failures='0'>
-    <testcase classname='iOSMainTests.Test' name='testExample' time='0.001'/>
+    <testcase classname='iOSMainTests.Test' name='testExample' time='0.000'/>
   </testsuite>
   <testsuite name='iOSUITests.CreateHabitPresenterTests' tests='2' failures='0'>
     <testcase classname='iOSUITests.CreateHabitPresenterTests' name='test_presentHabitAddedSuccessfuly' time='0.001'/>
@@ -10,21 +10,21 @@
   <testsuite name='iOSUITests.HabitListPresenterTests' tests='3' failures='0'>
     <testcase classname='iOSUITests.HabitListPresenterTests' name='test_presentHabitDidRemoveFailure' time='0.000'/>
     <testcase classname='iOSUITests.HabitListPresenterTests' name='test_presentHabitDidRemoveSuccessfully' time='0.000'/>
-    <testcase classname='iOSUITests.HabitListPresenterTests' name='test_presentHabits' time='0.002'/>
+    <testcase classname='iOSUITests.HabitListPresenterTests' name='test_presentHabits' time='0.003'/>
   </testsuite>
   <testsuite name='CoreDataDB_iOSTests.CoreDataDBTests' tests='1' failures='0'>
     <testcase classname='CoreDataDB_iOSTests.CoreDataDBTests' name='testExample' time='0.001'/>
   </testsuite>
   <testsuite name='DomainTests.CreateHabitInteractorTests' tests='6' failures='0'>
     <testcase classname='DomainTests.CreateHabitInteractorTests' name='test_addHabit_failure' time='0.003'/>
-    <testcase classname='DomainTests.CreateHabitInteractorTests' name='test_addHabit_success' time='0.002'/>
+    <testcase classname='DomainTests.CreateHabitInteractorTests' name='test_addHabit_success' time='0.001'/>
     <testcase classname='DomainTests.CreateHabitInteractorTests' name='test_canAddHabit_emptyData_falseResult' time='0.000'/>
     <testcase classname='DomainTests.CreateHabitInteractorTests' name='test_canAddHabit_withEmptySchedule_falseResult' time='0.000'/>
     <testcase classname='DomainTests.CreateHabitInteractorTests' name='test_canAddHabit_withHabitTitle_trueResult' time='0.000'/>
     <testcase classname='DomainTests.CreateHabitInteractorTests' name='test_initialHabitData' time='0.000'/>
   </testsuite>
   <testsuite name='DomainTests.EditHabitDatasInteractorTests' tests='6' failures='0'>
-    <testcase classname='DomainTests.EditHabitDatasInteractorTests' name='test_addHabitData_correctValue_dataWasAdded' time='0.001'/>
+    <testcase classname='DomainTests.EditHabitDatasInteractorTests' name='test_addHabitData_correctValue_dataWasAdded' time='0.000'/>
     <testcase classname='DomainTests.EditHabitDatasInteractorTests' name='test_addHabitData_incorrectValue_dataWasNotAdded' time='0.000'/>
     <testcase classname='DomainTests.EditHabitDatasInteractorTests' name='test_isHabitContainHabitData_correct' time='0.000'/>
     <testcase classname='DomainTests.EditHabitDatasInteractorTests' name='test_isHabitContainHabitData_incorrect' time='0.000'/>
@@ -46,11 +46,11 @@
     <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getMonthlyHabitAnalytics_by02Month31Day' time='0.001'/>
     <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getMonthlyHabitAnalytics_by12Month31Day' time='0.002'/>
     <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getMonthlyHabitAnalytics_byDateFromFuture' time='0.001'/>
-    <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getMonthlyHabitAnalytics_byMonthBeforeHabitCreated' time='0.001'/>
+    <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getMonthlyHabitAnalytics_byMonthBeforeHabitCreated' time='0.002'/>
     <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getYearlyHabitAnalytics_byDateFromFuture' time='0.001'/>
-    <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getYearlyHabitAnalytics_byFirstDayOfYear' time='0.002'/>
+    <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getYearlyHabitAnalytics_byFirstDayOfYear' time='0.001'/>
     <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getYearlyHabitAnalytics_byLastDayOfYear' time='0.001'/>
-    <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getYearlyHabitAnalytics_byYearBeforeHabitCreated' time='0.002'/>
+    <testcase classname='DomainTests.HabitAnalyticsInteractorTests' name='test_getYearlyHabitAnalytics_byYearBeforeHabitCreated' time='0.001'/>
   </testsuite>
   <testsuite name='DomainTests.HabitListInteractorTests' tests='9' failures='0'>
     <testcase classname='DomainTests.HabitListInteractorTests' name='test_loadHabits' time='0.001'/>

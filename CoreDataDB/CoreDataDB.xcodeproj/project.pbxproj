@@ -671,7 +671,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vp.CoreDataDB_iOS;
+				PRODUCT_BUNDLE_IDENTIFIER = vp.CoreDataDB.iOS;
 				PRODUCT_NAME = CoreDataDB;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -698,7 +698,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vp.CoreDataDB_iOS;
+				PRODUCT_BUNDLE_IDENTIFIER = vp.CoreDataDB.iOS;
 				PRODUCT_NAME = CoreDataDB;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
