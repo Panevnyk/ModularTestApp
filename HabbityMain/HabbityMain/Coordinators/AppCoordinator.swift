@@ -8,9 +8,9 @@
 
 import UIKit
 import SwiftUI
-import iOSUI
-import Domain
-import CoreDataDB
+import HabbityIOSUI
+import HabbityDomain
+import HabbityCoreDataDB
 
 final class AppCoordinator {
     private let window: UIWindow
