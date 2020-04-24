@@ -43,19 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "91127C7B23A3A01A0098CAFE"
-               BuildableName = "iOSUITests.xctest"
-               BlueprintName = "iOSUITests"
-               ReferencedContainer = "container:../iOSUI/iOSUI.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "912F269023ACECF200AD85D1"
-               BuildableName = "CoreDataDB_iOSTests.xctest"
-               BlueprintName = "CoreDataDB_iOSTests"
-               ReferencedContainer = "container:../CoreDataDB/CoreDataDB.xcodeproj">
+               BuildableName = "HabbityIOSUITests.xctest"
+               BlueprintName = "HabbityIOSUITests"
+               ReferencedContainer = "container:../HabbityIOSUI/HabbityIOSUI.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -63,9 +53,19 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "91127C0D23A395610098CAFE"
-               BuildableName = "DomainTests.xctest"
-               BlueprintName = "Domain_iOSTests"
-               ReferencedContainer = "container:../Domain/Domain.xcodeproj">
+               BuildableName = "HabbityDomainTests.xctest"
+               BlueprintName = "HabbityDomain_iOSTests"
+               ReferencedContainer = "container:../HabbityDomain/HabbityDomain.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "912F269023ACECF200AD85D1"
+               BuildableName = "HabbityCoreDataDB_iOSTests.xctest"
+               BlueprintName = "HabbityCoreDataDB_iOSTests"
+               ReferencedContainer = "container:../HabbityCoreDataDB/HabbityCoreDataDB.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

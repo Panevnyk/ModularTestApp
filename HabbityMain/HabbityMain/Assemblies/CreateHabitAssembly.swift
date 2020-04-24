@@ -7,9 +7,9 @@
 //
 
 import SwiftUI
-import Domain
-import CoreDataDB
-import iOSUI
+import HabbityDomain
+import HabbityCoreDataDB
+import HabbityIOSUI
 
 final class CreateHabitAssembly {
     let presenter: CreateHabitInteractorOutput

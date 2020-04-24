@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Domain
-import CoreDataDB
+import HabbityDomain
+import HabbityCoreDataDB
 import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

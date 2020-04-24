@@ -2,13 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../CoreDataDB/CoreDataDB.xcodeproj">
+      location = "group:../HabbityCoreDataDB/HabbityCoreDataDB.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../Domain/Domain.xcodeproj">
+      location = "group:../HabbityDomain/HabbityDomain.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../iOSUI/iOSUI.xcodeproj">
+      location = "group:../HabbityIOSUI/HabbityIOSUI.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:HabbityMain.xcodeproj">
