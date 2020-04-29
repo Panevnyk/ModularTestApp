@@ -2,89 +2,91 @@ default_platform(:iOS)
 
 platform :iOS do
 
-#============================== tests ==============================
+	#============================== tests ==============================
+	lane :tests do
+		# run tests
+		scan(
+			scheme: "CI",
+			workspace: "HabbityMain/HabbityMain.xcworkspace",
+			clean: true,
+			code_coverage: true
+		)
+	end
 
-lane :tests do
-	# run tests
-	run_tests(
-		workspace: "HabbityMain/HabbityMain.xcworkspace",
-		scheme: "CI",
-		devices: ["iPhone 11"]
-	)
-end
+
+	#============================== uploadToItunesConnect ==============================
+	lane :uploadToItunesConnect  do
+		cleanProject
+		tests
+		incrementBuildNumber
+		importCertificatesAndProvisionProfiles
+		uploadBuildToAppStoreConnect	
+	end
 
 
-#============================== uploadToItunesConnect ==============================
+	#============================== cleanProject ==============================
+	private_lane :cleanProject do 
+		clean_build_artifacts
+		clear_derived_data
+	end
 
-lane :uploadToItunesConnect  do
+	#============================== incrementBuildNumber ==============================
+	private_lane :incrementBuildNumber do 
+		increment_build_number(
+			xcodeproj: "HabbityMain/HabbityMain.xcodeproj"
+		)
 
-	# remove all documentation created during build
-	clean_build_artifacts
+		commit_version_bump(
+			xcodeproj: "HabbityMain/HabbityMain.xcodeproj",
+			message: "Build number bump by fastlane",
+			force: true
+		)
 
-	# clean derived data
-	clear_derived_data
+		push_to_git_remote(
+			tags: false
+		)
+	end
 
-	# run tests
-	scan(
-		scheme: "CI",
-		workspace: "HabbityMain/HabbityMain.xcworkspace",
-		clean: true,
-		code_coverage: true
-	)
+	#============================== importCertificatesAndProvisionProfiles =============================
+	private_lane :importCertificatesAndProvisionProfiles do 
+		# import certificates
+		cert(
+			filename: "Certificates/3X9QPBQVLL.cer",
+			username: "v.panevnyk@gmail.com",
+			team_name: "Vladyslav Panevnyk"
+		)
 
-	# increment build number
-	increment_build_number(
-		xcodeproj: "HabbityMain/HabbityMain.xcodeproj"
-	)
+		# load ProvisionProfiles
+		sigh(
+			provisioning_name: "App Store Habbity Provisioning Profile",
+			ignore_profiles_with_different_name: true,
+			username: "v.panevnyk@gmail.com",
+			app_identifier: "com.bandle.habbityApp",
+			skip_certificate_verification: true
+		)
+	end
 
-	# commit
-	commit_version_bump(
-		xcodeproj: "HabbityMain/HabbityMain.xcodeproj",
-		message: "Build number bump by fastlane",
-		force: true
-	)
-
-	# push
-	push_to_git_remote(
-		tags: false
-	)
-
-	# import certificates
-	cert(
-		filename: "Certificates/3X9QPBQVLL.cer",
-		username: "v.panevnyk@gmail.com",
-		team_name: "Vladyslav Panevnyk"
-
-	)
-	
-	# load provision profiles
-	sigh(
-		provisioning_name: "App Store Habbity Provisioning Profile",
-		ignore_profiles_with_different_name: true,
-		username: "v.panevnyk@gmail.com",
-		app_identifier: "com.bandle.habbityApp",
-		skip_certificate_verification: true
-	)
-
-	# create IPA 
-	gym(
-		scheme: "HabbityMain",
-		workspace: "HabbityMain/HabbityMain.xcworkspace",
-		clean: true,
-		output_name: "Habbity.ipa",
-		configuration: "Release",
-		include_symbols: true,
-		include_bitcode: true
-	)
-
-	# upload build to AppStoreConnect
-	pilot(
-		username: "v.panevnyk@gmail.com",
-		team_name: "Vladyslav Panevnyk",
-		app_identifier: "com.bandle.habbityApp",
-		ipa: "Habbity.ipa",
-		skip_waiting_for_build_processing: true
-	)
-end
+	#============================== uploadBuildToAppStoreConnect =============================
+	private_lane :uploadBuildToAppStoreConnect do 
+		# create IPA 
+		gym(
+			scheme: "HabbityMain",
+			workspace: "HabbityMain/HabbityMain.xcworkspace",
+			clean: true,
+			output_name: "Habbity.ipa",
+			configuration: "Release",
+			include_symbols: true,
+			include_bitcode: true
+		)
+		
+		# upload build to AppStoreConnect
+		pilot(
+			username: "v.panevnyk@gmail.com",
+			team_name: "Vladyslav Panevnyk",
+			app_identifier: "com.bandle.habbityApp",
+			ipa: "Habbity.ipa",
+			skip_waiting_for_build_processing: true
+		)
+	end
 
 end
