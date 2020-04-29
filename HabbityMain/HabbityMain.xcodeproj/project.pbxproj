@@ -440,7 +440,7 @@
 				CODE_SIGN_ENTITLEMENTS = HabbityMain/HabbityMain.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"HabbityMain/Preview Content\"";
 				DEVELOPMENT_TEAM = G6KD9UARPF;
 				ENABLE_PREVIEWS = YES;
@@ -467,7 +467,7 @@
 				CODE_SIGN_ENTITLEMENTS = HabbityMain/HabbityMain.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"HabbityMain/Preview Content\"";
 				DEVELOPMENT_TEAM = G6KD9UARPF;
 				ENABLE_PREVIEWS = YES;
