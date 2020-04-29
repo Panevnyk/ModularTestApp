@@ -23,6 +23,12 @@ platform :iOS do
 		uploadBuildToAppStoreConnect	
 	end
 
+	#============================== screenshots ==============================
+	lane :screenshots do
+		capture_screenshots
+		upload_to_app_store
+	end
+
 
 	#============================== cleanProject ==============================
 	private_lane :cleanProject do 
