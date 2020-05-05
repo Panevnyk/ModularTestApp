@@ -23,10 +23,17 @@ platform :iOS do
 		uploadBuildToAppStoreConnect	
 	end
 
-	#============================== screenshots ==============================
-	lane :screenshots do
+	#============================== makeAndUploadScreenshotsToAppStoreConnect ==============================
+	lane :makeAndUploadScreenshotsToAppStoreConnect do
+		# make screenshots
 		capture_screenshots
-		upload_to_app_store
+	
+		# upload screenshots to AppStoreConnect
+		#upload_to_app_store(
+		#	username: "v.panevnyk@gmail.com",
+		#	team_name: "Vladyslav Panevnyk",
+		#	app_identifier: "com.bandle.habbityApp"
+		#)
 	end
 
 

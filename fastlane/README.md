@@ -26,6 +26,11 @@ fastlane iOS tests
 fastlane iOS uploadToItunesConnect
 ```
 
+### iOS makeAndUploadScreenshotsToAppStoreConnect
+```
+fastlane iOS makeAndUploadScreenshotsToAppStoreConnect
+```
+
 
 ----
 

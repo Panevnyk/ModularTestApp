@@ -22,6 +22,8 @@
 		91C095242452F7A200E6075F /* HabbityCoreDataDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C095232452F7A200E6075F /* HabbityCoreDataDB.framework */; };
 		91C095252452F7A200E6075F /* HabbityCoreDataDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91C095232452F7A200E6075F /* HabbityCoreDataDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		91D6B9DB23AA849F0059EE9B /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6B9DA23AA849F0059EE9B /* Test.swift */; };
+		91F03558245AD914005CDC51 /* HabbitySnapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F03557245AD914005CDC51 /* HabbitySnapshots.swift */; };
+		91F03560245AD968005CDC51 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0355F245AD967005CDC51 /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 918D8D47239FFD0C0064AC83;
 			remoteInfo = iOSMain;
+		};
+		91F0355A245AD914005CDC51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 918D8D40239FFD0C0064AC83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 918D8D47239FFD0C0064AC83;
+			remoteInfo = HabbityMain;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -72,6 +81,10 @@
 		91C095142452F4A800E6075F /* HabbityDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HabbityDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C095232452F7A200E6075F /* HabbityCoreDataDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HabbityCoreDataDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D6B9DA23AA849F0059EE9B /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		91F03555245AD914005CDC51 /* HabbityMainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HabbityMainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		91F03557245AD914005CDC51 /* HabbitySnapshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabbitySnapshots.swift; sourceTree = "<group>"; };
+		91F03559245AD914005CDC51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91F0355F245AD967005CDC51 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = ../../fastlane/SnapshotHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +99,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		918D8D5B239FFD0D0064AC83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91F03552245AD914005CDC51 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -131,6 +151,7 @@
 			children = (
 				918D8D4A239FFD0C0064AC83 /* HabbityMain */,
 				918D8D61239FFD0D0064AC83 /* HabbityMainTests */,
+				91F03556245AD914005CDC51 /* HabbityMainUITests */,
 				918D8D49239FFD0C0064AC83 /* Products */,
 				91127C2023A397920098CAFE /* Frameworks */,
 			);
@@ -141,6 +162,7 @@
 			children = (
 				918D8D48239FFD0C0064AC83 /* Habbity.app */,
 				918D8D5E239FFD0D0064AC83 /* HabbityMainTests.xctest */,
+				91F03555245AD914005CDC51 /* HabbityMainUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,6 +198,16 @@
 				91D6B9DA23AA849F0059EE9B /* Test.swift */,
 			);
 			path = HabbityMainTests;
+			sourceTree = "<group>";
+		};
+		91F03556245AD914005CDC51 /* HabbityMainUITests */ = {
+			isa = PBXGroup;
+			children = (
+				91F0355F245AD967005CDC51 /* SnapshotHelper.swift */,
+				91F03557245AD914005CDC51 /* HabbitySnapshots.swift */,
+				91F03559245AD914005CDC51 /* Info.plist */,
+			);
+			path = HabbityMainUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,13 +249,31 @@
 			productReference = 918D8D5E239FFD0D0064AC83 /* HabbityMainTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		91F03554245AD914005CDC51 /* HabbityMainUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91F0355E245AD914005CDC51 /* Build configuration list for PBXNativeTarget "HabbityMainUITests" */;
+			buildPhases = (
+				91F03551245AD914005CDC51 /* Sources */,
+				91F03552245AD914005CDC51 /* Frameworks */,
+				91F03553245AD914005CDC51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91F0355B245AD914005CDC51 /* PBXTargetDependency */,
+			);
+			name = HabbityMainUITests;
+			productName = HabbityMainUITests;
+			productReference = 91F03555245AD914005CDC51 /* HabbityMainUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		918D8D40239FFD0C0064AC83 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Vladyslav Panevnyk";
 				TargetAttributes = {
@@ -233,6 +283,10 @@
 					918D8D5D239FFD0D0064AC83 = {
 						CreatedOnToolsVersion = 11.2.1;
 						LastSwiftMigration = 1120;
+						TestTargetID = 918D8D47239FFD0C0064AC83;
+					};
+					91F03554245AD914005CDC51 = {
+						CreatedOnToolsVersion = 11.3;
 						TestTargetID = 918D8D47239FFD0C0064AC83;
 					};
 				};
@@ -252,6 +306,7 @@
 			targets = (
 				918D8D47239FFD0C0064AC83 /* HabbityMain */,
 				918D8D5D239FFD0D0064AC83 /* HabbityMainTests */,
+				91F03554245AD914005CDC51 /* HabbityMainUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -268,6 +323,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		918D8D5C239FFD0D0064AC83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91F03553245AD914005CDC51 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -297,6 +359,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		91F03551245AD914005CDC51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91F03558245AD914005CDC51 /* HabbitySnapshots.swift in Sources */,
+				91F03560245AD968005CDC51 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -304,6 +375,11 @@
 			isa = PBXTargetDependency;
 			target = 918D8D47239FFD0C0064AC83 /* HabbityMain */;
 			targetProxy = 918D8D5F239FFD0D0064AC83 /* PBXContainerItemProxy */;
+		};
+		91F0355B245AD914005CDC51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 918D8D47239FFD0C0064AC83 /* HabbityMain */;
+			targetProxy = 91F0355A245AD914005CDC51 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -534,6 +610,42 @@
 			};
 			name = Release;
 		};
+		91F0355C245AD914005CDC51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HabbityMainUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.HabbityMainUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HabbityMain;
+			};
+			name = Debug;
+		};
+		91F0355D245AD914005CDC51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HabbityMainUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.HabbityMainUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HabbityMain;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -560,6 +672,15 @@
 			buildConfigurations = (
 				918D8D6B239FFD0D0064AC83 /* Debug */,
 				918D8D6C239FFD0D0064AC83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91F0355E245AD914005CDC51 /* Build configuration list for PBXNativeTarget "HabbityMainUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91F0355C245AD914005CDC51 /* Debug */,
+				91F0355D245AD914005CDC51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
