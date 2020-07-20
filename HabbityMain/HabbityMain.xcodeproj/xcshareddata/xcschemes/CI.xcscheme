@@ -68,6 +68,16 @@
                ReferencedContainer = "container:../HabbityCoreDataDB/HabbityCoreDataDB.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "91F03554245AD914005CDC51"
+               BuildableName = "HabbityMainUITests.xctest"
+               BlueprintName = "HabbityMainUITests"
+               ReferencedContainer = "container:HabbityMain.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

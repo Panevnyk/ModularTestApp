@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "918D8D47239FFD0C0064AC83"
-               BuildableName = "Habbity.app"
-               BlueprintName = "HabbityMain"
+               BlueprintIdentifier = "91F03554245AD914005CDC51"
+               BuildableName = "HabbityMainUITests.xctest"
+               BlueprintName = "HabbityMainUITests"
                ReferencedContainer = "container:HabbityMain.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,16 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "918D8D5D239FFD0D0064AC83"
-               BuildableName = "HabbityMainTests.xctest"
-               BlueprintName = "HabbityMainTests"
-               ReferencedContainer = "container:HabbityMain.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
@@ -60,16 +50,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "918D8D47239FFD0C0064AC83"
-            BuildableName = "Habbity.app"
-            BlueprintName = "HabbityMain"
-            ReferencedContainer = "container:HabbityMain.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -77,16 +57,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "918D8D47239FFD0C0064AC83"
-            BuildableName = "Habbity.app"
-            BlueprintName = "HabbityMain"
+            BlueprintIdentifier = "91F03554245AD914005CDC51"
+            BuildableName = "HabbityMainUITests.xctest"
+            BlueprintName = "HabbityMainUITests"
             ReferencedContainer = "container:HabbityMain.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

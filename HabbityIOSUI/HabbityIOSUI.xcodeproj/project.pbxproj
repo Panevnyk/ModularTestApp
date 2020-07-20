@@ -285,7 +285,7 @@
 		91127C6A23A3A01A0098CAFE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Vladyslav Panevnyk";
 				TargetAttributes = {
