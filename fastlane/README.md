@@ -20,7 +20,12 @@ or alternatively using `brew cask install fastlane`
 ```
 fastlane iOS tests
 ```
-Run unit tests 
+
+### iOS uploadToItunesConnect
+```
+fastlane iOS uploadToItunesConnect
+```
+
 
 ----
 
