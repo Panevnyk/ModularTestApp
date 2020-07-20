@@ -11,7 +11,7 @@ import HabbityDomain
 
 protocol CoreDataServiceProtocol: AnyObject {
     func save<T>(object: T) where T: NSManagedObject
-    func getEntities<T>() -> [T]? where T: NSManagedObject
+    func getEntities<T>(completion: ((_ : [T]?) -> Void)?) where T: NSManagedObject
 }
 
 public class CoreDataService {
@@ -51,7 +51,10 @@ public class CoreDataService {
     public init() {
         saveContext()
     }
-    
+}
+
+// MARK: - Context
+private extension CoreDataService {
     func saveContext() {
         let context = backgroundContext
         if context.hasChanges {
@@ -71,6 +74,14 @@ extension CoreDataService: CoreDataServiceProtocol {
             _ = self.backgroundContext.addEntity(withType: T.self)
         }
     }
+
+    func getEntities<T>(completion: ((_ : [T]?) -> Void)?) where T: NSManagedObject {
+        persistentContainerQueue.addOperation { [weak self] in
+            guard let self = self else { completion?(nil); return }
+
+            completion?(self.getEntities())
+        }
+    }
     
     func remove<T>(object: T) where T: NSManagedObject {
         writeBlock {
@@ -81,6 +92,7 @@ extension CoreDataService: CoreDataServiceProtocol {
     func writeBlock(action: @escaping (() -> Void)) {
         persistentContainerQueue.addOperation { [weak self] in
             guard let self = self else { return }
+
             self.backgroundContext.performAndWait {
                 action()
                 guard self.backgroundContext.hasChanges else { return }
@@ -93,24 +105,16 @@ extension CoreDataService: CoreDataServiceProtocol {
             }
         }
     }
-
-    func getEntities<T>(completion: ((_ : [T]?) -> Void)?) where T: NSManagedObject {
-        persistentContainerQueue.addOperation { [weak self] in
-            guard let self = self else {
-                completion?(nil)
-                return
-            }
-            completion?(self.getEntities())
-        }
-    }
     
-    func getEntities<T>() -> [T]? where T: NSManagedObject {
+    private func getEntities<T>() -> [T]? where T: NSManagedObject {
         do {
             let entities = try persistentContainer.viewContext.allEntities(withType: T.self)
+
             return entities
             
         } catch let error {
             print(error.localizedDescription)
+
             return nil
         }
     }

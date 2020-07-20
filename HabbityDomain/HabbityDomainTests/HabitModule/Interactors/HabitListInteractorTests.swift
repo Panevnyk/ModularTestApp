@@ -171,12 +171,8 @@ private extension HabitListInteractorTests {
         var isHabitRemovingFromDBSuccessfullyFinished = false
         var removedHabits: [Habit] = []
 
-        func getAllHabits() -> [Habit] {
-            return mockedHabits
-        }
-
         func getAllHabits(completion: ((_ : [Habit]) -> Void)?) {
-            completion?([])
+            completion?(mockedHabits)
         }
 
         func remove(habit: Habit) -> Bool {

@@ -88,7 +88,9 @@ private extension HabitsListView {
 // MARK: PlacePresenterOutput
 extension HabitsListView: HabitListPresenterOutput {
     public func display(habitViewModels: [HabitViewModel]) {
-        dataSource.habitViewModels = habitViewModels
+        DispatchQueue.main.async {
+            self.dataSource.habitViewModels = habitViewModels
+        }
     }
 
     public func displayHabitDidRemoveSuccessfully(by index: Int) {

@@ -23,6 +23,8 @@
 		914DBC3023AD10C700092638 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 914DBC2D23AD10C700092638 /* CoreDataModel.xcdatamodeld */; };
 		918B5C0123F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918B5C0023F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift */; };
 		918B5C0223F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918B5C0023F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift */; };
+		91B96D7F24C5B502000F7212 /* CoreDataService+HabitListDBBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B96D7E24C5B502000F7212 /* CoreDataService+HabitListDBBoundary.swift */; };
+		91B96D8024C5B6CF000F7212 /* CoreDataService+HabitListDBBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B96D7E24C5B502000F7212 /* CoreDataService+HabitListDBBoundary.swift */; };
 		91C0951C2452F4E500E6075F /* HabbityDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C0951B2452F4E500E6075F /* HabbityDomain.framework */; };
 		91C095202452F4F200E6075F /* HabbityDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C0951F2452F4F200E6075F /* HabbityDomain.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +64,7 @@
 		919BD98E240809B4002382B6 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		919BD99F24080ABE002382B6 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		919BD9A024080AC8002382B6 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91B96D7E24C5B502000F7212 /* CoreDataService+HabitListDBBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataService+HabitListDBBoundary.swift"; sourceTree = "<group>"; };
 		91C0951B2452F4E500E6075F /* HabbityDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HabbityDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C0951F2452F4F200E6075F /* HabbityDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HabbityDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C732392450928200D92856 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				918B5C0023F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift */,
+				91B96D7E24C5B502000F7212 /* CoreDataService+HabitListDBBoundary.swift */,
 			);
 			path = "CoreDataService+Boundaries";
 			sourceTree = "<group>";
@@ -364,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				918B5C0123F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift in Sources */,
+				91B96D7F24C5B502000F7212 /* CoreDataService+HabitListDBBoundary.swift in Sources */,
 				913C74A623B0ECC600DDF98F /* NSManagedObject+InitWithContext.swift in Sources */,
 				914DBC2823AD002100092638 /* NSManagedObjectContext+CRUDWrapper.swift in Sources */,
 				914DBC2F23AD10C700092638 /* CoreDataModel.xcdatamodeld in Sources */,
@@ -384,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				918B5C0223F6CC6E000E27B6 /* CoreDataService+CreateHabitDBBoundary.swift in Sources */,
+				91B96D8024C5B6CF000F7212 /* CoreDataService+HabitListDBBoundary.swift in Sources */,
 				913C74A723B0ECC600DDF98F /* NSManagedObject+InitWithContext.swift in Sources */,
 				912F26A223ACEDB400AD85D1 /* CoreDataService.swift in Sources */,
 				914DBC3023AD10C700092638 /* CoreDataModel.xcdatamodeld in Sources */,
